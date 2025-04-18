@@ -8,12 +8,11 @@ library(robotstxt)
 
 url <- "https://basketball.realgm.com/player/LeBron-James/Teammates/250"
 
-# Read the HTML page
+
 page <- read_html(url)
 
 paths_allowed(url)
 
-# Extract the teammates table
 teammates_table <- page |>
   html_element("table") |>
   html_table()
@@ -22,5 +21,23 @@ teammates_table <- teammates_table |>
   select('Player', 'Team(s)', 'GP', 'Win%')
 
 write.csv(teammates_table, "lebron_teammates.csv", row.names = FALSE)
+
+url2 <- "https://www.basketball-reference.com/players/j/jamesle01.html"
+
+
+page <- read_html(url2)
+
+paths_allowed(url2)
+
+lebron_tables <- page |> 
+  html_elements("table")
+
+lebron_table <- lebron_tables[[2]]|>
+  html_table()
+
+teammates_table <- teammates_table |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+
+write.csv(lebron_table, "lebron_seasons.csv", row.names = FALSE)
 
 ```
