@@ -17,9 +17,13 @@ teammates_table <- page |>
   html_element("table") |>
   html_table()
 
+Teammates_Stats <- teammates_table |>
+  select('Player', 'Season(s)', 'Team(s)', 'GP', 'PTS', 'REB', 'AST', 'Win%')
+
 teammates_table <- teammates_table |>
   select('Player', 'Team(s)', 'GP', 'Win%')
 
+write.csv(Teammates_Stats, "Teammates_Stats.csv", row.names = FALSE)
 write.csv(teammates_table, "lebron_teammates.csv", row.names = FALSE)
 
 url2 <- "https://www.basketball-reference.com/players/j/jamesle01.html"
@@ -35,9 +39,13 @@ lebron_tables <- page |>
 lebron_table <- lebron_tables[[2]]|>
   html_table()
 
+
 teammates_table <- teammates_table |>
   select('Player', 'Team(s)', 'GP', 'Win%')
 
 write.csv(lebron_table, "lebron_seasons.csv", row.names = FALSE)
+
+
+
 
 ```
