@@ -1,43 +1,35 @@
 
 
 ```{r}
-library(rvest)
 library(dplyr)
-library(stringr)
-library(robotstxt)
+library(tidyverse)
+library(knitr)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(mdsr)
 
-url <- "https://basketball.realgm.com/player/LeBron-James/Teammates/250"
+Teammates <- read.csv("data/lebron_teammates.csv")
+
+Teammates_50 <- Teammates |>
+  head(50)
+
+Teammates_100 <- Teammates |>
+  head(100)
+
+Teammates_50_Network <- Teammates_50 |>
+  as_tbl_graph(directed=TRUE) |>
+  activate(nodes)
+
+Teammates_100_Network <- Teammates_100 |>
+  as_tbl_graph(directed=TRUE) |>
+  activate(nodes)
+
+Teammates_Network <- Teammates |>
+  as_tbl_graph(directed=TRUE) |>
+  activate(nodes)
 
 
-page <- read_html(url)
 
-paths_allowed(url)
-
-teammates_table <- page |>
-  html_element("table") |>
-  html_table()
-
-teammates_table <- teammates_table |>
-  select('Player', 'Team(s)', 'GP', 'Win%')
-
-write.csv(teammates_table, "lebron_teammates.csv", row.names = FALSE)
-
-url2 <- "https://www.basketball-reference.com/players/j/jamesle01.html"
-
-
-page <- read_html(url2)
-
-paths_allowed(url2)
-
-lebron_tables <- page |> 
-  html_elements("table")
-
-lebron_table <- lebron_tables[[2]]|>
-  html_table()
-
-teammates_table <- teammates_table |>
-  select('Player', 'Team(s)', 'GP', 'Win%')
-
-write.csv(lebron_table, "lebron_seasons.csv", row.names = FALSE)
 
 ```
