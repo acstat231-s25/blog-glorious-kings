@@ -45,7 +45,207 @@ teammates_table <- teammates_table |>
 
 write.csv(lebron_table, "lebron_seasons.csv", row.names = FALSE)
 
+url3 <- "https://basketball.realgm.com/player/zydrunas-ilgauskas/Teammates/259"
+page <- read_html(url3)
+paths_allowed(url3)
+teammates_table2 <- page |>
+  html_element("table") |>
+  html_table()
+teammates_table2 <- teammates_table2 |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_table2, "zydrunas_teammates.csv", row.names = FALSE)
 
+url4 <- "https://basketball.realgm.com/player/Anderson-Varejao/Teammates/251"
+page <- read_html(url4)
+paths_allowed(url4)
+teammates_table3 <- page |>
+  html_element("table") |>
+  html_table()
+teammates_table3 <- teammates_table3 |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_table3, "anderson_teammates.csv", row.names = FALSE)
+
+url5 <- "https://basketball.realgm.com/player/James-Jones/Teammates/477"
+page <- read_html(url5)
+paths_allowed(url5)
+teammates_table4 <- page |>
+  html_element("table") |>
+  html_table()
+teammates_table4 <- teammates_table4 |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_table4, "JamesJ_teammates.csv", row.names = FALSE)
+
+url6 <- "https://basketball.realgm.com/player/Sasha-Pavlovic/Teammates/247"
+page <- read_html(url6)
+paths_allowed(url6)
+teammates_table5 <- page |>
+  html_element("table") |>
+  html_table()
+teammates_table5 <- teammates_table5 |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_table5, "Sasha_teammates.csv", row.names = FALSE)
+
+url7 <- "https://basketball.realgm.com/player/Dwayne-Wade/Teammates/450"
+page <- read_html(url7)
+paths_allowed(url7)
+teammates_table6 <- page |>
+  html_element("table") |>
+  html_table()
+teammates_table6 <- teammates_table6 |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_table6, "DWade_teammates.csv", row.names = FALSE)
+
+url8 <- "https://basketball.realgm.com/player/Chris-Bosh/Teammates/477"
+page <- read_html(url8)
+paths_allowed(url8)
+teammates_table7 <- page |>
+  html_element("table") |>
+  html_table()
+teammates_table7 <- teammates_table7 |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_table7, "Bosh_teammates.csv", row.names = FALSE)
+
+url9 <- "https://basketball.realgm.com/player/Mario-Chalmers/Teammates/803"
+page <- read_html(url9)
+paths_allowed(url9)
+teammates_chalmers <- page |>
+  html_element("table") |>
+  html_table()
+teammates_chalmers <- teammates_chalmers |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_chalmers, "chalmers_teammates.csv", row.names = FALSE)
+
+# Tristan Thompson
+url10 <- "https://basketball.realgm.com/player/Tristan-Thompson/Teammates/7103"
+page <- read_html(url10)
+paths_allowed(url10)
+teammates_thompson <- page |>
+  html_element("table") |>
+  html_table()
+teammates_thompson <- teammates_thompson |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_thompson, "thompson_teammates.csv", row.names = FALSE)
+
+# Kyrie Irving
+url11 <- "https://basketball.realgm.com/player/Kyrie-Irving/Teammates/7118"
+page <- read_html(url1)
+paths_allowed(url1)
+teammates_kyrie <- page |>
+  html_element("table") |>
+  html_table()
+teammates_kyrie <- teammates_kyrie |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_kyrie, "kyrie_teammates.csv", row.names = FALSE)
+
+# Kevin Love
+url12 <- "https://basketball.realgm.com/player/Kevin-Love/Teammates/760"
+page <- read_html(url12)
+paths_allowed(url12)
+teammates_love <- page |>
+  html_element("table") |>
+  html_table()
+teammates_love <- teammates_love |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_love, "love_teammates.csv", row.names = FALSE)
+
+# J.R. Smith
+url13 <- "https://basketball.realgm.com/player/JR-Smith/Teammates/386"
+page <- read_html(url13)
+paths_allowed(url13)
+teammates_jrsmith <- page |>
+  html_element("table") |>
+  html_table()
+teammates_jrsmith <- teammates_jrsmith |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_jrsmith, "jrsmith_teammates.csv", row.names = FALSE)
+
+# Iman Shumpert
+url14 <- "https://basketball.realgm.com/player/Iman-Shumpert/Teammates/2183"
+page <- read_html(url6)
+paths_allowed(url6)
+teammates_shumpert <- page |>
+  html_element("table") |>
+  html_table()
+teammates_shumpert <- teammates_shumpert |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_shumpert, "shumpert_teammates.csv", row.names = FALSE)
+
+# Matthew Dellavedova
+url14 <- "https://basketball.realgm.com/player/Matt-Dellavedova/Teammates/8530"
+page <- read_html(url7)
+paths_allowed(url7)
+teammates_delly <- page |>
+  html_element("table") |>
+  html_table()
+teammates_delly <- teammates_delly |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_delly, "delly_teammates.csv", row.names = FALSE)
+
+# Richard Jefferson
+url14 <- "https://basketball.realgm.com/player/Richard-Jefferson/Teammates/278"
+page <- read_html(url8)
+paths_allowed(url8)
+teammates_jefferson <- page |>
+  html_element("table") |>
+  html_table()
+teammates_jefferson <- teammates_jefferson |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_jefferson, "jefferson_teammates.csv", row.names = FALSE)
+
+# Mo Williams
+url9 <- "https://basketball.realgm.com/player/Mo-Williams/Teammates/241"
+page <- read_html(url9)
+paths_allowed(url9)
+teammates_mo <- page |>
+  html_element("table") |>
+  html_table()
+teammates_mo <- teammates_mo |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_mo, "mo_teammates.csv", row.names = FALSE)
+
+# Kyle Korver
+url10 <- "https://basketball.realgm.com/player/Kyle-Korver/Teammates/478"
+page <- read_html(url10)
+paths_allowed(url10)
+teammates_korver <- page |>
+  html_element("table") |>
+  html_table()
+teammates_korver <- teammates_korver |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_korver, "korver_teammates.csv", row.names = FALSE)
+
+# Anthony Davis
+url11 <- "https://basketball.realgm.com/player/Anthony-Davis/Teammates/13305"
+page <- read_html(url11)
+paths_allowed(url11)
+teammates_ad <- page |>
+  html_element("table") |>
+  html_table()
+teammates_ad <- teammates_ad |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_ad, "ad_teammates.csv", row.names = FALSE)
+
+# Danny Green
+url12 <- "https://basketball.realgm.com/player/Danny-Green/Teammates/1642"
+page <- read_html(url12)
+paths_allowed(url12)
+teammates_green <- page |>
+  html_element("table") |>
+  html_table()
+teammates_green <- teammates_green |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_green, "green_teammates.csv", row.names = FALSE)
+
+# Channing Frye
+url21 <- "https://basketball.realgm.com/player/Channing-Frye/Teammates/84"
+page <- read_html(url13)
+paths_allowed(url13)
+teammates_frye <- page |>
+  html_element("table") |>
+  html_table()
+teammates_frye <- teammates_frye |>
+  select('Player', 'Team(s)', 'GP', 'Win%')
+write.csv(teammates_frye, "frye_teammates.csv", row.names = FALSE)
 
 
 ```

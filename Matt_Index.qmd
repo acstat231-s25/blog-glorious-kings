@@ -18,18 +18,23 @@ Teammates_100 <- Teammates |>
   head(100)
 
 Teammates_50_Network <- Teammates_50 |>
-  as_tbl_graph(directed=TRUE) |>
+  as_tbl_graph(directed=FALSE) |>
   activate(nodes)
 
 Teammates_100_Network <- Teammates_100 |>
-  as_tbl_graph(directed=TRUE) |>
+  as_tbl_graph(directed=FALSE) |>
   activate(nodes)
 
 Teammates_Network <- Teammates |>
-  as_tbl_graph(directed=TRUE) |>
+  as_tbl_graph(directed=FALSE) |>
   activate(nodes)
 
+Teammates_50_Filter <- Teammates_50_Network |> 
+  activate(nodes) |> 
+  filter(total %in% GP) 
 
+Teammates_50_Filter <- Teammates_50_Filter |>
+  mutate(in_degree = strength(Teammates_50_Filter, mode = "in"))
 
 
 ```
