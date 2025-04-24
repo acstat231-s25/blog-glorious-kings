@@ -9,27 +9,47 @@ library(tidygraph)
 library(ggraph)
 library(mdsr)
 
-Teammates <- read.csv("data/lebron_teammates.csv")
-
-Teammates_50 <- Teammates |>
-  head(50)
-
-Teammates_100 <- Teammates |>
-  head(100)
-
-Teammates_50_Network <- Teammates_50 |>
-  as_tbl_graph(directed=TRUE) |>
-  activate(nodes)
-
-Teammates_100_Network <- Teammates_100 |>
-  as_tbl_graph(directed=TRUE) |>
-  activate(nodes)
-
-Teammates_Network <- Teammates |>
-  as_tbl_graph(directed=TRUE) |>
-  activate(nodes)
+```
 
 
+Read in the dataset
+
+```{r}
+Teammates_stats <- read.csv("data/Teammates_Stats.csv")
+
+```
+
+
+Create elbow plot for choosing the number of clusters
+
+```{r}
 
 
 ```
+
+
+perform clustering
+
+```{r}
+
+
+```
+
+
+interpret the results
+
+```{r}
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
