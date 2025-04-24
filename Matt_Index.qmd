@@ -1,0 +1,35 @@
+
+
+```{r}
+library(dplyr)
+library(tidyverse)
+library(knitr)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(mdsr)
+
+Teammates <- read.csv("data/lebron_teammates.csv")
+
+Teammates_50 <- Teammates |>
+  head(50)
+
+Teammates_100 <- Teammates |>
+  head(100)
+
+Teammates_50_Network <- Teammates_50 |>
+  as_tbl_graph(directed=TRUE) |>
+  activate(nodes)
+
+Teammates_100_Network <- Teammates_100 |>
+  as_tbl_graph(directed=TRUE) |>
+  activate(nodes)
+
+Teammates_Network <- Teammates |>
+  as_tbl_graph(directed=TRUE) |>
+  activate(nodes)
+
+
+
+
+```
