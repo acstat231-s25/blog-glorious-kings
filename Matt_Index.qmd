@@ -9,32 +9,59 @@ library(tidygraph)
 library(ggraph)
 library(mdsr)
 
-Teammates <- read.csv("data/lebron_teammates.csv")
+Lebron <- read.csv("data/lebron_teammates.csv") |>
+  mutate(name = "LeBron James")
+Thompson <- read.csv("data/thompson_teammates.csv")
+Jefferson <- read.csv("data/jefferson_teammates.csv")
+Love <- read.csv("data/love_teammates.csv")
+Davis <- read.csv("data/ad_teammates.csv")
+Kyrie <- read.csv("data/kyrie_teammates.csv")
+Green <- read.csv("data/green_teammates.csv")
+Korver <- read.csv("data/korver_teammates.csv")
+JR <- read.csv("data/jrsmith_teammates.csv")
+Frye <- read.csv("data/frye_teammates.csv")
+Anderson <- read.csv("data/Anderson_teammates.csv")
+Delly <- read.csv("data/delly_teammates.csv")
+Dwayne <- read.csv("data/DWade_teammates.csv")
+Sasha <- read.csv("data/Sasha_teammates.csv")
+Zydrunas <- read.csv("data/zydrunas_teammates.csv")
+Shumpert <- read.csv("data/shumpert_teammates.csv")
+Mo <- read.csv("data/mo_teammates.csv")
+Johnson <- read.csv("data/JamesJ_teammates.csv")
+Bosh <- read.csv("data/Bosh_teammates.csv")
+Chalmers <- read.csv("data/chalmers_teammates.csv")
 
-Teammates_50 <- Teammates |>
-  head(50)
+lebron_network <- bind_rows(
+  Lebron, Thompson, Jefferson, Love, Davis, Kyrie, Green, Korver,
+  JR, Frye, Anderson, Delly, Dwayne, Sasha, Zydrunas, Shumpert, Mo,
+  Johnson, Bosh, Chalmers
+)
 
-Teammates_100 <- Teammates |>
-  head(100)
+player_names <- c("LeBron James", "Tristan Thompson", "Richard Jefferson", "Kevin Love",
+                  "Anthony Davis", "Kyrie Irving", "Danny Green", "Kyle Korver",
+                  "JR Smith", "Channing Frye", "Anderson Varejao", "Matthew Dellavedova",
+                  "Dwyane Wade", "Sasha Pavlovic", "Zydrunas Ilgauskas", "Iman Shumpert",
+                  "Mo Williams", "James Jones", "Chris Bosh", "Mario Chalmers")
 
-Teammates_50_Network <- Teammates_50 |>
-  as_tbl_graph(directed=FALSE) |>
-  activate(nodes)
+edges <- lebron_network |>
+  rename(from = name, to = Player, weight = GP) |>
+  filter(from %in% player_names & to %in% player_names)
 
-Teammates_100_Network <- Teammates_100 |>
-  as_tbl_graph(directed=FALSE) |>
-  activate(nodes)
+edges <- edges |>
+  rowwise() |>
+  mutate(player1 = min(from, to),
+         player2 = max(from, to)) |>
+  group_by(player1, player2) |>
+  summarise(weight = sum(weight), .groups = 'drop') |>
+  rename(from = player1, to = player2)
 
-Teammates_Network <- Teammates |>
-  as_tbl_graph(directed=FALSE) |>
-  activate(nodes)
+lebron_plot <- graph_from_data_frame(edges, directed = FALSE)
 
-Teammates_50_Filter <- Teammates_50_Network |> 
-  activate(nodes) |> 
-  filter(total %in% GP) 
-
-Teammates_50_Filter <- Teammates_50_Filter |>
-  mutate(in_degree = strength(Teammates_50_Filter, mode = "in"))
-
+as_tbl_graph(lebron_plot) |>
+  ggraph(layout = 'kk') +
+  geom_edge_link(aes(width = weight), alpha = 0.5) +
+  geom_node_point(size = 6, color = "steelblue") +
+  geom_node_text(aes(label = name), repel = TRUE, size = 4, color = "Red") +
+  theme_void()
 
 ```
