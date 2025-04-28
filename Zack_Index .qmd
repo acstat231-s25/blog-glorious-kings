@@ -1,13 +1,12 @@
 
 
 ```{r}
+library(ggrepel)
+library(broom)
+library(GGally)
+library(tidyr)
 library(dplyr)
-library(tidyverse)
-library(knitr)
-library(igraph)
-library(tidygraph)
-library(ggraph)
-library(mdsr)
+library(readr)
 
 ```
 
@@ -17,29 +16,92 @@ Read in the dataset
 ```{r}
 Teammates_stats <- read.csv("data/Teammates_Stats.csv")
 
+
+
+#standardized stats first
+Stats_stdz <- Teammates_stats |>
+  select(Player, PTS, REB) |>
+   mutate(across(where(is.numeric)
+                , ~ (.x - mean(.x)) / sd(.x)
+                , .names = "{.col}_z"))
 ```
 
 
 Create elbow plot for choosing the number of clusters
 
 ```{r}
+#| fig-height: 4
+#| fig-width: 4.5
+# iterate through clustering algorithm for 10 different values of k
+elbow_plot <- tibble(k = 1:10) |>
+  mutate(
+    # List-column of 10 kmeans objects 
+    # (apply `kmeans()` to each value of `k`)
+    kmeans_results = purrr::map(k, ~kmeans(Stats_stdz, .x, nstart=20)),
+    # List-column of "glanced" model summaries for each kmeans object
+    # (apply `glance()` to each corresponding result after running `kmeans()`)
+    glanced = purrr::map(kmeans_results, glance)) |>
+  # Turn `glanced` list-column into regular tibble columns
+  unnest(cols = c(glanced))
 
-
+# construct elbow plot
+Elbw_plot <- ggplot(elbow_plot, aes(x = k, y = tot.withinss)) +
+  geom_point() + 
+  geom_line() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Number of clusters (k)", 
+       y = "Total within-cluster sum of squares")
+Elbw_plot
 ```
+
+Appears that the center should either be 3 or 4
 
 
 perform clustering
 
 ```{r}
+# set the seed for reproducibility
+set.seed(231)
 
+# perform k-means clustering with k = 3
+Stats_kmeans3 <- Stats_stdz |>
+  select(PTS_z, REB_z) |>
+  kmeans(centers = 3, nstart = 20)
+
+# summarize the kmeans object
+Stats_kmeans3_summary <- tidy(Stats_kmeans3)
+Stats_kmeans3_summary
 
 ```
 
 
-interpret the results
+Visualize the Clustering
 
 ```{r}
 
+
+# augment cluster assignments onto original standardized data
+Stats_stdz_c3 <- augment(Stats_kmeans3, Stats_stdz)
+
+# visualize the cluster assignments and centroids
+ggplot(Stats_stdz_c3, aes(x = PTS_z, y = REB_z)) + 
+  geom_point(aes(color = .cluster, shape = .cluster)) +
+  geom_text_repel(aes(label = Player, color = .cluster), 
+                  size = 3, max.overlaps = 15, show.legend = FALSE) +
+  scale_x_continuous(breaks = scales::breaks_width(0.5)) +
+  scale_y_continuous(breaks = scales::breaks_width(0.5)) +
+  # Add centroid labels to plot
+  geom_label(data = Stats_kmeans3_summary, aes(x = PTS_z, y = REB_z, label = cluster, color = cluster),
+             size = 3,
+             label.r = unit(0.5, "lines"),
+             label.size = 1.5,
+             label.padding = unit(0.5, "lines"),
+             show.legend = FALSE) +
+  labs(x = "Standardized Points per Game (PTS_z)",
+       y = "Standardized Rebounds per Game (REB_z)",
+       color = "Cluster",
+       shape = "Cluster") +
+  theme_classic()
 
 ```
 
