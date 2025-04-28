@@ -20,7 +20,7 @@ Teammates_stats <- read.csv("data/Teammates_Stats.csv")
 
 #standardized stats first
 Stats_stdz <- Teammates_stats |>
-  select(Player, PTS, REB) |>
+  select(Player, PTS, AST) |>
    mutate(across(where(is.numeric)
                 , ~ (.x - mean(.x)) / sd(.x)
                 , .names = "{.col}_z"))
@@ -65,7 +65,7 @@ set.seed(231)
 
 # perform k-means clustering with k = 3
 Stats_kmeans3 <- Stats_stdz |>
-  select(PTS_z, REB_z) |>
+  select(PTS_z, AST_z) |>
   kmeans(centers = 3, nstart = 20)
 
 # summarize the kmeans object
@@ -73,6 +73,9 @@ Stats_kmeans3_summary <- tidy(Stats_kmeans3)
 Stats_kmeans3_summary
 
 ```
+
+CLuster 1 are considered the superstars who have played with LeBron James. Cluster 2 are role players who had above average scoring and assit production. Cluster 3 are bench players who did not have that much impact on the game
+
 
 
 Visualize the Clustering
@@ -84,21 +87,21 @@ Visualize the Clustering
 Stats_stdz_c3 <- augment(Stats_kmeans3, Stats_stdz)
 
 # visualize the cluster assignments and centroids
-ggplot(Stats_stdz_c3, aes(x = PTS_z, y = REB_z)) + 
+ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z)) + 
   geom_point(aes(color = .cluster, shape = .cluster)) +
   geom_text_repel(aes(label = Player, color = .cluster), 
                   size = 3, max.overlaps = 15, show.legend = FALSE) +
   scale_x_continuous(breaks = scales::breaks_width(0.5)) +
   scale_y_continuous(breaks = scales::breaks_width(0.5)) +
   # Add centroid labels to plot
-  geom_label(data = Stats_kmeans3_summary, aes(x = PTS_z, y = REB_z, label = cluster, color = cluster),
+  geom_label(data = Stats_kmeans3_summary, aes(x = PTS_z, y = AST_z, label = cluster, color = cluster),
              size = 3,
              label.r = unit(0.5, "lines"),
              label.size = 1.5,
              label.padding = unit(0.5, "lines"),
              show.legend = FALSE) +
   labs(x = "Standardized Points per Game (PTS_z)",
-       y = "Standardized Rebounds per Game (REB_z)",
+       y = "Standardized Assists per Game (AST_z)",
        color = "Cluster",
        shape = "Cluster") +
   theme_classic()
