@@ -19,8 +19,63 @@ options(scipen = 1, knitr.kable.NA = "")
 library(tidyverse)
 library(knitr)
 library(kableExtra)
+library(dplyr)
+library(tidyverse)
+library(knitr)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(mdsr)
+
 ```
 
+```{r include = FALSE}
+Lebron <- read.csv("data/lebron_teammates.csv") |>
+  mutate(name = "LeBron James")
+Thompson <- read.csv("data/thompson_teammates.csv")
+Jefferson <- read.csv("data/jefferson_teammates.csv")
+Love <- read.csv("data/love_teammates.csv")
+Davis <- read.csv("data/ad_teammates.csv")
+Kyrie <- read.csv("data/kyrie_teammates.csv")
+Green <- read.csv("data/green_teammates.csv")
+Korver <- read.csv("data/korver_teammates.csv")
+JR <- read.csv("data/jrsmith_teammates.csv")
+Frye <- read.csv("data/frye_teammates.csv")
+Anderson <- read.csv("data/Anderson_teammates.csv")
+Delly <- read.csv("data/delly_teammates.csv")
+Dwayne <- read.csv("data/DWade_teammates.csv")
+Sasha <- read.csv("data/Sasha_teammates.csv")
+Zydrunas <- read.csv("data/zydrunas_teammates.csv")
+Shumpert <- read.csv("data/shumpert_teammates.csv")
+Mo <- read.csv("data/mo_teammates.csv")
+Johnson <- read.csv("data/JamesJ_teammates.csv")
+Bosh <- read.csv("data/Bosh_teammates.csv")
+Chalmers <- read.csv("data/chalmers_teammates.csv")
+
+lebron_network <- bind_rows(
+  Lebron, Thompson, Jefferson, Love, Davis, Kyrie, Green, Korver,
+  JR, Frye, Anderson, Delly, Dwayne, Sasha, Zydrunas, Shumpert, Mo,
+  Johnson, Bosh, Chalmers
+)
+
+player_names <- c("LeBron James", "Tristan Thompson", "Richard Jefferson", "Kevin Love",
+                  "Anthony Davis", "Kyrie Irving", "Danny Green", "Kyle Korver",
+                  "JR Smith", "Channing Frye", "Anderson Varejao", "Matthew Dellavedova",
+                  "Dwyane Wade", "Sasha Pavlovic", "Zydrunas Ilgauskas", "Iman Shumpert",
+                  "Mo Williams", "James Jones", "Chris Bosh", "Mario Chalmers")
+
+edges <- lebron_network |>
+  rename(from = name, to = Player, weight = GP) |>
+  filter(from %in% player_names & to %in% player_names)
+
+edges <- edges |>
+  rowwise() |>
+  mutate(player1 = min(from, to),
+         player2 = max(from, to)) |>
+  group_by(player1, player2) |>
+  summarise(weight = sum(weight), .groups = 'drop') |>
+  rename(from = player1, to = player2)
+```
 # Getting started
 
 This is an example of a Quarto website. All the [Quarto markdown features](https://quarto.org/docs/authoring/markdown-basics.html) we learned for formatting text, adding headings and subheadings, adding code and output, adding labels and captions and whatnot work as usual. 
