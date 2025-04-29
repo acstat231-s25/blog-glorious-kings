@@ -96,5 +96,12 @@
     "title": "Website title",
     "section": "A note",
     "text": "A note\nNotice that you can also modify the YAML headings at the top of each page as I did in the first subpage or completely delete them, as I did here."
+  },
+  {
+    "objectID": "Matt_Index.html",
+    "href": "Matt_Index.html",
+    "title": "Website title",
+    "section": "",
+    "text": "Attaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ readr     2.1.5\n✔ ggplot2   3.5.1     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.2     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'igraph'\n\n\nThe following objects are masked from 'package:lubridate':\n\n    %--%, union\n\n\nThe following objects are masked from 'package:purrr':\n\n    compose, simplify\n\n\nThe following object is masked from 'package:tidyr':\n\n    crossing\n\n\nThe following object is masked from 'package:tibble':\n\n    as_data_frame\n\n\nThe following objects are masked from 'package:dplyr':\n\n    as_data_frame, groups, union\n\n\nThe following objects are masked from 'package:stats':\n\n    decompose, spectrum\n\n\nThe following object is masked from 'package:base':\n\n    union\n\n\n\nAttaching package: 'tidygraph'\n\n\nThe following object is masked from 'package:igraph':\n\n    groups\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nWarning: The `trans` argument of `continuous_scale()` is deprecated as of ggplot2 3.5.0.\nℹ Please use the `transform` argument instead."
   }
 ]
