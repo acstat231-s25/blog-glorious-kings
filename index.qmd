@@ -93,60 +93,6 @@ lebron_plot <- graph_from_data_frame(edges, directed = FALSE)
 
 # Citations, cross-referencing, and linking between pages
 
-## Cross-referencing
-
-You should use code chunk labels and in-text [cross-references for figures and tables](https://quarto.org/docs/authoring/cross-references.html#computations) (see the *Knitr* examples at the link). 
-
-Quarto additionally provides similar syntax for [creating labels for and cross-referencing equations](https://quarto.org/docs/authoring/cross-references.html#equations), [creating labels for and cross-referencing sections](https://quarto.org/docs/authoring/cross-references.html#sections), and using code chunk options of the form `lst-label: lst-your-listing-label` and `lst-cap: Code chunk caption` to be able to cross-reference displayed code chunks (or "listings") using the syntax `@lst-your-listing-label` within the text. 
-
-These are not required for this project but are good practice.
-
-
-## Creating and linking to subpages
-
-You can create subpages by simply creating new qmd files. Any subpage you want to include on the website should be added to the website navigation list in the `_quarto.yml` file. 
-
-You can [link to another page on the website](another-page.qmd) by using just the filepath to the corresponding qmd file. You can also [link directly to a section of a subpage](yet-another-page.qmd#sec-note). 
-
-
-## Creating the bibliography
-
-One of the new challenges of Quarto, relative to a Word or Google doc, is learning how to build a bibliography and use the specified citation keys to write in-text citations.
-
-All items you plan to cite should be added to the `library.bib` bibliography file, which *you can open from within RStudio and edit just like any other text file*. You should use standard bibtex syntax for each entry, following the examples provided. If the resource you are using doesn't already provide a way to generate a bibtex entry, I recommend using [zoterobib](https://zbib.org) to generate the appropriate syntax (must change the Bibliography style to "BibTeX generic citation style"). The entries currently in `library.bib` are intended to provide syntax examples that capture the range of entries you are most likely to use. **You will need to delete and replace the contents of `library.bib` with your own citation entries.**
-
-::: {.callout-note}
-The examples in `library.bib` are nicely formatted so you can read and follow the patterns, but formatting and order of the `library.bib` file doesn't actually matter and will not be assessed. Just be sure the citations are as complete as possible (authors, titles, dates, urls, dois, etc.).
-:::
-
-```markdown
-@book{hadley2016,
-  author = {Hadley, Wickham}, 
-  title = {ggplot2: Elegant Graphics for Data Analysis}, 
-  url  = {https://ggplot2-book.org},
-  publisher = {Springer},
-  address = {New York, NY},
-  type = {Online book},
-  year = {2016},
-  edition = {3}
-}
-```
-
-
-## Creating in-text citations
-
-Items you cite in the text will be automatically added to a list of References at the bottom of the corresponding page. To cite a reference in the text, use the corresponding *citation key* (the first item in each bibtex entry---it shouldn't have any spaces or special characters) and format the citation using the appropriate [quarto format for in-text citations](https://quarto.org/docs/authoring/citations.html#sec-citations). This is similar to how we cross-reference tables and figures from code chunk labels. For example, the syntax 
-
-```
-@hadley2016 provides excellent examples of customizing our visualizations using **ggplot2**.
-``` 
-
-produces the following text:
-
-> @hadley2016 provides excellent examples of customizing our visualizations using **ggplot2**.
-
-And the corresponding reference is listed in full at the bottom of this page. 
-
 
 # Quarto website features
 
@@ -205,7 +151,7 @@ Use the following format to have more control over the [panel layout](https://qu
 The syntax "[ [1], [1,1] ]" indicates that we have three pieces of content that we want to spread across two rows. The first piece of content will be in its own row, and then the next two components will be split across two columns of equal width in a second row. 
 
 
-::: {layout="[ [1], [1,1] ]"}
+::: {layout="[ [1] ]"}
 
 ### Row 1 with only one output
 
@@ -223,17 +169,6 @@ ggraph(layout = "linear", circular = TRUE) +
   theme_void()
 
 ```
-
-
-### First column of row 2
-
-Some other content
-
-### Second column of row 2
-
-Some additional content.
-
-:::
 
 The values provided within each row specify the relative widths of the content within that row. For example "[1,2,1]" would create a row with 3 columns where the first and third columns are the same width and the middle column is twice as wide.
 
