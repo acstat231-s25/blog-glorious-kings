@@ -7,6 +7,8 @@ library(GGally)
 library(tidyr)
 library(dplyr)
 library(readr)
+library(knitr)
+library(kableExtra)
 
 ```
 
@@ -86,6 +88,10 @@ Visualize the Clustering
 #augment cluster assignments onto original standardized data
 Stats_stdz_c3 <- augment(Stats_kmeans3, Stats_stdz)
 
+
+Label_df <- Stats_stdz_c3 |>
+  filter(Player %in% c("Anthony Davis", "Dwayne Wade"))
+
 #visualize the cluster assignments and centroids
 ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z)) + 
   geom_point(aes(color = .cluster, shape = .cluster)) +
@@ -105,6 +111,35 @@ ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z)) +
   theme_classic()
 
 ```
+
+now creating a table with select players
+
+```{r}
+
+select_players <- c("Anthony Davis", "Dwyane Wade", "Mo Williams", "Channing Frye", "Richard Jefferson")
+
+player_clusters <- Stats_stdz_c3 |>
+ filter(Player %in%c("LeBron James", "Tristan Thompson", "Richard Jefferson", "Kevin Love",
+                  "Anthony Davis", "Kyrie Irving", "Danny Green", "Kyle Korver",
+                  "JR Smith", "Channing Frye", "Anderson Varejao", "Matthew Dellavedova",
+                  "Dwyane Wade", "Sasha Pavlovic", "Zydrunas Ilgauskas", "Iman Shumpert",
+                  "Mo Williams", "James Jones", "Chris Bosh", "Mario Chalmers")) |>
+  select("Player Name" = Player,
+         "Cluster Assignment" = .cluster,
+         "Standardized Points (PTS_z)" = PTS_z,
+         "Standardized Assists (AST_z)" = AST_z) |>
+  kable(booktabs = TRUE, digits = 2, caption = "Cluster Assignments and Standardized Stats", align = "c") |>
+  kable_styling("striped", position = "center")
+
+player_clusters
+
+```
+
+
+
+
+
+
 
 
 TRY CLUSTERING WITH TOTAL GAMES PLAYED AND POINTS
