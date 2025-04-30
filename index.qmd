@@ -5,7 +5,7 @@ author:
 - "Paul Grajzl"
 - "Zack Jesse"
 - "Matt Tabet"
-abstract: "A brief abstract summarizing your project is required here. This abstract, along with the first image or figure in your blog, will be used as a preview to your blog on the course's landing page for all the blogs."
+abstract: "LeBron's legacy is large on the statsheet, but extends much further than just putting the ball in the basket. Through his greatness, he has broken records, cultivated lifelong friendships through teammates, and made those around him into better players. His over 20 year career has changed fundamentally changed the game of basketball, which is displayed through the evolution of his playstyle."
 ---
 
 
