@@ -29,6 +29,7 @@ library(ggraph)
 library(mdsr)
 
 ```
+
 ```{r}
 
 #| fig-cap: "Image courtesy of shoepalace.com"
@@ -89,50 +90,6 @@ edges <- edges |>
 lebron_plot <- graph_from_data_frame(edges, directed = FALSE)
 
 ```
-# Getting started
-
-This is an example of a Quarto website. All the [Quarto markdown features](https://quarto.org/docs/authoring/markdown-basics.html) we learned for formatting text, adding headings and subheadings, adding code and output, adding labels and captions and whatnot work as usual. 
-
-
-## Website project structure
-
-
-The website project folder/repo will contain the following files, at a minimum:
-
-* `_quarto.yml`: A configuration file that controls the YAML content, similar to what we typically see at the top of our qmd files. 
-
-  Use this file to add or remove additional subpages, change the overall website title, customize the [navigation bar contents and layout](https://quarto.org/docs/websites/website-navigation.html), change the [website theme](https://quarto.org/docs/output-formats/html-themes.html), and set any other default formatting options such as code chunk options.
-
-* `index.qmd`: This is the landing page of your website. This file must be called *index.qmd* and must be located in the root directory of the project.
-
-  Use this page, at a minimum, to introduce your project. From there you can either fully include the contents of the project or use additional qmd files to create subpages of your website (perhaps explaining the structure of the website to the user on this landing page).
-
-* `bib` folder: Contains the bibliography file, which you should edit to include your resources, and a *.csl* file that tells Quarto how to format in-text citations and the bibliography list according to the American Statistical Association citation style. 
-
-* `docs` folder: The rendered content of the website will be located here.
-
-* `styles.css`: This file is currently empty, but if you want to modify or replace the default theme, do so here using CSS. Students in the past have used custom color palettes or custom fonts, for example.
-
-* Additional qmd files: If you want to add subpages with their own content, create new qmd files in your root directory to do so, being sure to include them in the list of contents in your `_quarto.yml` file. 
-
-### Other recommended content:
-
-Similar to the Shiny project, you will need to organize your wrangling scripts and data. You may also have other images or figures saved for displaying in your blog that will also need to be organized. Here are recommendations for organization.
-
-* `scripts`: Store wrangling scripts in their own folder
-
-* `data`: Store datasets in their own folder, being sure to separate raw data from clean/processed data. You can do this in one of two ways: two separate data folders in the root directory (e.g., `raw-data` and `data`) or two subfolders of a single `data` folder (subfolders called, for example, `raw`, `processed`).
-
-* `images`: Organize saved images or figures together in their own folder. Make sure you keep track of the source of the images or figures and credit the sources in some way in your page (include source in caption and/or link image to source)
-
-## Workflow
-
-1. Edit contents of any files. Each new qmd file is a self-contained environment, so you will need to load any necessary packages and datasets for rendering that particular file at the top of that file.
-
-2. After updating a qmd file, **Render** the qmd file. Note that the rendered files (.html etc) are in the `docs` folder. Keep them there!
-
-3. Commit changes to website and PUSH to publish those changes. 
-
 
 # Citations, cross-referencing, and linking between pages
 
