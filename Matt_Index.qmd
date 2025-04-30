@@ -9,8 +9,6 @@ library(tidygraph)
 library(ggraph)
 library(mdsr)
 
-set.seed(231)
-
 Lebron <- read.csv("data/lebron_teammates.csv") |>
   mutate(name = "LeBron James")
 Thompson <- read.csv("data/thompson_teammates.csv")
@@ -57,6 +55,7 @@ edges <- edges |>
   summarise(weight = sum(weight), .groups = 'drop') |>
   rename(from = player1, to = player2)
 
+lebron_plot <- graph_from_data_frame(edges, directed = FALSE)
 
 as_tbl_graph(lebron_plot) |>
 ggraph(layout = "linear", circular = TRUE) +
@@ -65,5 +64,6 @@ ggraph(layout = "linear", circular = TRUE) +
   geom_node_text(aes(label = name), repel = TRUE, size = 8, color = "black") +
   theme_void() +
   theme(legend.position = "bottom")
+
 
 ```
