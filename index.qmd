@@ -91,6 +91,50 @@ lebron_plot <- graph_from_data_frame(edges, directed = FALSE)
 
 ```
 
+
+Read in the dataset
+
+```{r}
+Teammates_stats <- read.csv("data/Teammates_Stats.csv")
+
+
+```
+
+
+```{r}
+
+#Need to assign players to one primary team
+teammates_clean <- Teammates_stats |>
+  mutate(Team = case_when(
+    str_detect(Team.s., "Cavs") ~ "Cavs",
+    str_detect(Team.s., "Heat") ~ "Heat",
+    str_detect(Team.s., "Lakers") ~ "Lakers",
+    TRUE ~ Team.s.
+  ))
+
+#Standardize PTS and ASTs across the whole dataset
+Stats_stdz <- teammates_clean |>
+  select(Player, Team, PTS, AST) |>
+  mutate(across(c(PTS, AST), 
+                ~ (.x - mean(.x)) / sd(.x),
+                .names = "{.col}_z")) |>
+  select(Player, Team, ends_with("_z"))
+```
+
+
+```{r}
+#Perform k-means clustering with k = 3
+set.seed(123)
+Stats_kmeans3 <- Stats_stdz |> 
+  select(PTS_z, AST_z) |>
+  kmeans(centers = 3, nstart = 20)
+
+Stats_stdz_c3 <- Stats_stdz |>
+  mutate(cluster = as.factor(Stats_kmeans3$cluster))
+
+Stats_kmeans3_summary <- tidy(Stats_kmeans3)
+Stats_kmeans3_summary
+```
 # Citations, cross-referencing, and linking between pages
 
 
@@ -144,7 +188,21 @@ include_graphics("https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/g
 
 ::: {layout="[ [1] ]"}
 
-![Global clustering of LeBron’s teammates](Images/lebron_clusters.png){width=70%}
+```{r}
+#| echo: FALSE 
+#| fig.width: 10
+#| fig.height: 10
+#| warning: FALSE
+
+ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z, color = cluster)) +
+  geom_point(size = 3) +
+  facet_wrap(~ Team) +
+  labs(title = "Clustering of LeBron’s Teammates Based on Teams He Played For",
+       x = "Standardized Points per Game (PTS_z)",
+       y = "Standardized Assists per Game (AST_z)",
+       color = "Cluster") +
+  theme_minimal()
+```
 
 
 
