@@ -144,6 +144,12 @@ include_graphics("https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/g
 
 ::: {layout="[ [1] ]"}
 
+![Global clustering of LeBron’s teammates](Images/lebron_clusters.png){width=70%}
+
+
+
+::: {layout="[ [1] ]"}
+
 
 ```{r} 
 #| echo: FALSE 
