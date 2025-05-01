@@ -97,14 +97,6 @@ lebron_plot <- graph_from_data_frame(edges, directed = FALSE)
 # Quarto website features
 
 
-```{r}
-#| fig-cap: "Image courtesy of businessinsider.com"
-#| fig-align: center
-#| out-width: 100%
-#| fig-link: "https://www.palmbeachpost.com/story/sports/2017/08/17/how-do-heat-fans-feel/7460287007/"
-
-include_graphics("https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/ghows-LK-f7d46477-c106-4e06-9871-c87a2237a617-1b058829.jpeg?width=660&height=372&fit=crop&format=pjpg&auto=webp")
-```
 
 Either approach will take either a filepath to a stored file or a URL to an image or gif. Width can be specified as a percentage of the width of the page (0% to 100%; my preferred approach) or as a fixed number of units (e.g. 400px, 3in, 10cm). 
 
@@ -133,12 +125,25 @@ Some information in a different tab
 
 :::
 
-## Panel layouts for content
+#LeBron and His Teammates
 
+Now that we have established Lebron's legacy through his own statistics as well as the successes of his teammates, let's take a deep dive into his connections with teammates. In addition, we can observe the changes in the game of basketball and the evolution of his career through the years that he played on each respective team. 
+
+
+```{r}
+#| fig-cap: "Image courtesy of palmbeachpost.com"
+#| fig-align: center
+#| out-width: 100%
+#| fig-link: "https://www.palmbeachpost.com/story/sports/2017/08/17/how-do-heat-fans-feel/7460287007/"
+
+include_graphics("https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/ghows-LK-f7d46477-c106-4e06-9871-c87a2237a617-1b058829.jpeg?width=660&height=372&fit=crop&format=pjpg&auto=webp")
+```
+
+
+##The Network
 
 ::: {layout="[ [1] ]"}
 
-### Row 1 with only one output
 
 ```{r} 
 #| echo: FALSE 
@@ -155,8 +160,42 @@ ggraph(layout = "linear", circular = TRUE) +
 
 ```
 
-The values provided within each row specify the relative widths of the content within that row. For example "[1,2,1]" would create a row with 3 columns where the first and third columns are the same width and the middle column is twice as wide.
+The network is weighted based on the total amount of games played with other players. These are 18 players who have played over 100 games with LeBron. As we can see, many of the other nodes (players) have a significant amount of edges connected to them as well. We can see how LeBron cultivated a strong culture in many different areas, especially early in his career. 
 
+Here is a list of teams he has played for and the years he was there, as well as the players in the network who played on these teams. 
+
+Cleveland Cavaliers (2003-2010):
+- Zydrunas Ilgauskas
+- James Jones
+- Anderson Varejao
+- Sasha Pavlovic
+- Danny Green 
+Miami Heat (2010-2014):
+- Zydrunas Ilgauskas
+- James Jones
+- Dwayne Wade
+- Mario Chalmers
+- Chris Bosh
+
+Cleveland Cavaliers (2014-2018):
+- Anderson Varejao
+- Dwayne Wade
+- Tristan Thompson
+- Kevin Love
+- Mo Williams
+- Kyle Korver
+- Kyrie Irving 
+- Channing Frye
+- Iman Shumpert
+- Richard Jefferson
+- Matthew Dellavadova
+
+LA Lakers (2018-2025):
+- Tristan Thompson 
+- Anthony Davis
+- Danny Green
+
+As we can see, there is a large overlap between teams. LeBron sticks with his teammates and builds friendships with them over multiple seasons, resulting in success for both him and others. In addition, we can see how much his game has evolved as he has the most seasons played in LA but a lot less players who have played with him for over a season. It seems as if both his strategy for success is changing, alongside the leagues general strategy for team building and winning has evolved, largely due to how much success he had in his runs with both the Heat and the Cavaliers. 
 
 ## Layouts for tables and visualizations produced by code chunks
 

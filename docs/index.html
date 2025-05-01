@@ -129,7 +129,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#quarto-website-features" id="toc-quarto-website-features" class="nav-link" data-scroll-target="#quarto-website-features">Quarto website features</a>
   <ul class="collapse">
   <li><a href="#panel-tabsets" id="toc-panel-tabsets" class="nav-link" data-scroll-target="#panel-tabsets">Panel tabsets</a></li>
-  <li><a href="#panel-layouts-for-content" id="toc-panel-layouts-for-content" class="nav-link" data-scroll-target="#panel-layouts-for-content">Panel layouts for content</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -191,20 +190,6 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="quarto-website-features" class="level1">
 <h1>Quarto website features</h1>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.palmbeachpost.com/story/sports/2017/08/17/how-do-heat-fans-feel/7460287007/"><img src="https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/ghows-LK-f7d46477-c106-4e06-9871-c87a2237a617-1b058829.jpeg?width=660&amp;height=372&amp;fit=crop&amp;format=pjpg&amp;auto=webp" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Image courtesy of businessinsider.com"></a></p>
-</figure>
-</div>
-<figcaption>Image courtesy of businessinsider.com</figcaption>
-</figure>
-</div>
-</div>
-</div>
 <p>Either approach will take either a filepath to a stored file or a URL to an image or gif. Width can be specified as a percentage of the width of the page (0% to 100%; my preferred approach) or as a fixed number of units (e.g.&nbsp;400px, 3in, 10cm).</p>
 <p>I can’t imagine a scenario where students should or would include videos within their blog, but Quarto provides <a href="https://quarto.org/docs/authoring/videos.html">guidance on embedding videos</a>, as well.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -234,12 +219,24 @@ Note
 </div>
 </div>
 </div>
-</section>
-<section id="panel-layouts-for-content" class="level2">
-<h2 class="anchored" data-anchor-id="panel-layouts-for-content">Panel layouts for content</h2>
+<p>#LeBron and His Teammates</p>
+<p>Now that we have established Lebron’s legacy through his own statistics as well as the successes of his teammates, let’s take a deep dive into his connections with teammates. In addition, we can observe the changes in the game of basketball and the evolution of his career through the years that he played on each respective team.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.palmbeachpost.com/story/sports/2017/08/17/how-do-heat-fans-feel/7460287007/"><img src="https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/ghows-LK-f7d46477-c106-4e06-9871-c87a2237a617-1b058829.jpeg?width=660&amp;height=372&amp;fit=crop&amp;format=pjpg&amp;auto=webp" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Image courtesy of palmbeachpost.com"></a></p>
+</figure>
+</div>
+<figcaption>Image courtesy of palmbeachpost.com</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>##The Network</p>
 <div data-layout="[ [1] ]">
-<section id="row-1-with-only-one-output" class="level3">
-<h3 class="anchored" data-anchor-id="row-1-with-only-one-output">Row 1 with only one output</h3>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -249,8 +246,12 @@ Note
 </div>
 </div>
 </div>
-<p>The values provided within each row specify the relative widths of the content within that row. For example “[1,2,1]” would create a row with 3 columns where the first and third columns are the same width and the middle column is twice as wide.</p>
-</section>
+<p>The network is weighted based on the total amount of games played with other players. These are 18 players who have played over 100 games with LeBron. As we can see, many of the other nodes (players) have a significant amount of edges connected to them as well. We can see how LeBron cultivated a strong culture in many different areas, especially early in his career.</p>
+<p>Here is a list of teams he has played for and the years he was there, as well as the players in the network who played on these teams.</p>
+<p>Cleveland Cavaliers (2003-2010): - Zydrunas Ilgauskas - James Jones - Anderson Varejao - Sasha Pavlovic - Danny Green Miami Heat (2010-2014): - Zydrunas Ilgauskas - James Jones - Dwayne Wade - Mario Chalmers - Chris Bosh</p>
+<p>Cleveland Cavaliers (2014-2018): - Anderson Varejao - Dwayne Wade - Tristan Thompson - Kevin Love - Mo Williams - Kyle Korver - Kyrie Irving - Channing Frye - Iman Shumpert - Richard Jefferson - Matthew Dellavadova</p>
+<p>LA Lakers (2018-2025): - Tristan Thompson - Anthony Davis - Danny Green</p>
+<p>As we can see, there is a large overlap between teams. LeBron sticks with his teammates and builds friendships with them over multiple seasons, resulting in success for both him and others. In addition, we can see how much his game has evolved as he has the most seasons played in LA but a lot less players who have played with him for over a season. It seems as if both his strategy for success is changing, alongside the leagues general strategy for team building and winning has evolved, largely due to how much success he had in his runs with both the Heat and the Cavaliers.</p>
 <section id="layouts-for-tables-and-visualizations-produced-by-code-chunks" class="level2">
 <h2 class="anchored" data-anchor-id="layouts-for-tables-and-visualizations-produced-by-code-chunks">Layouts for tables and visualizations produced by code chunks</h2>
 <p>For details on how to layout subfigures from multiple graphs produced by the same code chunk, see the examples in the <strong>Knitr</strong> tabs of the sections on <a href="https://quarto.org/docs/authoring/figures.html#layout">figure layouts, subcaptions, and custom layouts</a>.</p>
