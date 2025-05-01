@@ -136,20 +136,92 @@ Stats_stdz_c3 <- Stats_stdz |>
 Stats_kmeans3_summary <- tidy(Stats_kmeans3)
 Stats_kmeans3_summary
 ```
-# Citations, cross-referencing, and linking between pages
 
 
-# Quarto website features
+```{r court-setup, include=FALSE}
+library(tidyverse)
 
+# Utility to create circle or arc points
+circle_points <- function(center = c(0, 0), radius = 1, npoints = 100) {
+  theta <- seq(0, 2*pi, length.out = npoints)
+  data.frame(x = center[1] + radius * cos(theta),
+             y = center[2] + radius * sin(theta))
+}
 
+arc_points <- function(center = c(0, 0), radius = 1, start = 0, end = pi, npoints = 100) {
+  theta <- seq(start, end, length.out = npoints)
+  data.frame(x = center[1] + radius * cos(theta),
+             y = center[2] + radius * sin(theta))
+}
 
-Either approach will take either a filepath to a stored file or a URL to an image or gif. Width can be specified as a percentage of the width of the page (0% to 100%; my preferred approach) or as a fixed number of units (e.g. 400px, 3in, 10cm). 
+# Draw half court with ggplot layers
+draw_half_court <- function(court_color = "#8B0000", court_thickness = 0.7) {
+  list(
+    geom_rect(aes(xmin = -250, xmax = 250, ymin = -47.5, ymax = 422.5), fill = NA, color = court_color, linewidth = court_thickness),
+    geom_rect(aes(xmin = -80, xmax = 80, ymin = -47.5, ymax = 142.5), fill = NA, color = court_color, linewidth = court_thickness),
+    geom_path(data = arc_points(c(0, 142.5), 60, 0, pi), aes(x, y), color = court_color, linewidth = court_thickness),
+    geom_path(data = arc_points(c(0, 142.5), 60, pi, 2*pi), aes(x, y), color = court_color, linewidth = court_thickness, linetype = "longdash"),
+    geom_path(data = circle_points(c(0, 0), 7.5), aes(x, y), color = "white", linewidth = court_thickness),
+    annotate("segment", x = -30, xend = 30, y = -7.5, yend = -7.5, color = "white", linewidth = court_thickness),
+    geom_path(data = arc_points(c(0, 0), 40, 0, pi), aes(x, y), color = court_color, linewidth = court_thickness),
+    annotate("segment", x = -220, xend = -220, y = -47.5, yend = 89.5, color = court_color, linewidth = court_thickness),
+    annotate("segment", x = 220, xend = 220, y = -47.5, yend = 89.5, color = court_color, linewidth = court_thickness),
+    geom_path(data = arc_points(c(0, 0), 237.5, acos(220 / 237.5), pi - acos(220 / 237.5)), aes(x, y), color = court_color, linewidth = court_thickness)
+  )
+}
+```
 
-I can't imagine a scenario where students should or would include videos within their blog, but Quarto provides [guidance on embedding videos](https://quarto.org/docs/authoring/videos.html), as well.
+## LeBron James Shot Charts
 
-::: {.callout-note}
-The first figure of your blog will be used as the display image on our course's landing page!
+::: {.panel-tabset}
+
+### Rookie Season (2004)
+
+```{r shotchart-2004, echo=FALSE, message=FALSE, warning=FALSE}
+shots_2004 <- read_csv("data/shot-chart-data/LeBron_James/2003-04.csv")
+
+ggplot(shots_2004, aes(x = LOC_X, y = LOC_Y)) +
+  geom_point(color = "blue", alpha = 0.6) +
+  coord_fixed() +
+  draw_half_court() +
+  labs(
+    title = "Shot Chart: LeBron James – Rookie Season (2004)",
+    x = "x", y = "y"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "lightgray"),
+    panel.grid.major = element_line(color = "#cccccc"),
+    panel.grid.minor = element_line(color = "#dddddd")
+  ) +
+  xlim(-250, 250) + ylim(-50, 470)
+```
+
+### Most Recent Season (2025)
+
+```{r shotchart-2025, echo=FALSE, message=FALSE, warning=FALSE}
+shots_2025 <- read_csv("data/shot-chart-data/LeBron_James/2023-24.csv")
+
+ggplot(shots_2025, aes(x = LOC_X, y = LOC_Y)) +
+  geom_point(color = "blue", alpha = 0.6) +
+  coord_fixed() +
+  draw_half_court() +
+  labs(
+    title = "Shot Chart: LeBron James – Most Recent Season (2025)",
+    x = "x", y = "y"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "lightgray"),
+    panel.grid.major = element_line(color = "#cccccc"),
+    panel.grid.minor = element_line(color = "#dddddd")
+  ) +
+  xlim(-250, 250) + ylim(-50, 470)
+```
+
 :::
+
+
 
 ```{r}
 library(tidyverse)
@@ -221,13 +293,13 @@ plot_lebron_map <- function(start_year, end_year, home_state) {
 ```
 
 
-## Panel tabsets
+## Spatial Analysis - LeBron's Scoring by Era
 
 Use the following format to add information or tables or visualizations in [tabset panels](https://quarto.org/docs/interactive/layout.html#tabset-panel).
 
 ::: {.panel-tabset}
 
-### Tab 1
+### First Cleveland Era
 
 Some information in one tab 
 
@@ -237,7 +309,7 @@ plot_lebron_map(2004, 2010, "Ohio")
 
 
 
-### Tab 2
+### Miami Era
 
 Some information in a different tab
 
@@ -246,20 +318,20 @@ plot_lebron_map(2011, 2014, "Florida")
 ```
 
 
-### Tab 3
+### Second Cleveland Era
 
 ```{r}
 plot_lebron_map(2015, 2018, "Ohio")
 ```
 
-### Tab 4
+### Lakers Era
 
 ```{r}
 plot_lebron_map(2019, 2025, "California")
 ```
 :::
 
-#LeBron and His Teammates
+###LeBron and His Teammates
 
 Now that we have established Lebron's legacy through his own statistics as well as the successes of his teammates, let's take a deep dive into his connections with teammates. In addition, we can observe the changes in the game of basketball and the evolution of his career through the years that he played on each respective team. 
 
@@ -351,49 +423,4 @@ LA Lakers (2018-2025):
 - Danny Green
 
 As we can see, there is a large overlap between teams. LeBron sticks with his teammates and builds friendships with them over multiple seasons, resulting in success for both him and others. In addition, we can see how much his game has evolved as he has the most seasons played in LA but a lot less players who have played with him for over a season. It seems as if both his strategy for success is changing, alongside the leagues general strategy for team building and winning has evolved, largely due to how much success he had in his runs with both the Heat and the Cavaliers. 
-
-## Layouts for tables and visualizations produced by code chunks
-
-For details on how to layout subfigures from multiple graphs produced by the same code chunk, see the examples in the **Knitr** tabs of the sections on [figure layouts, subcaptions, and custom layouts](https://quarto.org/docs/authoring/figures.html#layout).
-
-The same syntax shown across the linked examples can be used to create subtables by replacing `fig-cap` and `fig-subcap` with `tbl-cap` and `tbl-subcap`. 
-
-Two examples in @tbl-layout and @fig-layout below are borrowed and slightly modified from the linked sections. 
-
-```{r}
-#| label: tbl-layout
-#| tbl-cap: "Two tables side-by-side"
-#| tbl-subcap: 
-#|   - "First three rows of cars dataset"
-#|   - "First three rows of pressure dataset"
-#| layout-ncol: 2
-
-cars |> 
-  slice(1:3) |> 
-  kable()
-
-pressure |> 
-  slice(1:3) |> 
-  kable()
-```
-
-
-```{r}
-#| label: fig-layout
-#| fig-cap: "Three figures in a complex layout"
-#| fig-subcap: 
-#|   - "cars"
-#|   - "pressure"
-#|   - "mtcars"
-#| layout: [[4, -1, 4], [1]] 
-
-ggplot(cars, aes(speed, dist)) +
-  geom_point()
-
-ggplot(pressure, aes(temperature, pressure)) +
-  geom_point()
-
-ggplot(mtcars, aes(hp, mpg)) +
-  geom_point()
-```
 
