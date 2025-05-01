@@ -16,286 +16,273 @@ library(tidyverse)
 
 # Scraping check (only done once)
 paths_allowed("https://www.basketball-reference.com/leagues/NBA_2024_totals.html")
+paths_allowed("https://basketball.realgm.com/player/LeBron-James/GameLogs/250")
 
 ### INITIAL DATA SCRAPING ###
 
-# Define the range of years
-start_year <- 2024
-end_year <- 2015
+# Define the range of years (all years that LeBron James has played)
+start_year <- 2025
+end_year <- 2003
 
-# Loop over the years and store each table with a unique name
-for (year in start_year:end_year) {
-  # Construct the season name (e.g., "23_24" for 2024)
-  season_start <- year - 1
-  season_end <- substr(year, 3, 4)
-  season_label <- paste0(season_start %% 100, "_", season_end)
+### LeBron Game Logs ###
+
+# Define destination folder
+dest_folder <- "data/game-logs/"
+
+# Make sure the folder exists
+if (!dir.exists(dest_folder)) {
+  dir.create(dest_folder, recursive = TRUE)
+}
+
+# Function to scrape and save one season
+scrape_and_save_season <- function(season_end_year) {
+  # Create the URL
+  url <- paste0(
+    "https://basketball.realgm.com/player/LeBron-James/GameLogs/250/NBA/",
+    season_end_year,
+    "/Reg"
+  )
   
-  # Build the URL for each season
-  url <- paste0("https://www.basketball-reference.com/leagues/NBA_", year, "_totals.html")
+  # Try reading the page (some seasons might be missing if he didn't play, but in LeBron's case all should exist)
+  page <- tryCatch(read_html(url), error = function(e) NULL)
+  
+  if (!is.null(page)) {
+    # Find the table
+    table_node <- html_node(page, "table")
+    
+    # Only proceed if table exists
+    if (!is.na(table_node)) {
+      game_log <- html_table(table_node, fill = TRUE)
+      
+      # Save CSV with season_end_year in the filename
+      file_name <- paste0(dest_folder, "LeBron_GameLog_", season_end_year, ".csv")
+      write_csv(game_log, file_name)
+      
+      cat("Saved season:", season_end_year, "\n")
+    } else {
+      cat("No table found for season:", season_end_year, "\n")
+    }
+  } else {
+    cat("Failed to load page for season:", season_end_year, "\n")
+  }
+}
+
+# Loop from 2025 back to 2004
+for (year in 2025:2004) {
+  scrape_and_save_season(year)
+}
+
+### Team Game Logs ###
+
+# Note, recall that LeBron played for Cavs 2003-2010, Heat 2010-2014, Cavs 2014-2018, Lakers 2018-2025, so we scrape each team like that
+
+# Destination folder
+dest_folder <- "data/team-game-logs/"
+
+# Create folder if doesn't exist
+if (!dir.exists(dest_folder)) {
+  dir.create(dest_folder, recursive = TRUE)
+}
+
+# Define a vector for all season end years: 2004 to 2025
+seasons <- 2004:2025
+
+# Define function to get team abbreviation for each year
+get_team <- function(year) {
+  if (year >= 2004 && year <= 2010) {
+    return("CLE")  # Cavaliers first stint
+  } else if (year >= 2011 && year <= 2014) {
+    return("MIA")  # Heat
+  } else if (year >= 2015 && year <= 2018) {
+    return("CLE")  # Cavaliers second stint
+  } else if (year >= 2019 && year <= 2025) {
+    return("LAL")  # Lakers
+  } else {
+    stop("Year out of LeBron's career range")
+  }
+}
+
+# Loop over seasons
+for (year in seasons) {
+  
+  # Get the correct team for this year
+  team_abbr <- get_team(year)
+  
+  # Build the URL
+  url <- paste0("https://www.basketball-reference.com/teams/", team_abbr, "/", year, "/gamelog/")
   
   # Scrape the tables
   tables <- url |>
     read_html() |>
     html_elements("table")
   
-  # Extract the first table (player totals) and assign to a named variable, just so happened to be the first table in the list this time around
-  assign(
-    paste0("Player_stats", season_label),
-    tables |>
-      purrr::pluck(1) |>
-      html_table()
-  )
+  # Try to extract the first table if exists
+  if (length(tables) > 0) {
+    team_log <- tables |>
+      pluck(1) |>
+      html_table(fill = TRUE)
+    
+    # Save CSV
+    file_name <- paste0(dest_folder, "TeamGameLog_", team_abbr, "_", year, ".csv")
+    write_csv(team_log, file_name)
+    
+    cat("Saved:", file_name, "\n")
+  } else {
+    cat("No table found for:", team_abbr, "season ending", year, "\n")
+  }
 }
 
-# Save each dataset to a CSV file - this will give us the individual season datasets for all ten seasons
-for (year in start_year:end_year) {
-  # Construct season label (same logic as before)
-  season_start <- year - 1
-  season_end <- substr(year, 3, 4)
-  season_label <- paste0(season_start %% 100, "_", season_end)
-  
-  # Get the variable name
-  var_name <- paste0("Player_stats", season_label)
-  
-  # Save to CSV
-  write.csv(get(var_name), 
-            file = paste0(var_name, ".csv"), 
-            row.names = FALSE)
+### Unified Logs with Home and Away, and Current Team ###
+
+# Read LeBron's 2025 game log
+lebron_2025 <- read_csv("data/game-logs/LeBron_GameLog_2025.csv")
+
+# Read Lakers' 2025 team game log
+team_2025 <- read_csv("data/team-game-logs/TeamGameLog_LAL_2025.csv")
+
+# View the column names
+colnames(lebron_2025)
+colnames(team_2025)
+
+# Make sure dates can match by cleaning up both
+# (assuming the 'Date' column is what links them)
+
+# Optional: check column names if needed
+# colnames(lebron_2025)
+# colnames(team_2025)
+
+### COMBINING EVERYTHING ### (So that we have home AND away represented, as well as the team LeBron played for each season, for spatial data).
+
+# Load packages
+library(tidyverse)
+library(lubridate)
+
+# Create output folder if it doesn't exist
+combined_folder <- "data/combined/"
+if (!dir.exists(combined_folder)) {
+  dir.create(combined_folder, recursive = TRUE)
 }
 
-### BEGIN WRANGLING ###
-
-# Add Season column to each dataset before binding, so that we can track which season each statistic came from
-Player_stats14_15$Season <- "2014-15"
-Player_stats15_16$Season <- "2015-16"
-Player_stats16_17$Season <- "2016-17"
-Player_stats17_18$Season <- "2017-18"
-Player_stats18_19$Season <- "2018-19"
-Player_stats19_20$Season <- "2019-20"
-Player_stats20_21$Season <- "2020-21"
-Player_stats21_22$Season <- "2021-22"
-Player_stats22_23$Season <- "2022-23"
-Player_stats23_24$Season <- "2023-24"
-
-
-# Combine all player-season tables vertically to create a master table with all player seasons from the past ten seasons
-All_Player_stats14_24 <- bind_rows(
-  Player_stats14_15,
-  Player_stats15_16,
-  Player_stats16_17,
-  Player_stats17_18,
-  Player_stats18_19,
-  Player_stats19_20,
-  Player_stats20_21,
-  Player_stats21_22,
-  Player_stats22_23,
-  Player_stats23_24
-)
-
-# Save to CSV
-write.csv(All_Player_stats14_24, "All_Player_stats14_24.csv", row.names = FALSE)
-
-
-# List of all your player stats table suffixes - this gets repeated throughout the code a lot for reference (usually above any season-based wrangling)
-season_labels <- c("14_15", "15_16", "16_17", "17_18", "18_19",
-                   "19_20", "20_21", "21_22", "22_23", "23_24")
-
-for (label in season_labels) {
-  
-  df <- get(paste0("Player_stats", label))
-  
-  # Step 1: Identify players with combined team row (e.g., "2TM", "3TM", etc.)
-  multi_team_players <- df |>
-    filter(str_detect(Team, "TM")) |> 
-    select(Player) |> 
-    distinct()
-  
-  # Step 2: Create team list for each player
-  team_lists <- df |>
-    filter(Player %in% multi_team_players$Player & !str_detect(Team, "TM")) |>
-    group_by(Player) |>
-    summarise(`Teams Played For` = paste(sort(unique(Team)), collapse = ", "), .groups = "drop")
-  
-  # Step 3: Keep only the summary rows for multi-team players
-  df_filtered <- df |>
-    filter(!(Player %in% multi_team_players$Player & !str_detect(Team, "TM"))) |> 
-    left_join(team_lists, by = "Player")
-  
-  # Step 4: Save the filtered dataset
-  assign(paste0("Player_stats", label, "_filtered"), df_filtered)
+# Function to get team based on season
+get_team <- function(year) {
+  if (year >= 2004 && year <= 2010) {
+    return("CLE")
+  } else if (year >= 2011 && year <= 2014) {
+    return("MIA")
+  } else if (year >= 2015 && year <= 2018) {
+    return("CLE")
+  } else if (year >= 2019 && year <= 2025) {
+    return("LAL")
+  } else {
+    stop("Year out of LeBron's career range")
+  }
 }
 
-# Bind them all together
-All_Player_stats14_24_filtered <- bind_rows(
-  lapply(season_labels, function(label) {
-    get(paste0("Player_stats", label, "_filtered"))
+# Loop over all seasons
+for (year in 2004:2025) {
+  # === File paths ===
+  team_abbr <- get_team(year)
+  lebron_path <- paste0("data/game-logs/LeBron_GameLog_", year, ".csv")
+  team_path <- paste0("data/team-game-logs/TeamGameLog_", team_abbr, "_", year, ".csv")
+  output_path <- paste0("data/combined/LeBron_GameLog_", year, "_WithTeamInfo.csv")
+  
+  # === Try-catch to continue even if a file is missing or corrupt ===
+  tryCatch({
+    # Read data
+    lebron_df <- read_csv(lebron_path)
+    team_df <- read_csv(team_path, skip = 1)
+    
+    # Clean LeBron dates
+    lebron_df <- lebron_df %>%
+      mutate(Date = mdy(Date)) %>%
+      filter(!is.na(Date))
+    
+    # Clean team dates and determine Home/Away
+    team_df <- team_df %>%
+      filter(!is.na(Date)) %>%
+      mutate(
+        Date = ymd(Date),
+        `Home/Away` = ifelse(`...4` == "@", "Away", NA),
+        `Home/Away` = replace_na(`Home/Away`, "Home"),
+        Team = team_abbr
+      ) %>%
+      select(Date, `Home/Away`, Team)
+    
+    # Merge
+    merged_df <- lebron_df %>%
+      left_join(team_df, by = "Date")
+    
+    # Save
+    write_csv(merged_df, output_path)
+    cat("Saved:", output_path, "\n")
+  }, error = function(e) {
+    cat("Failed for year", year, ":", conditionMessage(e), "\n")
   })
-)
-
-# Save to CSV, this now gives us a filtered dataset for all players seasons over the course of the ten year period
-write.csv(All_Player_stats14_24_filtered, "All_Player_stats14_24_filtered.csv", row.names = FALSE)
-
-
-
-# Load the main filtered dataset
-all_stats <- read_csv("All_Player_stats14_24_filtered.csv")
-
-# Remove Rk column, won't matter for this section
-all_stats <- all_stats |> select(-Rk)
-
-# Save Age for 23-24 season only, since we can easily calculate age from that number for any other seasons if we need to
-age_col <- all_stats |> 
-  filter(Season == "2023-24") |> 
-  select(Player, Age) |> 
-  rename(Age_23_24 = Age)
-
-# Handle Position summary, in case some players switch position or play multiple positions with different teams
-pos_summary <- all_stats |> 
-  count(Player, Pos) |> 
-  group_by(Player) |> 
-  summarise(
-    All_Positions = paste0(Pos, " (", n, ")", collapse = ", "),
-    Majority_Position = Pos[which.max(n)],
-    .groups = "drop"
-  )
-
-# Handle Team aggregation
-team_summary <- all_stats |> 
-  mutate(Team_key = ifelse(is.na(`Teams Played For`), Team, paste0("{", `Teams Played For`, "}"))) |> 
-  count(Player, Team_key) |> 
-  group_by(Player) |> 
-  summarise(
-    Teams_Played_For = paste0(Team_key, " (", n, ")", collapse = ", "),
-    .groups = "drop"
-  )
-
-# Reshape stats to wide format
-stat_cols <- setdiff(names(all_stats), c("Player", "Age", "Team", "Pos", "Season", "Teams Played For"))
-
-stats_wide <- all_stats |> 
-  select(Player, Season, all_of(stat_cols)) |> 
-  pivot_wider(
-    names_from = Season,
-    values_from = all_of(stat_cols),
-    names_glue = "{.value}_{Season}"
-  )
-
-# Combine everything into the final unique-player table
-Unique_Players14_24 <- stats_wide |> 
-  left_join(age_col, by = "Player") |> 
-  left_join(pos_summary, by = "Player") |> 
-  left_join(team_summary, by = "Player")
-
-# Save to CSV, we now have all players that played in the NBA over the past 10 seasons and their stats for each year as desired
-write_csv(Unique_Players14_24, "Unique_Players14_24.csv")
-
-# Check if all player names are unique
-anyDuplicated(Unique_Players14_24$Player) # returns 0 as desired, so indeed we have everything we need here in terms of unique players
-
-# Now, we'll figure out a method to get player averages over the course of the seasons that they played. Note, not over the course of all ten seasons
-# since some players have only played a few years (younger, got to the NBA later, etc).
-
-# Step 1: Define columns to exclude, pretty much all the non-numeric stuff
-cols_to_exclude <- c(
-  "Player", 
-  "All_Positions", 
-  "Majority_Position", 
-  "Teams_Played_For", 
-  "Age_23_24",
-  colnames(Unique_Players14_24)[str_starts(colnames(Unique_Players14_24), "Awards_")]
-)
-
-# Step 2: Capture original stat columns and extract base stat names
-original_stat_cols <- setdiff(colnames(Unique_Players14_24), cols_to_exclude)
-ordered_stats <- unique(str_remove(original_stat_cols, "_\\d{4}-\\d{2}$"))
-
-# Step 3: Preserve original player order
-original_player_order <- Unique_Players14_24$Player
-
-# Step 4: Compute averages
-Unique_player_averages <- Unique_Players14_24 |>
-  pivot_longer(cols = all_of(original_stat_cols), names_to = "Stat_Season", values_to = "Value") |>
-  separate(Stat_Season, into = c("Stat", "Season"), sep = "_", extra = "merge") |>
-  mutate(Stat = factor(Stat, levels = ordered_stats)) |>
-  group_by(Player, Stat) |>
-  summarise(Average = mean(Value, na.rm = TRUE), .groups = "drop") |>
-  pivot_wider(names_from = Stat, values_from = Average)
-
-# Step 5: Restore original player and stat order
-Unique_player_averages <- Unique_player_averages |>
-  mutate(Player = factor(Player, levels = original_player_order)) |>
-  arrange(Player) |>
-  select(Player, all_of(ordered_stats))
-
-# Step 6: Save, so now we have player averages over the course of their time (as season averages, not game averages quite yet, although we could get that too).
-write_csv(Unique_player_averages, "Unique_player_averages.csv")
-
-# Which players averaged over 1000 field goal attempts each season since they've been playing in the NBA?
-
-Unique_player_averages |>
-  filter(FGA >= 1000) |>
-  pull(Player)
-
-Unique_player_averages |>
-  filter(FGA >= 1000) |>
-  summarise(n = n())
-
-
-
-# List of season labels (repeat from above, for reference)
-season_labels <- c("14_15", "15_16", "16_17", "17_18", "18_19",
-                   "19_20", "20_21", "21_22", "22_23", "23_24")
-
-# Function to compute per-game stats
-compute_per_game <- function(df) {
-  # Identify columns to exclude: non-numeric, percentages, and columns not suitable for per-game calculation
-  excluded_cols <- c("Player", "Team", "Pos", "Age", "Season", "Teams Played For", "Awards", "Rk", "G")
-  percent_cols <- grep("%", names(df), value = TRUE)
-  non_per_game_cols <- union(excluded_cols, percent_cols)
-  
-  # Identify columns to compute per-game stats for
-  stat_cols <- setdiff(names(df), non_per_game_cols)
-  
-  # Make sure G (Games played) column exists
-  if (!"G" %in% names(df)) stop("Column 'G' missing in input")
-  
-  # Compute per-game stats and rename
-  per_game_stats <- df |>
-    mutate(across(all_of(stat_cols), ~ .x / G)) |>
-    select(all_of(stat_cols)) |> 
-    rename_with(~ paste0(
-      case_when(
-        .x == "PTS" ~ "PPG",
-        .x == "AST" ~ "APG",
-        .x == "TRB" ~ "RPG",
-        .x == "DRB" ~ "DRPG",
-        .x == "ORB" ~ "ORPG",
-        .x == "STL" ~ "SPG",
-        .x == "BLK" ~ "BPG",
-        .x == "TOV" ~ "TOPG",
-        .x == "PF"  ~ "PFPG",
-        .x == "FG"  ~ "FGPG",
-        .x == "FGA" ~ "FGAPG",
-        .x == "3P"  ~ "3PPG",
-        .x == "3PA" ~ "3PAPG",
-        .x == "2P"  ~ "2PPG",
-        .x == "2PA" ~ "2PAPG",
-        .x == "FT"  ~ "FTPG",
-        .x == "FTA" ~ "FTAPG",
-        .x == "GS"  ~ "GSPG",
-        .x == "MP"  ~ "MPG",
-        .x == "Trp-Dbl" ~ "TripleDoublePG",
-        TRUE ~ paste0(.x, "_per_game")
-      )
-    ))
-  
-  # Bind to original dataset
-  bind_cols(df, per_game_stats)
 }
 
-# Loop through each dataset, compute per-game stats, assign new dataset for each of the seasons, so that those also include per game averages
-for (label in season_labels) {
-  df <- get(paste0("Player_stats", label, "_filtered"))
-  df_pergame <- compute_per_game(df)
-  assign(paste0("Player_stats", label, "_filtered_pergame"), df_pergame)
-}
+### TEAMS BY STATE ###
+
+### STATE MAP ###
+
+# Load packages
+library(tidyverse)
+library(lubridate)
+library(maps)
+library(ggplot2)
+
+# === Load data ===
+lebron <- read_csv("data/combined/LeBron_GameLog_2025_WithTeamInfo.csv")
+team_states <- read_csv("data/NBA_Teams_By_State.csv")
+
+# === Expand team_states to long format (one team per row) ===
+team_states_long <- team_states %>%
+  separate_rows(Teams, sep = ",") %>%
+  mutate(
+    Teams = str_trim(Teams),
+    State = str_to_title(State)
+  )
+
+# === Create opponent → state lookup table ===
+team_lookup <- team_states_long %>%
+  distinct(Teams, State) %>%
+  rename(Opponent = Teams, OpponentState = State)
+
+# === Clean LeBron data and join on opponent team ===
+lebron <- lebron %>%
+  mutate(
+    Opponent = str_trim(Opponent),
+    GameState = if_else(`Home/Away` == "Home", "California", NA)
+  ) %>%
+  left_join(team_lookup, by = "Opponent") %>%
+  mutate(
+    GameState = if_else(`Home/Away` == "Away", OpponentState, GameState)
+  )
+
+# === Summarize total points by state ===
+points_by_state <- lebron %>%
+  filter(!is.na(GameState)) %>%
+  group_by(GameState) %>%
+  summarise(TotalPoints = sum(PTS, na.rm = TRUE)) %>%
+  mutate(region = str_to_lower(GameState))
+
+# === Get U.S. map data ===
+states_map <- map_data("state")
+
+# Join map data with point totals
+map_data_joined <- left_join(states_map, points_by_state, by = "region")
+
+# === Plot ===
+ggplot(map_data_joined, aes(x = long, y = lat, group = group)) +
+  geom_polygon(aes(fill = TotalPoints), color = "white") +
+  scale_fill_viridis_c(option = "plasma", na.value = "grey90") +
+  theme_minimal() +
+  labs(
+    title = "LeBron James: Total Points by State (2025 Season)",
+    fill = "Total Points",
+    caption = "Home games = California; Away games matched to opponent team state"
+  ) +
+  coord_fixed(1.3)
+
+
+
+
