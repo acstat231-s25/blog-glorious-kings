@@ -27,6 +27,7 @@ library(igraph)
 library(tidygraph)
 library(ggraph)
 library(mdsr)
+library(broom)
 
 ```
 
@@ -150,6 +151,74 @@ I can't imagine a scenario where students should or would include videos within 
 The first figure of your blog will be used as the display image on our course's landing page!
 :::
 
+```{r}
+library(tidyverse)
+library(lubridate)
+library(maps)
+library(ggplot2)
+
+# Load team-to-state lookup
+team_states <- read_csv("data/NBA_Teams_By_State.csv")
+
+team_lookup <- team_states %>%
+  separate_rows(Teams, sep = ",") %>%
+  mutate(
+    Teams = str_trim(Teams),
+    State = str_to_title(State),
+    Mascot = word(Teams, -1)
+  ) %>%
+  distinct(Mascot, State)
+
+# Helper function to plot scoring map by era
+plot_lebron_map <- function(start_year, end_year, home_state) {
+  years <- start_year:end_year
+
+  # Combine game logs from selected years
+  lebron <- bind_rows(lapply(years, function(y) {
+    file <- paste0("data/combined/LeBron_GameLog_", y, "_WithTeamInfo.csv")
+    if (file.exists(file)) {
+      read_csv(file, show_col_types = FALSE) %>%
+        mutate(Season = y)
+    }
+  }))
+
+  # Assign GameState based on home/away and join with team-state info
+  lebron <- lebron %>%
+    mutate(
+      Opponent = str_trim(Opponent),
+      GameState = if_else(`Home/Away` == "Home", home_state, NA)
+    ) %>%
+    left_join(team_lookup, by = c("Opponent" = "Mascot")) %>%
+    mutate(GameState = if_else(`Home/Away` == "Away", State, GameState))
+
+  # Summarize points by state
+  points_by_state <- lebron %>%
+    filter(!is.na(GameState)) %>%
+    group_by(GameState) %>%
+    summarise(TotalPoints = sum(PTS, na.rm = TRUE)) %>%
+    mutate(region = str_to_lower(GameState))
+
+  # Get US map and merge
+  states_map <- map_data("state")
+  map_data_joined <- left_join(states_map, points_by_state, by = "region")
+
+  # Plot
+  ggplot(map_data_joined, aes(x = long, y = lat, group = group)) +
+    geom_polygon(aes(fill = TotalPoints), color = "white", size = 0.2) +
+    scale_fill_stepsn(
+      colors = c("#deebf7", "#9ecae1", "#4292c6", "#2171b5", "#084594"),
+      n.breaks = 6,
+      na.value = "grey90"
+    ) +
+    coord_fixed(1.3) +
+    theme_void() +
+    labs(
+      title = paste("Total Points by State (", start_year, "–", end_year, ")"),
+      fill = "Total Points",
+      caption = paste("Home games played in", home_state)
+    )
+}
+```
 
 
 ## Panel tabsets
@@ -162,11 +231,32 @@ Use the following format to add information or tables or visualizations in [tabs
 
 Some information in one tab 
 
+```{r}
+plot_lebron_map(2004, 2010, "Ohio")
+```
+
+
 
 ### Tab 2
 
 Some information in a different tab
 
+```{r}
+plot_lebron_map(2011, 2014, "Florida")
+```
+
+
+### Tab 3
+
+```{r}
+plot_lebron_map(2015, 2018, "Ohio")
+```
+
+### Tab 4
+
+```{r}
+plot_lebron_map(2019, 2025, "California")
+```
 :::
 
 #LeBron and His Teammates

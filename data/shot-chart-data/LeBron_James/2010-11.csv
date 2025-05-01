@@ -1,0 +1,759 @@
+GRID_TYPE,GAME_ID,GAME_EVENT_ID,PLAYER_ID,PLAYER_NAME,TEAM_ID,TEAM_NAME,PERIOD,MINUTES_REMAINING,SECONDS_REMAINING,EVENT_TYPE,ACTION_TYPE,SHOT_TYPE,SHOT_ZONE_BASIC,SHOT_ZONE_AREA,SHOT_ZONE_RANGE,SHOT_DISTANCE,LOC_X,LOC_Y,SHOT_ATTEMPTED_FLAG,SHOT_MADE_FLAG,GAME_DATE,HTM,VTM
+Shot Chart Detail,0021000001,8,2544,LeBron James,1610612748,Miami Heat,1,10,53,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,19,144,135,1,1,20101026,BOS,MIA
+Shot Chart Detail,0021000001,24,2544,LeBron James,1610612748,Miami Heat,1,8,43,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,19,-190,4,1,1,20101026,BOS,MIA
+Shot Chart Detail,0021000001,199,2544,LeBron James,1610612748,Miami Heat,2,3,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,21,64,206,1,1,20101026,BOS,MIA
+Shot Chart Detail,0021000001,232,2544,LeBron James,1610612748,Miami Heat,2,0,52,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-4,4,1,1,20101026,BOS,MIA
+Shot Chart Detail,0021000001,306,2544,LeBron James,1610612748,Miami Heat,3,6,58,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,23,-231,-3,1,1,20101026,BOS,MIA
+Shot Chart Detail,0021000001,352,2544,LeBron James,1610612748,Miami Heat,3,2,56,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,24,155,194,1,1,20101026,BOS,MIA
+Shot Chart Detail,0021000001,354,2544,LeBron James,1610612748,Miami Heat,3,2,19,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,21,61,209,1,1,20101026,BOS,MIA
+Shot Chart Detail,0021000001,377,2544,LeBron James,1610612748,Miami Heat,3,0,21,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,2,-3,1,1,20101026,BOS,MIA
+Shot Chart Detail,0021000001,478,2544,LeBron James,1610612748,Miami Heat,4,2,25,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,24,146,200,1,1,20101026,BOS,MIA
+Shot Chart Detail,0021000001,492,2544,LeBron James,1610612748,Miami Heat,4,1,10,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-8,-6,1,1,20101026,BOS,MIA
+Shot Chart Detail,0021000006,36,2544,LeBron James,1610612748,Miami Heat,1,7,27,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-5,7,1,1,20101027,PHI,MIA
+Shot Chart Detail,0021000006,112,2544,LeBron James,1610612748,Miami Heat,1,1,1,Made Shot,Running Bank shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-11,37,1,1,20101027,PHI,MIA
+Shot Chart Detail,0021000006,342,2544,LeBron James,1610612748,Miami Heat,3,6,22,Made Shot,Driving Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-5,11,1,1,20101027,PHI,MIA
+Shot Chart Detail,0021000006,356,2544,LeBron James,1610612748,Miami Heat,3,5,20,Made Shot,Running Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,-15,56,1,1,20101027,PHI,MIA
+Shot Chart Detail,0021000006,497,2544,LeBron James,1610612748,Miami Heat,4,1,10,Made Shot,Running Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,4,-10,47,1,1,20101027,PHI,MIA
+Shot Chart Detail,0021000025,34,2544,LeBron James,1610612748,Miami Heat,1,9,11,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,26,171,198,1,1,20101029,MIA,ORL
+Shot Chart Detail,0021000025,48,2544,LeBron James,1610612748,Miami Heat,1,8,11,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,22,21,222,1,1,20101029,MIA,ORL
+Shot Chart Detail,0021000025,313,2544,LeBron James,1610612748,Miami Heat,3,11,36,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-175,172,1,1,20101029,MIA,ORL
+Shot Chart Detail,0021000025,335,2544,LeBron James,1610612748,Miami Heat,3,9,17,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Right Side(R),8-16 ft.,12,64,108,1,1,20101029,MIA,ORL
+Shot Chart Detail,0021000025,338,2544,LeBron James,1610612748,Miami Heat,3,8,55,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,9,18,91,1,1,20101029,MIA,ORL
+Shot Chart Detail,0021000025,508,2544,LeBron James,1610612748,Miami Heat,4,6,45,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,18,184,42,1,1,20101029,MIA,ORL
+Shot Chart Detail,0021000040,12,2544,LeBron James,1610612748,Miami Heat,1,10,58,Made Shot,Alley Oop Layup shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,23,3,1,1,20101031,NJN,MIA
+Shot Chart Detail,0021000040,38,2544,LeBron James,1610612748,Miami Heat,1,7,16,Made Shot,Driving Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,1,1,1,20101031,NJN,MIA
+Shot Chart Detail,0021000040,181,2544,LeBron James,1610612748,Miami Heat,2,7,28,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-4,15,1,1,20101031,NJN,MIA
+Shot Chart Detail,0021000040,184,2544,LeBron James,1610612748,Miami Heat,2,7,13,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,12,25,1,1,20101031,NJN,MIA
+Shot Chart Detail,0021000040,305,2544,LeBron James,1610612748,Miami Heat,3,6,4,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-23,14,1,1,20101031,NJN,MIA
+Shot Chart Detail,0021000050,325,2544,LeBron James,1610612748,Miami Heat,2,0,43,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-15,15,1,1,20101102,MIA,MIN
+Shot Chart Detail,0021000050,355,2544,LeBron James,1610612748,Miami Heat,3,9,12,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,20,3,1,1,20101102,MIA,MIN
+Shot Chart Detail,0021000050,366,2544,LeBron James,1610612748,Miami Heat,3,8,8,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,0,15,1,1,20101102,MIA,MIN
+Shot Chart Detail,0021000050,399,2544,LeBron James,1610612748,Miami Heat,3,4,44,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,20,203,7,1,1,20101102,MIA,MIN
+Shot Chart Detail,0021000050,410,2544,LeBron James,1610612748,Miami Heat,3,3,50,Made Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,17,-111,137,1,1,20101102,MIA,MIN
+Shot Chart Detail,0021000050,449,2544,LeBron James,1610612748,Miami Heat,3,0,33,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,22,-161,154,1,1,20101102,MIA,MIN
+Shot Chart Detail,0021000050,451,2544,LeBron James,1610612748,Miami Heat,3,0,0,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-92,172,1,1,20101102,MIA,MIN
+Shot Chart Detail,0021000075,46,2544,LeBron James,1610612748,Miami Heat,1,6,47,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,0,20,1,1,20101105,NOH,MIA
+Shot Chart Detail,0021000075,62,2544,LeBron James,1610612748,Miami Heat,1,5,28,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,24,-239,36,1,1,20101105,NOH,MIA
+Shot Chart Detail,0021000075,146,2544,LeBron James,1610612748,Miami Heat,2,8,4,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-2,28,1,1,20101105,NOH,MIA
+Shot Chart Detail,0021000075,224,2544,LeBron James,1610612748,Miami Heat,2,1,26,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,21,-194,91,1,1,20101105,NOH,MIA
+Shot Chart Detail,0021000075,229,2544,LeBron James,1610612748,Miami Heat,2,0,53,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-18,6,1,1,20101105,NOH,MIA
+Shot Chart Detail,0021000075,269,2544,LeBron James,1610612748,Miami Heat,3,8,59,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,19,143,126,1,1,20101105,NOH,MIA
+Shot Chart Detail,0021000082,71,2544,LeBron James,1610612748,Miami Heat,1,5,55,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-32,20,1,1,20101106,MIA,NJN
+Shot Chart Detail,0021000082,78,2544,LeBron James,1610612748,Miami Heat,1,5,25,Made Shot,Driving Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,11,9,1,1,20101106,MIA,NJN
+Shot Chart Detail,0021000082,123,2544,LeBron James,1610612748,Miami Heat,1,0,48,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,1,11,1,1,20101106,MIA,NJN
+Shot Chart Detail,0021000082,238,2544,LeBron James,1610612748,Miami Heat,2,3,9,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-8,14,1,1,20101106,MIA,NJN
+Shot Chart Detail,0021000082,302,2544,LeBron James,1610612748,Miami Heat,3,7,45,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,1,20,1,1,20101106,MIA,NJN
+Shot Chart Detail,0021000082,338,2544,LeBron James,1610612748,Miami Heat,3,4,42,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,23,7,1,1,20101106,MIA,NJN
+Shot Chart Detail,0021000082,359,2544,LeBron James,1610612748,Miami Heat,3,2,50,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-11,11,1,1,20101106,MIA,NJN
+Shot Chart Detail,0021000082,395,2544,LeBron James,1610612748,Miami Heat,3,0,27,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-174,178,1,1,20101106,MIA,NJN
+Shot Chart Detail,0021000082,404,2544,LeBron James,1610612748,Miami Heat,3,0,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,26,184,186,1,1,20101106,MIA,NJN
+Shot Chart Detail,0021000103,36,2544,LeBron James,1610612748,Miami Heat,1,8,27,Made Shot,Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,24,12,1,1,20101109,MIA,UTA
+Shot Chart Detail,0021000103,72,2544,LeBron James,1610612748,Miami Heat,1,5,5,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,20,2,206,1,1,20101109,MIA,UTA
+Shot Chart Detail,0021000103,296,2544,LeBron James,1610612748,Miami Heat,3,6,52,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-8,15,1,1,20101109,MIA,UTA
+Shot Chart Detail,0021000103,318,2544,LeBron James,1610612748,Miami Heat,3,4,8,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-23,17,1,1,20101109,MIA,UTA
+Shot Chart Detail,0021000103,408,2544,LeBron James,1610612748,Miami Heat,4,10,20,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-13,15,1,1,20101109,MIA,UTA
+Shot Chart Detail,0021000118,3,2544,LeBron James,1610612748,Miami Heat,1,11,33,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-19,11,1,1,20101111,MIA,BOS
+Shot Chart Detail,0021000118,5,2544,LeBron James,1610612748,Miami Heat,1,10,46,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,17,-149,93,1,1,20101111,MIA,BOS
+Shot Chart Detail,0021000118,37,2544,LeBron James,1610612748,Miami Heat,1,7,38,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,11,1,1,20101111,MIA,BOS
+Shot Chart Detail,0021000118,108,2544,LeBron James,1610612748,Miami Heat,1,2,25,Made Shot,Jump Bank Shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,8,-64,52,1,1,20101111,MIA,BOS
+Shot Chart Detail,0021000118,259,2544,LeBron James,1610612748,Miami Heat,2,1,29,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,34,20,1,1,20101111,MIA,BOS
+Shot Chart Detail,0021000118,386,2544,LeBron James,1610612748,Miami Heat,3,3,41,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,4,37,20,1,1,20101111,MIA,BOS
+Shot Chart Detail,0021000118,400,2544,LeBron James,1610612748,Miami Heat,3,1,13,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-21,6,1,1,20101111,MIA,BOS
+Shot Chart Detail,0021000118,497,2544,LeBron James,1610612748,Miami Heat,4,6,21,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,21,-166,138,1,1,20101111,MIA,BOS
+Shot Chart Detail,0021000118,536,2544,LeBron James,1610612748,Miami Heat,4,1,54,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-8,25,1,1,20101111,MIA,BOS
+Shot Chart Detail,0021000133,37,2544,LeBron James,1610612748,Miami Heat,1,8,17,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-26,22,1,1,20101113,MIA,TOR
+Shot Chart Detail,0021000133,45,2544,LeBron James,1610612748,Miami Heat,1,7,12,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,13,29,131,1,1,20101113,MIA,TOR
+Shot Chart Detail,0021000133,55,2544,LeBron James,1610612748,Miami Heat,1,6,21,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,10,4,1,1,20101113,MIA,TOR
+Shot Chart Detail,0021000133,123,2544,LeBron James,1610612748,Miami Heat,1,1,37,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,15,-152,-6,1,1,20101113,MIA,TOR
+Shot Chart Detail,0021000133,263,2544,LeBron James,1610612748,Miami Heat,2,1,32,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-27,26,1,1,20101113,MIA,TOR
+Shot Chart Detail,0021000133,403,2544,LeBron James,1610612748,Miami Heat,3,2,33,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,10,32,104,1,1,20101113,MIA,TOR
+Shot Chart Detail,0021000133,416,2544,LeBron James,1610612748,Miami Heat,3,1,35,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,17,92,153,1,1,20101113,MIA,TOR
+Shot Chart Detail,0021000133,518,2544,LeBron James,1610612748,Miami Heat,4,3,44,Made Shot,Running Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-3,9,1,1,20101113,MIA,TOR
+Shot Chart Detail,0021000158,86,2544,LeBron James,1610612748,Miami Heat,1,4,18,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,20,-106,172,1,1,20101117,MIA,PHX
+Shot Chart Detail,0021000158,109,2544,LeBron James,1610612748,Miami Heat,1,2,7,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,20,-100,176,1,1,20101117,MIA,PHX
+Shot Chart Detail,0021000158,117,2544,LeBron James,1610612748,Miami Heat,1,0,58,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,28,23,1,1,20101117,MIA,PHX
+Shot Chart Detail,0021000158,120,2544,LeBron James,1610612748,Miami Heat,1,0,41,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,20,-84,183,1,1,20101117,MIA,PHX
+Shot Chart Detail,0021000158,250,2544,LeBron James,1610612748,Miami Heat,2,2,38,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,29,11,1,1,20101117,MIA,PHX
+Shot Chart Detail,0021000158,269,2544,LeBron James,1610612748,Miami Heat,2,1,26,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,20,-125,165,1,1,20101117,MIA,PHX
+Shot Chart Detail,0021000158,303,2544,LeBron James,1610612748,Miami Heat,2,0,4,Made Shot,Jump Bank Shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,8,-75,48,1,1,20101117,MIA,PHX
+Shot Chart Detail,0021000158,450,2544,LeBron James,1610612748,Miami Heat,4,11,46,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,12,6,123,1,1,20101117,MIA,PHX
+Shot Chart Detail,0021000158,452,2544,LeBron James,1610612748,Miami Heat,4,11,29,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,0,20,1,1,20101117,MIA,PHX
+Shot Chart Detail,0021000175,3,2544,LeBron James,1610612748,Miami Heat,1,11,44,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,15,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000175,40,2544,LeBron James,1610612748,Miami Heat,1,6,27,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,182,183,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000175,46,2544,LeBron James,1610612748,Miami Heat,1,5,45,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,21,-101,186,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000175,59,2544,LeBron James,1610612748,Miami Heat,1,4,26,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,21,-103,186,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000175,86,2544,LeBron James,1610612748,Miami Heat,1,1,26,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-27,15,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000175,96,2544,LeBron James,1610612748,Miami Heat,1,0,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,20,136,148,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000175,237,2544,LeBron James,1610612748,Miami Heat,2,1,5,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,4,-43,25,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000175,264,2544,LeBron James,1610612748,Miami Heat,3,11,1,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,-32,50,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000175,374,2544,LeBron James,1610612748,Miami Heat,3,0,54,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,17,-97,140,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000175,383,2544,LeBron James,1610612748,Miami Heat,4,11,38,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-180,159,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000175,467,2544,LeBron James,1610612748,Miami Heat,4,3,27,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,9,10,94,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000175,477,2544,LeBron James,1610612748,Miami Heat,4,2,12,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-21,14,1,1,20101119,MIA,CHA
+Shot Chart Detail,0021000185,92,2544,LeBron James,1610612748,Miami Heat,1,0,25,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-4,19,1,1,20101120,MEM,MIA
+Shot Chart Detail,0021000185,113,2544,LeBron James,1610612748,Miami Heat,2,10,27,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,4,-13,44,1,1,20101120,MEM,MIA
+Shot Chart Detail,0021000185,144,2544,LeBron James,1610612748,Miami Heat,2,8,19,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Center(C),24+ ft.,25,1,254,1,1,20101120,MEM,MIA
+Shot Chart Detail,0021000185,215,2544,LeBron James,1610612748,Miami Heat,2,0,27,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,9,0,1,1,20101120,MEM,MIA
+Shot Chart Detail,0021000185,238,2544,LeBron James,1610612748,Miami Heat,3,11,4,Made Shot,Driving Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,7,6,1,1,20101120,MEM,MIA
+Shot Chart Detail,0021000185,340,2544,LeBron James,1610612748,Miami Heat,3,2,49,Made Shot,Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-2,3,1,1,20101120,MEM,MIA
+Shot Chart Detail,0021000185,369,2544,LeBron James,1610612748,Miami Heat,3,0,11,Made Shot,Running Bank shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,7,54,50,1,1,20101120,MEM,MIA
+Shot Chart Detail,0021000185,416,2544,LeBron James,1610612748,Miami Heat,4,7,54,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,22,-226,0,1,1,20101120,MEM,MIA
+Shot Chart Detail,0021000185,428,2544,LeBron James,1610612748,Miami Heat,4,5,51,Made Shot,Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,1,3,1,1,20101120,MEM,MIA
+Shot Chart Detail,0021000185,452,2544,LeBron James,1610612748,Miami Heat,4,3,9,Made Shot,Driving Bank shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-35,17,1,1,20101120,MEM,MIA
+Shot Chart Detail,0021000185,480,2544,LeBron James,1610612748,Miami Heat,4,0,5,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,4,11,1,1,20101120,MEM,MIA
+Shot Chart Detail,0021000196,139,2544,LeBron James,1610612748,Miami Heat,1,0,0,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,21,211,-25,1,1,20101122,MIA,IND
+Shot Chart Detail,0021000196,245,2544,LeBron James,1610612748,Miami Heat,2,2,9,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-18,20,1,1,20101122,MIA,IND
+Shot Chart Detail,0021000196,292,2544,LeBron James,1610612748,Miami Heat,3,11,47,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,4,9,1,1,20101122,MIA,IND
+Shot Chart Detail,0021000196,320,2544,LeBron James,1610612748,Miami Heat,3,8,50,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,21,159,145,1,1,20101122,MIA,IND
+Shot Chart Detail,0021000196,460,2544,LeBron James,1610612748,Miami Heat,4,9,50,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Center(C),24+ ft.,26,81,252,1,1,20101122,MIA,IND
+Shot Chart Detail,0021000196,559,2544,LeBron James,1610612748,Miami Heat,4,2,24,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,23,-229,33,1,1,20101122,MIA,IND
+Shot Chart Detail,0021000213,104,2544,LeBron James,1610612748,Miami Heat,1,1,1,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,17,1,1,20101124,ORL,MIA
+Shot Chart Detail,0021000213,134,2544,LeBron James,1610612748,Miami Heat,2,9,57,Made Shot,Jump Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,31,19,1,1,20101124,ORL,MIA
+Shot Chart Detail,0021000213,199,2544,LeBron James,1610612748,Miami Heat,2,5,10,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,21,-207,41,1,1,20101124,ORL,MIA
+Shot Chart Detail,0021000213,235,2544,LeBron James,1610612748,Miami Heat,2,2,11,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-10,14,1,1,20101124,ORL,MIA
+Shot Chart Detail,0021000213,262,2544,LeBron James,1610612748,Miami Heat,2,0,9,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,18,-68,175,1,1,20101124,ORL,MIA
+Shot Chart Detail,0021000213,325,2544,LeBron James,1610612748,Miami Heat,3,7,37,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Center(C),24+ ft.,24,-70,236,1,1,20101124,ORL,MIA
+Shot Chart Detail,0021000213,398,2544,LeBron James,1610612748,Miami Heat,3,1,0,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-16,15,1,1,20101124,ORL,MIA
+Shot Chart Detail,0021000213,534,2544,LeBron James,1610612748,Miami Heat,4,1,43,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,7,19,1,1,20101124,ORL,MIA
+Shot Chart Detail,0021000213,590,2544,LeBron James,1610612748,Miami Heat,4,0,15,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-4,9,1,1,20101124,ORL,MIA
+Shot Chart Detail,0021000226,23,2544,LeBron James,1610612748,Miami Heat,1,8,57,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-21,12,1,1,20101126,MIA,PHI
+Shot Chart Detail,0021000226,114,2544,LeBron James,1610612748,Miami Heat,1,0,21,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,9,83,39,1,1,20101126,MIA,PHI
+Shot Chart Detail,0021000226,229,2544,LeBron James,1610612748,Miami Heat,2,1,50,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,25,-114,227,1,1,20101126,MIA,PHI
+Shot Chart Detail,0021000226,302,2544,LeBron James,1610612748,Miami Heat,3,6,5,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,13,4,132,1,1,20101126,MIA,PHI
+Shot Chart Detail,0021000226,396,2544,LeBron James,1610612748,Miami Heat,4,10,1,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-24,7,1,1,20101126,MIA,PHI
+Shot Chart Detail,0021000239,187,2544,LeBron James,1610612748,Miami Heat,2,5,18,Made Shot,Turnaround Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,6,50,47,1,1,20101127,DAL,MIA
+Shot Chart Detail,0021000239,213,2544,LeBron James,1610612748,Miami Heat,2,2,53,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,9,-95,7,1,1,20101127,DAL,MIA
+Shot Chart Detail,0021000239,215,2544,LeBron James,1610612748,Miami Heat,2,2,40,Made Shot,Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,15,12,1,1,20101127,DAL,MIA
+Shot Chart Detail,0021000239,221,2544,LeBron James,1610612748,Miami Heat,2,2,3,Made Shot,Putback Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,12,7,1,1,20101127,DAL,MIA
+Shot Chart Detail,0021000239,500,2544,LeBron James,1610612748,Miami Heat,4,5,6,Made Shot,Driving Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,26,3,1,1,20101127,DAL,MIA
+Shot Chart Detail,0021000250,55,2544,LeBron James,1610612748,Miami Heat,1,6,5,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),8-16 ft.,14,20,146,1,1,20101129,MIA,WAS
+Shot Chart Detail,0021000250,90,2544,LeBron James,1610612748,Miami Heat,1,3,14,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,28,14,1,1,20101129,MIA,WAS
+Shot Chart Detail,0021000250,125,2544,LeBron James,1610612748,Miami Heat,1,0,17,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,20,15,1,1,20101129,MIA,WAS
+Shot Chart Detail,0021000250,239,2544,LeBron James,1610612748,Miami Heat,2,4,37,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,23,17,1,1,20101129,MIA,WAS
+Shot Chart Detail,0021000250,260,2544,LeBron James,1610612748,Miami Heat,2,2,13,Made Shot,Alley Oop Layup shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,29,17,1,1,20101129,MIA,WAS
+Shot Chart Detail,0021000250,298,2544,LeBron James,1610612748,Miami Heat,2,0,10,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,20,-76,189,1,1,20101129,MIA,WAS
+Shot Chart Detail,0021000250,307,2544,LeBron James,1610612748,Miami Heat,3,11,25,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-21,14,1,1,20101129,MIA,WAS
+Shot Chart Detail,0021000250,423,2544,LeBron James,1610612748,Miami Heat,3,1,24,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,18,63,179,1,1,20101129,MIA,WAS
+Shot Chart Detail,0021000250,595,2544,LeBron James,1610612748,Miami Heat,4,2,32,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,23,-235,17,1,1,20101129,MIA,WAS
+Shot Chart Detail,0021000250,597,2544,LeBron James,1610612748,Miami Heat,4,1,59,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,19,-198,7,1,1,20101129,MIA,WAS
+Shot Chart Detail,0021000265,4,2544,LeBron James,1610612748,Miami Heat,1,11,18,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-21,22,1,1,20101201,MIA,DET
+Shot Chart Detail,0021000265,37,2544,LeBron James,1610612748,Miami Heat,1,6,7,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,12,125,0,1,1,20101201,MIA,DET
+Shot Chart Detail,0021000265,43,2544,LeBron James,1610612748,Miami Heat,1,5,6,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,34,37,1,1,20101201,MIA,DET
+Shot Chart Detail,0021000265,65,2544,LeBron James,1610612748,Miami Heat,1,3,5,Made Shot,Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-21,33,1,1,20101201,MIA,DET
+Shot Chart Detail,0021000265,74,2544,LeBron James,1610612748,Miami Heat,1,2,25,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,23,-231,34,1,1,20101201,MIA,DET
+Shot Chart Detail,0021000265,210,2544,LeBron James,1610612748,Miami Heat,2,2,14,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,21,-188,110,1,1,20101201,MIA,DET
+Shot Chart Detail,0021000265,295,2544,LeBron James,1610612748,Miami Heat,3,6,41,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,29,14,1,1,20101201,MIA,DET
+Shot Chart Detail,0021000265,340,2544,LeBron James,1610612748,Miami Heat,3,1,44,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,21,108,181,1,1,20101201,MIA,DET
+Shot Chart Detail,0021000273,12,2544,LeBron James,1610612748,Miami Heat,1,10,40,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,16,160,19,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,100,2544,LeBron James,1610612748,Miami Heat,1,3,9,Made Shot,Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-2,11,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,102,2544,LeBron James,1610612748,Miami Heat,1,2,47,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-122,153,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,111,2544,LeBron James,1610612748,Miami Heat,1,1,46,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,17,157,67,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,218,2544,LeBron James,1610612748,Miami Heat,2,4,21,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-229,89,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,294,2544,LeBron James,1610612748,Miami Heat,3,10,48,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,17,12,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,296,2544,LeBron James,1610612748,Miami Heat,3,10,34,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-5,1,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,316,2544,LeBron James,1610612748,Miami Heat,3,8,21,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,21,138,165,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,320,2544,LeBron James,1610612748,Miami Heat,3,7,53,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,22,-123,186,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,332,2544,LeBron James,1610612748,Miami Heat,3,6,40,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-10,4,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,347,2544,LeBron James,1610612748,Miami Heat,3,4,38,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,121,225,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,350,2544,LeBron James,1610612748,Miami Heat,3,4,26,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,7,0,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,396,2544,LeBron James,1610612748,Miami Heat,3,1,27,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,18,162,94,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,404,2544,LeBron James,1610612748,Miami Heat,3,0,57,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,15,-92,126,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000273,416,2544,LeBron James,1610612748,Miami Heat,3,0,34,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,15,157,15,1,1,20101202,CLE,MIA
+Shot Chart Detail,0021000288,15,2544,LeBron James,1610612748,Miami Heat,1,9,43,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,21,-215,3,1,1,20101204,MIA,ATL
+Shot Chart Detail,0021000288,49,2544,LeBron James,1610612748,Miami Heat,1,5,26,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,20,149,145,1,1,20101204,MIA,ATL
+Shot Chart Detail,0021000288,79,2544,LeBron James,1610612748,Miami Heat,1,2,16,Made Shot,Jump Shot,3PT Field Goal,Right Corner 3,Right Side(R),24+ ft.,23,233,33,1,1,20101204,MIA,ATL
+Shot Chart Detail,0021000288,161,2544,LeBron James,1610612748,Miami Heat,2,5,13,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,20,152,140,1,1,20101204,MIA,ATL
+Shot Chart Detail,0021000288,451,2544,LeBron James,1610612748,Miami Heat,4,2,52,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,10,22,1,1,20101204,MIA,ATL
+Shot Chart Detail,0021000306,19,2544,LeBron James,1610612748,Miami Heat,1,9,10,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,4,9,1,1,20101206,MIL,MIA
+Shot Chart Detail,0021000306,23,2544,LeBron James,1610612748,Miami Heat,1,8,36,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,0,14,1,1,20101206,MIL,MIA
+Shot Chart Detail,0021000306,256,2544,LeBron James,1610612748,Miami Heat,2,0,10,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,9,-97,23,1,1,20101206,MIL,MIA
+Shot Chart Detail,0021000306,289,2544,LeBron James,1610612748,Miami Heat,3,8,22,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,10,-100,30,1,1,20101206,MIL,MIA
+Shot Chart Detail,0021000306,338,2544,LeBron James,1610612748,Miami Heat,3,3,42,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,1,1,1,1,20101206,MIL,MIA
+Shot Chart Detail,0021000306,364,2544,LeBron James,1610612748,Miami Heat,3,0,36,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,157,201,1,1,20101206,MIL,MIA
+Shot Chart Detail,0021000306,442,2544,LeBron James,1610612748,Miami Heat,4,5,44,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,14,133,60,1,1,20101206,MIL,MIA
+Shot Chart Detail,0021000324,8,2544,LeBron James,1610612748,Miami Heat,1,10,42,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,21,-218,17,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000324,16,2544,LeBron James,1610612748,Miami Heat,1,9,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,24,230,88,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000324,54,2544,LeBron James,1610612748,Miami Heat,1,5,31,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,21,-146,162,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000324,68,2544,LeBron James,1610612748,Miami Heat,1,4,26,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,9,11,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000324,93,2544,LeBron James,1610612748,Miami Heat,1,2,31,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,23,-38,227,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000324,180,2544,LeBron James,1610612748,Miami Heat,2,7,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Center(C),24+ ft.,24,-48,236,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000324,212,2544,LeBron James,1610612748,Miami Heat,2,4,27,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-8,31,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000324,248,2544,LeBron James,1610612748,Miami Heat,2,0,41,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,13,22,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000324,325,2544,LeBron James,1610612748,Miami Heat,3,5,37,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-11,4,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000324,336,2544,LeBron James,1610612748,Miami Heat,3,3,55,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,22,-229,-2,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000324,450,2544,LeBron James,1610612748,Miami Heat,4,3,18,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,1,23,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000324,454,2544,LeBron James,1610612748,Miami Heat,4,2,45,Made Shot,Tip Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,0,15,1,1,20101208,UTA,MIA
+Shot Chart Detail,0021000340,13,2544,LeBron James,1610612748,Miami Heat,1,10,32,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,13,20,1,1,20101210,GSW,MIA
+Shot Chart Detail,0021000340,38,2544,LeBron James,1610612748,Miami Heat,1,8,0,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,6,3,1,1,20101210,GSW,MIA
+Shot Chart Detail,0021000340,94,2544,LeBron James,1610612748,Miami Heat,1,1,27,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,17,138,101,1,1,20101210,GSW,MIA
+Shot Chart Detail,0021000340,198,2544,LeBron James,1610612748,Miami Heat,2,4,23,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,17,20,1,1,20101210,GSW,MIA
+Shot Chart Detail,0021000340,241,2544,LeBron James,1610612748,Miami Heat,2,0,44,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,7,17,1,1,20101210,GSW,MIA
+Shot Chart Detail,0021000340,286,2544,LeBron James,1610612748,Miami Heat,3,8,12,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,1,3,1,1,20101210,GSW,MIA
+Shot Chart Detail,0021000340,335,2544,LeBron James,1610612748,Miami Heat,3,4,16,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,17,7,1,1,20101210,GSW,MIA
+Shot Chart Detail,0021000340,367,2544,LeBron James,1610612748,Miami Heat,3,1,28,Made Shot,Pullup Jump shot,3PT Field Goal,Above the Break 3,Center(C),24+ ft.,26,-29,268,1,1,20101210,GSW,MIA
+Shot Chart Detail,0021000340,369,2544,LeBron James,1610612748,Miami Heat,3,1,0,Made Shot,Pullup Jump shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,25,-210,146,1,1,20101210,GSW,MIA
+Shot Chart Detail,0021000340,382,2544,LeBron James,1610612748,Miami Heat,3,0,12,Made Shot,Pullup Jump shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,25,-81,246,1,1,20101210,GSW,MIA
+Shot Chart Detail,0021000348,4,2544,LeBron James,1610612748,Miami Heat,1,11,40,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,12,7,1,1,20101211,SAC,MIA
+Shot Chart Detail,0021000348,97,2544,LeBron James,1610612748,Miami Heat,1,2,3,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,19,-15,190,1,1,20101211,SAC,MIA
+Shot Chart Detail,0021000348,241,2544,LeBron James,1610612748,Miami Heat,2,1,53,Made Shot,Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,27,-1,1,1,20101211,SAC,MIA
+Shot Chart Detail,0021000348,264,2544,LeBron James,1610612748,Miami Heat,3,11,12,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,16,-75,143,1,1,20101211,SAC,MIA
+Shot Chart Detail,0021000348,268,2544,LeBron James,1610612748,Miami Heat,3,10,27,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,18,-43,178,1,1,20101211,SAC,MIA
+Shot Chart Detail,0021000348,349,2544,LeBron James,1610612748,Miami Heat,3,3,41,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,29,9,1,1,20101211,SAC,MIA
+Shot Chart Detail,0021000348,363,2544,LeBron James,1610612748,Miami Heat,3,2,40,Made Shot,Step Back Jump shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,18,-139,124,1,1,20101211,SAC,MIA
+Shot Chart Detail,0021000348,365,2544,LeBron James,1610612748,Miami Heat,3,1,56,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,228,121,1,1,20101211,SAC,MIA
+Shot Chart Detail,0021000348,379,2544,LeBron James,1610612748,Miami Heat,3,0,39,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-193,153,1,1,20101211,SAC,MIA
+Shot Chart Detail,0021000348,513,2544,LeBron James,1610612748,Miami Heat,4,2,36,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-13,14,1,1,20101211,SAC,MIA
+Shot Chart Detail,0021000355,64,2544,LeBron James,1610612748,Miami Heat,1,4,48,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,19,130,148,1,1,20101213,MIA,NOH
+Shot Chart Detail,0021000355,99,2544,LeBron James,1610612748,Miami Heat,1,2,27,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,11,1,1,20101213,MIA,NOH
+Shot Chart Detail,0021000355,328,2544,LeBron James,1610612748,Miami Heat,3,5,45,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,23,14,1,1,20101213,MIA,NOH
+Shot Chart Detail,0021000355,345,2544,LeBron James,1610612748,Miami Heat,3,5,12,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,15,23,1,1,20101213,MIA,NOH
+Shot Chart Detail,0021000355,364,2544,LeBron James,1610612748,Miami Heat,3,3,6,Made Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,12,124,17,1,1,20101213,MIA,NOH
+Shot Chart Detail,0021000355,402,2544,LeBron James,1610612748,Miami Heat,3,0,15,Made Shot,Jump Bank Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,7,-67,36,1,1,20101213,MIA,NOH
+Shot Chart Detail,0021000371,62,2544,LeBron James,1610612748,Miami Heat,1,5,7,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,17,-166,66,1,1,20101215,MIA,CLE
+Shot Chart Detail,0021000371,66,2544,LeBron James,1610612748,Miami Heat,1,4,34,Made Shot,Running Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,4,45,15,1,1,20101215,MIA,CLE
+Shot Chart Detail,0021000371,101,2544,LeBron James,1610612748,Miami Heat,1,1,52,Made Shot,Fadeaway Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,11,-57,102,1,1,20101215,MIA,CLE
+Shot Chart Detail,0021000371,181,2544,LeBron James,1610612748,Miami Heat,2,6,10,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-21,22,1,1,20101215,MIA,CLE
+Shot Chart Detail,0021000371,378,2544,LeBron James,1610612748,Miami Heat,3,1,6,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-11,14,1,1,20101215,MIA,CLE
+Shot Chart Detail,0021000382,5,2544,LeBron James,1610612748,Miami Heat,1,11,14,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,147,203,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,18,2544,LeBron James,1610612748,Miami Heat,1,8,57,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,17,89,145,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,61,2544,LeBron James,1610612748,Miami Heat,1,3,41,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,181,186,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,84,2544,LeBron James,1610612748,Miami Heat,1,1,36,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,18,-112,149,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,88,2544,LeBron James,1610612748,Miami Heat,1,1,3,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,16,-67,149,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,97,2544,LeBron James,1610612748,Miami Heat,1,0,14,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,18,125,143,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,235,2544,LeBron James,1610612748,Miami Heat,2,0,38,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,18,15,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,273,2544,LeBron James,1610612748,Miami Heat,3,9,21,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-204,132,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,294,2544,LeBron James,1610612748,Miami Heat,3,7,25,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,16,56,151,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,353,2544,LeBron James,1610612748,Miami Heat,3,2,14,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,24,6,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,356,2544,LeBron James,1610612748,Miami Heat,3,1,55,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-93,175,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,369,2544,LeBron James,1610612748,Miami Heat,3,0,58,Made Shot,Running Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,7,26,75,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,372,2544,LeBron James,1610612748,Miami Heat,3,0,44,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,20,-160,132,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000382,449,2544,LeBron James,1610612748,Miami Heat,4,5,53,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,24,9,1,1,20101217,NYK,MIA
+Shot Chart Detail,0021000393,23,2544,LeBron James,1610612748,Miami Heat,1,9,14,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,22,-228,-28,1,1,20101218,WAS,MIA
+Shot Chart Detail,0021000393,201,2544,LeBron James,1610612748,Miami Heat,2,4,42,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,6,-2,1,1,20101218,WAS,MIA
+Shot Chart Detail,0021000393,220,2544,LeBron James,1610612748,Miami Heat,2,2,33,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,4,-2,1,1,20101218,WAS,MIA
+Shot Chart Detail,0021000393,289,2544,LeBron James,1610612748,Miami Heat,3,8,55,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,26,162,206,1,1,20101218,WAS,MIA
+Shot Chart Detail,0021000393,297,2544,LeBron James,1610612748,Miami Heat,3,8,10,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,147,205,1,1,20101218,WAS,MIA
+Shot Chart Detail,0021000393,321,2544,LeBron James,1610612748,Miami Heat,3,5,35,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,7,-76,0,1,1,20101218,WAS,MIA
+Shot Chart Detail,0021000393,364,2544,LeBron James,1610612748,Miami Heat,3,1,29,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,12,1,1,1,20101218,WAS,MIA
+Shot Chart Detail,0021000393,407,2544,LeBron James,1610612748,Miami Heat,4,9,14,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,20,200,-43,1,1,20101218,WAS,MIA
+Shot Chart Detail,0021000393,494,2544,LeBron James,1610612748,Miami Heat,4,1,38,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,4,3,1,1,20101218,WAS,MIA
+Shot Chart Detail,0021000410,279,2544,LeBron James,1610612748,Miami Heat,3,7,50,Made Shot,Jump Shot,3PT Field Goal,Right Corner 3,Right Side(R),24+ ft.,23,226,66,1,1,20101220,MIA,DAL
+Shot Chart Detail,0021000410,309,2544,LeBron James,1610612748,Miami Heat,3,4,20,Made Shot,Jump Shot,3PT Field Goal,Right Corner 3,Right Side(R),24+ ft.,24,231,69,1,1,20101220,MIA,DAL
+Shot Chart Detail,0021000410,353,2544,LeBron James,1610612748,Miami Heat,3,0,0,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,22,20,225,1,1,20101220,MIA,DAL
+Shot Chart Detail,0021000410,361,2544,LeBron James,1610612748,Miami Heat,4,11,26,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,21,-133,168,1,1,20101220,MIA,DAL
+Shot Chart Detail,0021000410,498,2544,LeBron James,1610612748,Miami Heat,4,0,56,Made Shot,Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,28,9,1,1,20101220,MIA,DAL
+Shot Chart Detail,0021000410,526,2544,LeBron James,1610612748,Miami Heat,4,0,6,Made Shot,Running Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,6,-19,61,1,1,20101220,MIA,DAL
+Shot Chart Detail,0021000432,16,2544,LeBron James,1610612748,Miami Heat,1,10,12,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,1,3,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,43,2544,LeBron James,1610612748,Miami Heat,1,6,26,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,0,-2,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,75,2544,LeBron James,1610612748,Miami Heat,1,3,40,Made Shot,Step Back Jump shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,16,73,149,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,93,2544,LeBron James,1610612748,Miami Heat,1,2,18,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,4,-3,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,118,2544,LeBron James,1610612748,Miami Heat,1,0,4,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,7,0,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,201,2544,LeBron James,1610612748,Miami Heat,2,4,43,Made Shot,Driving Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,2,0,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,207,2544,LeBron James,1610612748,Miami Heat,2,4,5,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,2,0,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,224,2544,LeBron James,1610612748,Miami Heat,2,2,0,Made Shot,Running Bank shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,51,20,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,245,2544,LeBron James,1610612748,Miami Heat,2,0,3,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,9,3,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,258,2544,LeBron James,1610612748,Miami Heat,3,11,40,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,24,141,206,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,390,2544,LeBron James,1610612748,Miami Heat,4,10,24,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,22,-128,181,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,421,2544,LeBron James,1610612748,Miami Heat,4,7,57,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,25,-180,176,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000432,466,2544,LeBron James,1610612748,Miami Heat,4,3,50,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,19,132,138,1,1,20101223,PHX,MIA
+Shot Chart Detail,0021000435,59,2544,LeBron James,1610612748,Miami Heat,1,6,3,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,23,-239,-13,1,1,20101225,LAL,MIA
+Shot Chart Detail,0021000435,85,2544,LeBron James,1610612748,Miami Heat,1,3,47,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,26,177,192,1,1,20101225,LAL,MIA
+Shot Chart Detail,0021000435,131,2544,LeBron James,1610612748,Miami Heat,1,0,0,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,17,-160,80,1,1,20101225,LAL,MIA
+Shot Chart Detail,0021000435,229,2544,LeBron James,1610612748,Miami Heat,2,2,44,Made Shot,Jump Shot,3PT Field Goal,Right Corner 3,Right Side(R),24+ ft.,23,237,-11,1,1,20101225,LAL,MIA
+Shot Chart Detail,0021000435,291,2544,LeBron James,1610612748,Miami Heat,3,7,38,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,26,160,205,1,1,20101225,LAL,MIA
+Shot Chart Detail,0021000435,323,2544,LeBron James,1610612748,Miami Heat,3,4,55,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-16,4,1,1,20101225,LAL,MIA
+Shot Chart Detail,0021000435,354,2544,LeBron James,1610612748,Miami Heat,3,1,19,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,25,-228,110,1,1,20101225,LAL,MIA
+Shot Chart Detail,0021000435,398,2544,LeBron James,1610612748,Miami Heat,4,8,32,Made Shot,Putback Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,1,17,1,1,20101225,LAL,MIA
+Shot Chart Detail,0021000457,34,2544,LeBron James,1610612748,Miami Heat,1,7,28,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-8,14,1,1,20101228,MIA,NYK
+Shot Chart Detail,0021000457,64,2544,LeBron James,1610612748,Miami Heat,1,4,1,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,1,22,1,1,20101228,MIA,NYK
+Shot Chart Detail,0021000457,67,2544,LeBron James,1610612748,Miami Heat,1,3,36,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,26,-149,216,1,1,20101228,MIA,NYK
+Shot Chart Detail,0021000457,266,2544,LeBron James,1610612748,Miami Heat,2,1,47,Made Shot,Jump Bank Shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,8,-78,42,1,1,20101228,MIA,NYK
+Shot Chart Detail,0021000457,422,2544,LeBron James,1610612748,Miami Heat,4,11,23,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-122,148,1,1,20101228,MIA,NYK
+Shot Chart Detail,0021000457,443,2544,LeBron James,1610612748,Miami Heat,4,9,38,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,8,13,82,1,1,20101228,MIA,NYK
+Shot Chart Detail,0021000457,498,2544,LeBron James,1610612748,Miami Heat,4,4,2,Made Shot,Fadeaway Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,11,-11,118,1,1,20101228,MIA,NYK
+Shot Chart Detail,0021000457,541,2544,LeBron James,1610612748,Miami Heat,4,0,40,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-19,34,1,1,20101228,MIA,NYK
+Shot Chart Detail,0021000469,36,2544,LeBron James,1610612748,Miami Heat,1,7,46,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,20,-100,178,1,1,20101229,HOU,MIA
+Shot Chart Detail,0021000469,103,2544,LeBron James,1610612748,Miami Heat,1,2,30,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,8,-37,82,1,1,20101229,HOU,MIA
+Shot Chart Detail,0021000469,139,2544,LeBron James,1610612748,Miami Heat,1,0,11,Made Shot,Driving Jump shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-16,26,1,1,20101229,HOU,MIA
+Shot Chart Detail,0021000469,243,2544,LeBron James,1610612748,Miami Heat,2,2,8,Made Shot,Pullup Jump shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,7,-56,47,1,1,20101229,HOU,MIA
+Shot Chart Detail,0021000469,326,2544,LeBron James,1610612748,Miami Heat,3,6,2,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,1,0,1,1,20101229,HOU,MIA
+Shot Chart Detail,0021000469,354,2544,LeBron James,1610612748,Miami Heat,3,3,7,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,17,-35,167,1,1,20101229,HOU,MIA
+Shot Chart Detail,0021000469,361,2544,LeBron James,1610612748,Miami Heat,3,2,4,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,18,157,94,1,1,20101229,HOU,MIA
+Shot Chart Detail,0021000469,484,2544,LeBron James,1610612748,Miami Heat,4,4,26,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,20,-139,156,1,1,20101229,HOU,MIA
+Shot Chart Detail,0021000486,37,2544,LeBron James,1610612748,Miami Heat,1,6,21,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,20,12,1,1,20110101,MIA,GSW
+Shot Chart Detail,0021000486,194,2544,LeBron James,1610612748,Miami Heat,2,3,24,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-16,12,1,1,20110101,MIA,GSW
+Shot Chart Detail,0021000486,235,2544,LeBron James,1610612748,Miami Heat,2,0,42,Made Shot,Running Hook Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,7,2,71,1,1,20110101,MIA,GSW
+Shot Chart Detail,0021000486,301,2544,LeBron James,1610612748,Miami Heat,3,7,57,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,20,19,1,1,20110101,MIA,GSW
+Shot Chart Detail,0021000486,312,2544,LeBron James,1610612748,Miami Heat,3,6,8,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-15,15,1,1,20110101,MIA,GSW
+Shot Chart Detail,0021000486,470,2544,LeBron James,1610612748,Miami Heat,4,5,32,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-23,19,1,1,20110101,MIA,GSW
+Shot Chart Detail,0021000486,529,2544,LeBron James,1610612748,Miami Heat,4,1,2,Made Shot,Tip Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-24,20,1,1,20110101,MIA,GSW
+Shot Chart Detail,0021000499,36,2544,LeBron James,1610612748,Miami Heat,1,7,12,Made Shot,Running Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,10,-43,97,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,68,2544,LeBron James,1610612748,Miami Heat,1,2,48,Made Shot,Fadeaway Jump Shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,12,-67,108,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,191,2544,LeBron James,1610612748,Miami Heat,2,2,24,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,10,9,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,198,2544,LeBron James,1610612748,Miami Heat,2,1,18,Made Shot,Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,17,11,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,201,2544,LeBron James,1610612748,Miami Heat,2,0,49,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,1,19,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,259,2544,LeBron James,1610612748,Miami Heat,3,8,18,Made Shot,Jump Bank Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,18,-138,127,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,304,2544,LeBron James,1610612748,Miami Heat,3,4,33,Made Shot,Step Back Jump shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,108,233,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,317,2544,LeBron James,1610612748,Miami Heat,3,3,39,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,18,130,129,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,325,2544,LeBron James,1610612748,Miami Heat,3,2,49,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,20,122,164,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,331,2544,LeBron James,1610612748,Miami Heat,3,2,23,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,20,88,187,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,333,2544,LeBron James,1610612748,Miami Heat,3,1,36,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,18,176,48,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,405,2544,LeBron James,1610612748,Miami Heat,4,7,59,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,33,-191,279,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,407,2544,LeBron James,1610612748,Miami Heat,4,7,37,Made Shot,Reverse Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-1,4,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,416,2544,LeBron James,1610612748,Miami Heat,4,6,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-92,170,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000499,429,2544,LeBron James,1610612748,Miami Heat,4,5,13,Made Shot,Driving Jump shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,9,-81,53,1,1,20110103,CHA,MIA
+Shot Chart Detail,0021000505,76,2544,LeBron James,1610612748,Miami Heat,1,2,36,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,27,9,1,1,20110104,MIA,MIL
+Shot Chart Detail,0021000505,87,2544,LeBron James,1610612748,Miami Heat,1,2,9,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,20,11,1,1,20110104,MIA,MIL
+Shot Chart Detail,0021000505,90,2544,LeBron James,1610612748,Miami Heat,1,1,30,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,21,218,17,1,1,20110104,MIA,MIL
+Shot Chart Detail,0021000505,199,2544,LeBron James,1610612748,Miami Heat,2,5,26,Made Shot,Jump Bank Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,12,-57,108,1,1,20110104,MIA,MIL
+Shot Chart Detail,0021000505,302,2544,LeBron James,1610612748,Miami Heat,3,9,29,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,9,1,1,20110104,MIA,MIL
+Shot Chart Detail,0021000505,304,2544,LeBron James,1610612748,Miami Heat,3,9,7,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-16,14,1,1,20110104,MIA,MIL
+Shot Chart Detail,0021000505,353,2544,LeBron James,1610612748,Miami Heat,3,3,41,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,13,64,124,1,1,20110104,MIA,MIL
+Shot Chart Detail,0021000505,475,2544,LeBron James,1610612748,Miami Heat,4,5,50,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,14,70,129,1,1,20110104,MIA,MIL
+Shot Chart Detail,0021000532,9,2544,LeBron James,1610612748,Miami Heat,1,10,53,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,18,45,175,1,1,20110107,MIL,MIA
+Shot Chart Detail,0021000532,29,2544,LeBron James,1610612748,Miami Heat,1,8,54,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-218,105,1,1,20110107,MIL,MIA
+Shot Chart Detail,0021000532,46,2544,LeBron James,1610612748,Miami Heat,1,6,16,Made Shot,Alley Oop Layup shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-10,11,1,1,20110107,MIL,MIA
+Shot Chart Detail,0021000532,216,2544,LeBron James,1610612748,Miami Heat,2,4,24,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,14,130,74,1,1,20110107,MIL,MIA
+Shot Chart Detail,0021000532,238,2544,LeBron James,1610612748,Miami Heat,2,1,21,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,13,-4,138,1,1,20110107,MIL,MIA
+Shot Chart Detail,0021000532,333,2544,LeBron James,1610612748,Miami Heat,3,4,0,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,19,-174,86,1,1,20110107,MIL,MIA
+Shot Chart Detail,0021000532,372,2544,LeBron James,1610612748,Miami Heat,3,0,18,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,11,-114,37,1,1,20110107,MIL,MIA
+Shot Chart Detail,0021000532,527,2544,LeBron James,1610612748,Miami Heat,5,4,41,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,19,-190,12,1,1,20110107,MIL,MIA
+Shot Chart Detail,0021000549,64,2544,LeBron James,1610612748,Miami Heat,1,3,20,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,17,-179,15,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,84,2544,LeBron James,1610612748,Miami Heat,1,2,3,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,15,1,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,165,2544,LeBron James,1610612748,Miami Heat,2,6,37,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-15,9,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,206,2544,LeBron James,1610612748,Miami Heat,2,2,3,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,9,4,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,233,2544,LeBron James,1610612748,Miami Heat,2,0,5,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,18,-29,183,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,245,2544,LeBron James,1610612748,Miami Heat,3,10,55,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,13,-21,138,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,279,2544,LeBron James,1610612748,Miami Heat,3,6,27,Made Shot,Tip Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-13,1,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,306,2544,LeBron James,1610612748,Miami Heat,3,3,30,Made Shot,Driving Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-15,1,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,317,2544,LeBron James,1610612748,Miami Heat,3,2,33,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,9,14,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,332,2544,LeBron James,1610612748,Miami Heat,3,1,23,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-11,7,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,344,2544,LeBron James,1610612748,Miami Heat,4,10,53,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,22,-202,96,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,411,2544,LeBron James,1610612748,Miami Heat,4,3,8,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,16,-108,127,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,413,2544,LeBron James,1610612748,Miami Heat,4,2,39,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,6,-67,15,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,422,2544,LeBron James,1610612748,Miami Heat,4,2,1,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-34,3,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,424,2544,LeBron James,1610612748,Miami Heat,4,1,39,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-207,129,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,480,2544,LeBron James,1610612748,Miami Heat,5,2,12,Made Shot,Pullup Jump shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,25,-108,233,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000549,511,2544,LeBron James,1610612748,Miami Heat,5,0,16,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,83,238,1,1,20110109,POR,MIA
+Shot Chart Detail,0021000572,61,2544,LeBron James,1610612748,Miami Heat,1,5,28,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,17,-179,4,1,1,20110112,LAC,MIA
+Shot Chart Detail,0021000572,112,2544,LeBron James,1610612748,Miami Heat,1,1,25,Made Shot,Driving Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,4,15,1,1,20110112,LAC,MIA
+Shot Chart Detail,0021000572,117,2544,LeBron James,1610612748,Miami Heat,1,0,41,Made Shot,Running Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,-30,45,1,1,20110112,LAC,MIA
+Shot Chart Detail,0021000572,220,2544,LeBron James,1610612748,Miami Heat,2,4,20,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,27,114,246,1,1,20110112,LAC,MIA
+Shot Chart Detail,0021000572,242,2544,LeBron James,1610612748,Miami Heat,2,2,43,Made Shot,Tip Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-16,12,1,1,20110112,LAC,MIA
+Shot Chart Detail,0021000572,259,2544,LeBron James,1610612748,Miami Heat,2,1,2,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-155,194,1,1,20110112,LAC,MIA
+Shot Chart Detail,0021000572,348,2544,LeBron James,1610612748,Miami Heat,3,5,42,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,4,29,28,1,1,20110112,LAC,MIA
+Shot Chart Detail,0021000572,467,2544,LeBron James,1610612748,Miami Heat,4,7,42,Made Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,10,88,60,1,1,20110112,LAC,MIA
+Shot Chart Detail,0021000572,475,2544,LeBron James,1610612748,Miami Heat,4,6,36,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,23,-234,12,1,1,20110112,LAC,MIA
+Shot Chart Detail,0021000572,506,2544,LeBron James,1610612748,Miami Heat,4,2,40,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-13,28,1,1,20110112,LAC,MIA
+Shot Chart Detail,0021000572,549,2544,LeBron James,1610612748,Miami Heat,4,0,18,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,23,17,1,1,20110112,LAC,MIA
+Shot Chart Detail,0021000611,6,2544,LeBron James,1610612748,Miami Heat,1,10,39,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,20,182,102,1,1,20110118,MIA,ATL
+Shot Chart Detail,0021000611,186,2544,LeBron James,1610612748,Miami Heat,2,5,49,Made Shot,Hook Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,8,-38,71,1,1,20110118,MIA,ATL
+Shot Chart Detail,0021000611,225,2544,LeBron James,1610612748,Miami Heat,2,2,41,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,-34,47,1,1,20110118,MIA,ATL
+Shot Chart Detail,0021000611,309,2544,LeBron James,1610612748,Miami Heat,3,6,31,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-8,28,1,1,20110118,MIA,ATL
+Shot Chart Detail,0021000611,329,2544,LeBron James,1610612748,Miami Heat,3,3,46,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-18,19,1,1,20110118,MIA,ATL
+Shot Chart Detail,0021000611,418,2544,LeBron James,1610612748,Miami Heat,4,6,57,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,20,25,1,1,20110118,MIA,ATL
+Shot Chart Detail,0021000611,498,2544,LeBron James,1610612748,Miami Heat,4,0,35,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-4,20,1,1,20110118,MIA,ATL
+Shot Chart Detail,0021000611,520,2544,LeBron James,1610612748,Miami Heat,5,3,42,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-24,26,1,1,20110118,MIA,ATL
+Shot Chart Detail,0021000611,531,2544,LeBron James,1610612748,Miami Heat,5,2,42,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-218,121,1,1,20110118,MIA,ATL
+Shot Chart Detail,0021000611,543,2544,LeBron James,1610612748,Miami Heat,5,1,15,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-27,12,1,1,20110118,MIA,ATL
+Shot Chart Detail,0021000611,546,2544,LeBron James,1610612748,Miami Heat,5,0,51,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-198,151,1,1,20110118,MIA,ATL
+Shot Chart Detail,0021000643,3,2544,LeBron James,1610612748,Miami Heat,1,11,16,Made Shot,Hook Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,45,34,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,21,2544,LeBron James,1610612748,Miami Heat,1,9,13,Made Shot,Jump Bank Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,-52,23,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,71,2544,LeBron James,1610612748,Miami Heat,1,4,51,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,24,11,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,92,2544,LeBron James,1610612748,Miami Heat,1,3,5,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,26,12,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,219,2544,LeBron James,1610612748,Miami Heat,2,4,29,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-169,181,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,245,2544,LeBron James,1610612748,Miami Heat,2,1,58,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-18,22,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,255,2544,LeBron James,1610612748,Miami Heat,2,0,57,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,17,15,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,273,2544,LeBron James,1610612748,Miami Heat,3,11,42,Made Shot,Running Hook Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,9,21,89,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,331,2544,LeBron James,1610612748,Miami Heat,3,4,49,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,31,6,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,336,2544,LeBron James,1610612748,Miami Heat,3,4,8,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,7,56,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,371,2544,LeBron James,1610612748,Miami Heat,3,1,59,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,24,12,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,460,2544,LeBron James,1610612748,Miami Heat,4,5,12,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-11,14,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,465,2544,LeBron James,1610612748,Miami Heat,4,4,31,Made Shot,Turnaround Jump Shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,12,-68,102,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000643,472,2544,LeBron James,1610612748,Miami Heat,4,4,16,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,12,1,1,20110122,MIA,TOR
+Shot Chart Detail,0021000678,74,2544,LeBron James,1610612748,Miami Heat,1,5,0,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,6,9,1,1,20110127,NYK,MIA
+Shot Chart Detail,0021000678,82,2544,LeBron James,1610612748,Miami Heat,1,4,15,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,18,7,1,1,20110127,NYK,MIA
+Shot Chart Detail,0021000678,201,2544,LeBron James,1610612748,Miami Heat,2,6,56,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,18,12,1,1,20110127,NYK,MIA
+Shot Chart Detail,0021000678,275,2544,LeBron James,1610612748,Miami Heat,3,11,47,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-2,14,1,1,20110127,NYK,MIA
+Shot Chart Detail,0021000678,524,2544,LeBron James,1610612748,Miami Heat,4,1,32,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-15,7,1,1,20110127,NYK,MIA
+Shot Chart Detail,0021000678,531,2544,LeBron James,1610612748,Miami Heat,4,0,44,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,7,1,1,20110127,NYK,MIA
+Shot Chart Detail,0021000678,536,2544,LeBron James,1610612748,Miami Heat,4,0,17,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-24,14,1,1,20110127,NYK,MIA
+Shot Chart Detail,0021000686,27,2544,LeBron James,1610612748,Miami Heat,1,9,7,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-15,20,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,43,2544,LeBron James,1610612748,Miami Heat,1,7,34,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,18,-153,97,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,53,2544,LeBron James,1610612748,Miami Heat,1,6,37,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,11,18,118,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,93,2544,LeBron James,1610612748,Miami Heat,1,2,50,Made Shot,Jump Bank Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,4,-30,28,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,119,2544,LeBron James,1610612748,Miami Heat,1,0,11,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,14,-100,108,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,198,2544,LeBron James,1610612748,Miami Heat,2,5,29,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,28,20,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,209,2544,LeBron James,1610612748,Miami Heat,2,4,48,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,18,17,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,215,2544,LeBron James,1610612748,Miami Heat,2,3,42,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,23,176,149,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,235,2544,LeBron James,1610612748,Miami Heat,2,1,53,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,18,25,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,238,2544,LeBron James,1610612748,Miami Heat,2,1,25,Made Shot,Running Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,15,14,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,285,2544,LeBron James,1610612748,Miami Heat,3,7,52,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,7,28,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,334,2544,LeBron James,1610612748,Miami Heat,3,2,32,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,155,201,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,374,2544,LeBron James,1610612748,Miami Heat,4,10,0,Made Shot,Fadeaway Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,9,10,99,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,410,2544,LeBron James,1610612748,Miami Heat,4,5,27,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-10,22,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000686,434,2544,LeBron James,1610612748,Miami Heat,4,3,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Center(C),24+ ft.,25,18,250,1,1,20110128,MIA,DET
+Shot Chart Detail,0021000701,122,2544,LeBron James,1610612748,Miami Heat,1,0,10,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,20,-2,1,1,20110130,OKC,MIA
+Shot Chart Detail,0021000701,175,2544,LeBron James,1610612748,Miami Heat,2,7,51,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,17,-153,85,1,1,20110130,OKC,MIA
+Shot Chart Detail,0021000701,246,2544,LeBron James,1610612748,Miami Heat,2,2,16,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-4,7,1,1,20110130,OKC,MIA
+Shot Chart Detail,0021000701,315,2544,LeBron James,1610612748,Miami Heat,3,10,14,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,10,0,1,1,20110130,OKC,MIA
+Shot Chart Detail,0021000701,328,2544,LeBron James,1610612748,Miami Heat,3,9,9,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,24,155,194,1,1,20110130,OKC,MIA
+Shot Chart Detail,0021000701,413,2544,LeBron James,1610612748,Miami Heat,3,1,33,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,12,-93,78,1,1,20110130,OKC,MIA
+Shot Chart Detail,0021000701,420,2544,LeBron James,1610612748,Miami Heat,3,0,20,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-119,214,1,1,20110130,OKC,MIA
+Shot Chart Detail,0021000710,130,2544,LeBron James,1610612748,Miami Heat,1,2,23,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-13,14,1,1,20110131,MIA,CLE
+Shot Chart Detail,0021000710,152,2544,LeBron James,1610612748,Miami Heat,1,0,27,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,7,10,75,1,1,20110131,MIA,CLE
+Shot Chart Detail,0021000710,248,2544,LeBron James,1610612748,Miami Heat,2,3,8,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-4,17,1,1,20110131,MIA,CLE
+Shot Chart Detail,0021000710,345,2544,LeBron James,1610612748,Miami Heat,3,7,15,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,4,25,1,1,20110131,MIA,CLE
+Shot Chart Detail,0021000710,374,2544,LeBron James,1610612748,Miami Heat,3,4,33,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,21,-157,140,1,1,20110131,MIA,CLE
+Shot Chart Detail,0021000710,413,2544,LeBron James,1610612748,Miami Heat,3,1,24,Made Shot,Layup Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,4,-24,34,1,1,20110131,MIA,CLE
+Shot Chart Detail,0021000710,434,2544,LeBron James,1610612748,Miami Heat,3,0,11,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,24,14,1,1,20110131,MIA,CLE
+Shot Chart Detail,0021000730,4,2544,LeBron James,1610612748,Miami Heat,1,11,33,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,Center(C),8-16 ft.,14,-24,142,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,52,2544,LeBron James,1610612748,Miami Heat,1,7,13,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,16,-128,108,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,54,2544,LeBron James,1610612748,Miami Heat,1,6,35,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,18,-144,112,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,62,2544,LeBron James,1610612748,Miami Heat,1,5,50,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,21,182,115,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,64,2544,LeBron James,1610612748,Miami Heat,1,5,15,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,18,182,-5,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,78,2544,LeBron James,1610612748,Miami Heat,1,4,13,Made Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,9,94,22,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,89,2544,LeBron James,1610612748,Miami Heat,1,3,25,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,7,12,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,93,2544,LeBron James,1610612748,Miami Heat,1,2,18,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,17,-158,74,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,116,2544,LeBron James,1610612748,Miami Heat,1,0,25,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,22,192,123,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,171,2544,LeBron James,1610612748,Miami Heat,2,6,17,Made Shot,Jump Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-26,23,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,180,2544,LeBron James,1610612748,Miami Heat,2,5,42,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,13,12,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,234,2544,LeBron James,1610612748,Miami Heat,2,2,13,Made Shot,Jump Bank Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,4,-45,19,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,287,2544,LeBron James,1610612748,Miami Heat,3,10,47,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-123,216,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,319,2544,LeBron James,1610612748,Miami Heat,3,7,48,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-109,222,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,384,2544,LeBron James,1610612748,Miami Heat,3,1,48,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,24,9,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,399,2544,LeBron James,1610612748,Miami Heat,3,0,17,Made Shot,Turnaround Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,9,37,88,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000730,529,2544,LeBron James,1610612748,Miami Heat,4,1,29,Made Shot,Pullup Jump shot,3PT Field Goal,Above the Break 3,Center(C),24+ ft.,25,23,255,1,1,20110203,ORL,MIA
+Shot Chart Detail,0021000733,8,2544,LeBron James,1610612748,Miami Heat,1,10,39,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,17,-144,94,1,1,20110204,CHA,MIA
+Shot Chart Detail,0021000733,55,2544,LeBron James,1610612748,Miami Heat,1,5,7,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,18,-134,131,1,1,20110204,CHA,MIA
+Shot Chart Detail,0021000733,62,2544,LeBron James,1610612748,Miami Heat,1,3,58,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-7,15,1,1,20110204,CHA,MIA
+Shot Chart Detail,0021000733,84,2544,LeBron James,1610612748,Miami Heat,1,1,34,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-2,11,1,1,20110204,CHA,MIA
+Shot Chart Detail,0021000733,247,2544,LeBron James,1610612748,Miami Heat,3,10,30,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,14,144,28,1,1,20110204,CHA,MIA
+Shot Chart Detail,0021000733,323,2544,LeBron James,1610612748,Miami Heat,3,0,37,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-4,23,1,1,20110204,CHA,MIA
+Shot Chart Detail,0021000733,418,2544,LeBron James,1610612748,Miami Heat,4,5,13,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,0,11,1,1,20110204,CHA,MIA
+Shot Chart Detail,0021000754,93,2544,LeBron James,1610612748,Miami Heat,1,2,29,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-19,17,1,1,20110206,MIA,LAC
+Shot Chart Detail,0021000754,102,2544,LeBron James,1610612748,Miami Heat,1,2,4,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-11,24,1,1,20110206,MIA,LAC
+Shot Chart Detail,0021000754,249,2544,LeBron James,1610612748,Miami Heat,2,3,3,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,28,15,1,1,20110206,MIA,LAC
+Shot Chart Detail,0021000754,272,2544,LeBron James,1610612748,Miami Heat,2,0,58,Made Shot,Jump Bank Shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,8,-79,23,1,1,20110206,MIA,LAC
+Shot Chart Detail,0021000754,310,2544,LeBron James,1610612748,Miami Heat,3,10,42,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,17,26,1,1,20110206,MIA,LAC
+Shot Chart Detail,0021000754,523,2544,LeBron James,1610612748,Miami Heat,4,6,13,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,23,17,1,1,20110206,MIA,LAC
+Shot Chart Detail,0021000769,2,2544,LeBron James,1610612748,Miami Heat,1,11,45,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-24,9,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,47,2544,LeBron James,1610612748,Miami Heat,1,6,31,Made Shot,Putback Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-19,9,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,49,2544,LeBron James,1610612748,Miami Heat,1,6,14,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-15,12,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,67,2544,LeBron James,1610612748,Miami Heat,1,4,52,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-9,16,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,99,2544,LeBron James,1610612748,Miami Heat,1,3,2,Made Shot,Jump Shot,3PT Field Goal,Right Corner 3,Right Side(R),24+ ft.,23,231,-8,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,123,2544,LeBron James,1610612748,Miami Heat,1,0,2,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-16,12,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,171,2544,LeBron James,1610612748,Miami Heat,2,8,5,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,17,-175,6,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,174,2544,LeBron James,1610612748,Miami Heat,2,7,36,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,26,149,214,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,245,2544,LeBron James,1610612748,Miami Heat,2,0,59,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,3,11,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,247,2544,LeBron James,1610612748,Miami Heat,2,0,43,Made Shot,Running Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,0,12,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,253,2544,LeBron James,1610612748,Miami Heat,2,0,4,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-23,6,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,281,2544,LeBron James,1610612748,Miami Heat,3,8,40,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,20,-169,119,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,358,2544,LeBron James,1610612748,Miami Heat,3,1,29,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-5,17,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,469,2544,LeBron James,1610612748,Miami Heat,4,2,7,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,16,78,140,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000769,494,2544,LeBron James,1610612748,Miami Heat,4,0,14,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,17,-76,154,1,1,20110208,MIA,IND
+Shot Chart Detail,0021000792,20,2544,LeBron James,1610612748,Miami Heat,1,9,27,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,0,3,1,1,20110211,DET,MIA
+Shot Chart Detail,0021000792,47,2544,LeBron James,1610612748,Miami Heat,1,6,16,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-2,1,1,1,20110211,DET,MIA
+Shot Chart Detail,0021000792,79,2544,LeBron James,1610612748,Miami Heat,1,3,3,Made Shot,Fadeaway Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,7,-75,3,1,1,20110211,DET,MIA
+Shot Chart Detail,0021000792,258,2544,LeBron James,1610612748,Miami Heat,3,10,27,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,19,141,134,1,1,20110211,DET,MIA
+Shot Chart Detail,0021000792,350,2544,LeBron James,1610612748,Miami Heat,3,0,0,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,17,113,137,1,1,20110211,DET,MIA
+Shot Chart Detail,0021000792,420,2544,LeBron James,1610612748,Miami Heat,4,5,28,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,19,-59,189,1,1,20110211,DET,MIA
+Shot Chart Detail,0021000792,427,2544,LeBron James,1610612748,Miami Heat,4,4,41,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,1,-3,1,1,20110211,DET,MIA
+Shot Chart Detail,0021000804,13,2544,LeBron James,1610612748,Miami Heat,1,9,51,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,0,-5,1,1,20110213,BOS,MIA
+Shot Chart Detail,0021000804,58,2544,LeBron James,1610612748,Miami Heat,1,4,9,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-2,6,1,1,20110213,BOS,MIA
+Shot Chart Detail,0021000804,61,2544,LeBron James,1610612748,Miami Heat,1,3,48,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,1,1,1,1,20110213,BOS,MIA
+Shot Chart Detail,0021000804,78,2544,LeBron James,1610612748,Miami Heat,1,1,49,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,6,14,1,1,20110213,BOS,MIA
+Shot Chart Detail,0021000804,221,2544,LeBron James,1610612748,Miami Heat,2,0,0,Made Shot,Floating Jump shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-37,11,1,1,20110213,BOS,MIA
+Shot Chart Detail,0021000804,296,2544,LeBron James,1610612748,Miami Heat,3,5,46,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-2,4,1,1,20110213,BOS,MIA
+Shot Chart Detail,0021000804,359,2544,LeBron James,1610612748,Miami Heat,3,0,58,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,2,-2,1,1,20110213,BOS,MIA
+Shot Chart Detail,0021000804,376,2544,LeBron James,1610612748,Miami Heat,4,11,47,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-4,12,1,1,20110213,BOS,MIA
+Shot Chart Detail,0021000804,419,2544,LeBron James,1610612748,Miami Heat,4,7,24,Made Shot,Floating Jump shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,6,-16,67,1,1,20110213,BOS,MIA
+Shot Chart Detail,0021000804,429,2544,LeBron James,1610612748,Miami Heat,4,5,31,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,22,-73,209,1,1,20110213,BOS,MIA
+Shot Chart Detail,0021000818,7,2544,LeBron James,1610612748,Miami Heat,1,11,4,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,29,7,1,1,20110215,IND,MIA
+Shot Chart Detail,0021000818,85,2544,LeBron James,1610612748,Miami Heat,1,3,50,Made Shot,Alley Oop Layup shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,15,-19,1,1,20110215,IND,MIA
+Shot Chart Detail,0021000818,104,2544,LeBron James,1610612748,Miami Heat,1,2,8,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,15,4,1,1,20110215,IND,MIA
+Shot Chart Detail,0021000818,118,2544,LeBron James,1610612748,Miami Heat,1,0,20,Made Shot,Fadeaway Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,13,-13,134,1,1,20110215,IND,MIA
+Shot Chart Detail,0021000818,202,2544,LeBron James,1610612748,Miami Heat,2,5,27,Made Shot,Turnaround Jump Shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,11,-60,101,1,1,20110215,IND,MIA
+Shot Chart Detail,0021000818,355,2544,LeBron James,1610612748,Miami Heat,3,1,53,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,20,-175,108,1,1,20110215,IND,MIA
+Shot Chart Detail,0021000818,379,2544,LeBron James,1610612748,Miami Heat,3,0,17,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Center(C),24+ ft.,26,31,265,1,1,20110215,IND,MIA
+Shot Chart Detail,0021000818,445,2544,LeBron James,1610612748,Miami Heat,4,6,12,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,18,7,1,1,20110215,IND,MIA
+Shot Chart Detail,0021000818,462,2544,LeBron James,1610612748,Miami Heat,4,4,10,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-4,0,1,1,20110215,IND,MIA
+Shot Chart Detail,0021000818,467,2544,LeBron James,1610612748,Miami Heat,4,3,30,Made Shot,Tip Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,7,0,1,1,20110215,IND,MIA
+Shot Chart Detail,0021000818,505,2544,LeBron James,1610612748,Miami Heat,4,1,24,Made Shot,Fadeaway Jump Shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,8,-51,69,1,1,20110215,IND,MIA
+Shot Chart Detail,0021000825,44,2544,LeBron James,1610612748,Miami Heat,1,6,11,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,12,0,1,1,20110216,TOR,MIA
+Shot Chart Detail,0021000825,120,2544,LeBron James,1610612748,Miami Heat,1,0,51,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,22,-8,227,1,1,20110216,TOR,MIA
+Shot Chart Detail,0021000825,122,2544,LeBron James,1610612748,Miami Heat,1,0,28,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,21,7,214,1,1,20110216,TOR,MIA
+Shot Chart Detail,0021000825,233,2544,LeBron James,1610612748,Miami Heat,2,0,54,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,12,1,1,20110216,TOR,MIA
+Shot Chart Detail,0021000825,315,2544,LeBron James,1610612748,Miami Heat,3,5,46,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,12,17,1,1,20110216,TOR,MIA
+Shot Chart Detail,0021000825,356,2544,LeBron James,1610612748,Miami Heat,3,1,49,Made Shot,Running Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,6,6,1,1,20110216,TOR,MIA
+Shot Chart Detail,0021000825,525,2544,LeBron James,1610612748,Miami Heat,4,1,16,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-18,7,1,1,20110216,TOR,MIA
+Shot Chart Detail,0021000825,529,2544,LeBron James,1610612748,Miami Heat,4,0,57,Made Shot,Tip Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-7,14,1,1,20110216,TOR,MIA
+Shot Chart Detail,0021000841,27,2544,LeBron James,1610612748,Miami Heat,1,9,18,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-15,17,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,33,2544,LeBron James,1610612748,Miami Heat,1,8,12,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,0,23,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,69,2544,LeBron James,1610612748,Miami Heat,1,4,50,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,24,25,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,81,2544,LeBron James,1610612748,Miami Heat,1,3,32,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,15,-81,134,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,96,2544,LeBron James,1610612748,Miami Heat,1,2,5,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,10,-108,14,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,102,2544,LeBron James,1610612748,Miami Heat,1,1,22,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-18,23,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,117,2544,LeBron James,1610612748,Miami Heat,1,0,0,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,11,97,61,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,193,2544,LeBron James,1610612748,Miami Heat,2,4,41,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,16,114,121,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,200,2544,LeBron James,1610612748,Miami Heat,2,4,5,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,17,-97,143,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,242,2544,LeBron James,1610612748,Miami Heat,2,0,17,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,25,-103,233,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,255,2544,LeBron James,1610612748,Miami Heat,3,10,48,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Center(C),8-16 ft.,15,6,156,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,258,2544,LeBron James,1610612748,Miami Heat,3,10,26,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-207,132,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,278,2544,LeBron James,1610612748,Miami Heat,3,8,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,187,172,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000841,349,2544,LeBron James,1610612748,Miami Heat,3,1,43,Made Shot,Running Jump Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,34,20,1,1,20110222,MIA,SAC
+Shot Chart Detail,0021000859,46,2544,LeBron James,1610612748,Miami Heat,1,8,51,Made Shot,Reverse Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-11,14,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000859,49,2544,LeBron James,1610612748,Miami Heat,1,8,28,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,9,14,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000859,54,2544,LeBron James,1610612748,Miami Heat,1,8,3,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,9,4,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000859,113,2544,LeBron James,1610612748,Miami Heat,1,1,19,Made Shot,Floating Jump shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,6,-43,52,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000859,127,2544,LeBron James,1610612748,Miami Heat,1,0,12,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,22,58,219,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000859,238,2544,LeBron James,1610612748,Miami Heat,2,2,32,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,17,-177,6,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000859,263,2544,LeBron James,1610612748,Miami Heat,2,0,38,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-13,26,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000859,266,2544,LeBron James,1610612748,Miami Heat,2,0,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,22,-149,170,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000859,281,2544,LeBron James,1610612748,Miami Heat,3,10,40,Made Shot,Running Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,10,12,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000859,305,2544,LeBron James,1610612748,Miami Heat,3,7,40,Made Shot,Running Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-5,15,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000859,448,2544,LeBron James,1610612748,Miami Heat,4,7,5,Made Shot,Driving Jump shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,24,45,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000859,539,2544,LeBron James,1610612748,Miami Heat,4,0,36,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,7,-57,55,1,1,20110224,CHI,MIA
+Shot Chart Detail,0021000866,15,2544,LeBron James,1610612748,Miami Heat,1,10,10,Made Shot,Turnaround Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,13,-54,129,1,1,20110225,MIA,WAS
+Shot Chart Detail,0021000866,109,2544,LeBron James,1610612748,Miami Heat,1,1,12,Made Shot,Running Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,8,7,83,1,1,20110225,MIA,WAS
+Shot Chart Detail,0021000866,260,2544,LeBron James,1610612748,Miami Heat,2,1,24,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-16,22,1,1,20110225,MIA,WAS
+Shot Chart Detail,0021000866,340,2544,LeBron James,1610612748,Miami Heat,3,6,5,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,21,53,209,1,1,20110225,MIA,WAS
+Shot Chart Detail,0021000866,406,2544,LeBron James,1610612748,Miami Heat,3,1,35,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,21,217,22,1,1,20110225,MIA,WAS
+Shot Chart Detail,0021000887,11,2544,LeBron James,1610612748,Miami Heat,1,10,35,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,196,159,1,1,20110227,MIA,NYK
+Shot Chart Detail,0021000887,22,2544,LeBron James,1610612748,Miami Heat,1,8,54,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,18,14,1,1,20110227,MIA,NYK
+Shot Chart Detail,0021000887,98,2544,LeBron James,1610612748,Miami Heat,1,2,43,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,19,73,186,1,1,20110227,MIA,NYK
+Shot Chart Detail,0021000887,132,2544,LeBron James,1610612748,Miami Heat,1,0,40,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,23,14,1,1,20110227,MIA,NYK
+Shot Chart Detail,0021000887,192,2544,LeBron James,1610612748,Miami Heat,2,7,6,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-23,17,1,1,20110227,MIA,NYK
+Shot Chart Detail,0021000887,289,2544,LeBron James,1610612748,Miami Heat,3,9,45,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,-40,34,1,1,20110227,MIA,NYK
+Shot Chart Detail,0021000887,330,2544,LeBron James,1610612748,Miami Heat,3,5,50,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,12,1,1,20110227,MIA,NYK
+Shot Chart Detail,0021000887,421,2544,LeBron James,1610612748,Miami Heat,4,7,10,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Right Side(R),8-16 ft.,12,73,99,1,1,20110227,MIA,NYK
+Shot Chart Detail,0021000887,458,2544,LeBron James,1610612748,Miami Heat,4,4,3,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,28,20,1,1,20110227,MIA,NYK
+Shot Chart Detail,0021000887,468,2544,LeBron James,1610612748,Miami Heat,4,3,5,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-23,14,1,1,20110227,MIA,NYK
+Shot Chart Detail,0021000912,35,2544,LeBron James,1610612748,Miami Heat,1,6,47,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-24,14,1,1,20110303,MIA,ORL
+Shot Chart Detail,0021000912,77,2544,LeBron James,1610612748,Miami Heat,1,2,45,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Right Side(R),8-16 ft.,14,75,129,1,1,20110303,MIA,ORL
+Shot Chart Detail,0021000912,96,2544,LeBron James,1610612748,Miami Heat,1,1,39,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,15,-84,132,1,1,20110303,MIA,ORL
+Shot Chart Detail,0021000912,111,2544,LeBron James,1610612748,Miami Heat,1,0,8,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,21,-89,194,1,1,20110303,MIA,ORL
+Shot Chart Detail,0021000912,178,2544,LeBron James,1610612748,Miami Heat,2,6,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,20,113,170,1,1,20110303,MIA,ORL
+Shot Chart Detail,0021000912,182,2544,LeBron James,1610612748,Miami Heat,2,5,28,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,21,-82,200,1,1,20110303,MIA,ORL
+Shot Chart Detail,0021000912,190,2544,LeBron James,1610612748,Miami Heat,2,4,2,Made Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,14,-142,44,1,1,20110303,MIA,ORL
+Shot Chart Detail,0021000912,199,2544,LeBron James,1610612748,Miami Heat,2,3,39,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,16,-153,74,1,1,20110303,MIA,ORL
+Shot Chart Detail,0021000912,274,2544,LeBron James,1610612748,Miami Heat,3,8,57,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-24,14,1,1,20110303,MIA,ORL
+Shot Chart Detail,0021000912,318,2544,LeBron James,1610612748,Miami Heat,3,5,18,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,22,13,224,1,1,20110303,MIA,ORL
+Shot Chart Detail,0021000912,337,2544,LeBron James,1610612748,Miami Heat,3,2,2,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,18,-34,183,1,1,20110303,MIA,ORL
+Shot Chart Detail,0021000923,35,2544,LeBron James,1610612748,Miami Heat,1,7,43,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,9,6,1,1,20110304,SAS,MIA
+Shot Chart Detail,0021000923,150,2544,LeBron James,1610612748,Miami Heat,2,8,44,Made Shot,Driving Bank shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,6,65,6,1,1,20110304,SAS,MIA
+Shot Chart Detail,0021000923,188,2544,LeBron James,1610612748,Miami Heat,2,4,55,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,24,-6,1,1,20110304,SAS,MIA
+Shot Chart Detail,0021000923,197,2544,LeBron James,1610612748,Miami Heat,2,3,10,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,28,0,1,1,20110304,SAS,MIA
+Shot Chart Detail,0021000923,200,2544,LeBron James,1610612748,Miami Heat,2,2,53,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-13,3,1,1,20110304,SAS,MIA
+Shot Chart Detail,0021000923,213,2544,LeBron James,1610612748,Miami Heat,2,1,50,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,6,4,67,1,1,20110304,SAS,MIA
+Shot Chart Detail,0021000923,217,2544,LeBron James,1610612748,Miami Heat,2,1,7,Made Shot,Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,18,-16,1,1,20110304,SAS,MIA
+Shot Chart Detail,0021000923,280,2544,LeBron James,1610612748,Miami Heat,3,7,44,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),8-16 ft.,15,10,151,1,1,20110304,SAS,MIA
+Shot Chart Detail,0021000923,313,2544,LeBron James,1610612748,Miami Heat,3,4,38,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,17,48,168,1,1,20110304,SAS,MIA
+Shot Chart Detail,0021000923,407,2544,LeBron James,1610612748,Miami Heat,4,10,20,Made Shot,Running Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,2,23,1,1,20110304,SAS,MIA
+Shot Chart Detail,0021000923,409,2544,LeBron James,1610612748,Miami Heat,4,9,33,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,23,-119,206,1,1,20110304,SAS,MIA
+Shot Chart Detail,0021000931,23,2544,LeBron James,1610612748,Miami Heat,1,8,23,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,26,7,1,1,20110306,MIA,CHI
+Shot Chart Detail,0021000931,45,2544,LeBron James,1610612748,Miami Heat,1,5,57,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-27,12,1,1,20110306,MIA,CHI
+Shot Chart Detail,0021000931,55,2544,LeBron James,1610612748,Miami Heat,1,4,10,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,20,-199,23,1,1,20110306,MIA,CHI
+Shot Chart Detail,0021000931,89,2544,LeBron James,1610612748,Miami Heat,1,0,24,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,6,53,1,1,20110306,MIA,CHI
+Shot Chart Detail,0021000931,176,2544,LeBron James,1610612748,Miami Heat,2,2,26,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-130,143,1,1,20110306,MIA,CHI
+Shot Chart Detail,0021000931,202,2544,LeBron James,1610612748,Miami Heat,2,0,45,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,25,-187,172,1,1,20110306,MIA,CHI
+Shot Chart Detail,0021000931,225,2544,LeBron James,1610612748,Miami Heat,3,11,36,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,19,195,-6,1,1,20110306,MIA,CHI
+Shot Chart Detail,0021000931,319,2544,LeBron James,1610612748,Miami Heat,3,1,24,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,11,-97,55,1,1,20110306,MIA,CHI
+Shot Chart Detail,0021000931,442,2544,LeBron James,1610612748,Miami Heat,4,3,17,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,17,13,175,1,1,20110306,MIA,CHI
+Shot Chart Detail,0021000931,454,2544,LeBron James,1610612748,Miami Heat,4,1,47,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,10,-98,28,1,1,20110306,MIA,CHI
+Shot Chart Detail,0021000951,45,2544,LeBron James,1610612748,Miami Heat,1,6,22,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,23,-232,-6,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,60,2544,LeBron James,1610612748,Miami Heat,1,3,54,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-18,14,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,105,2544,LeBron James,1610612748,Miami Heat,1,0,24,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-23,19,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,125,2544,LeBron James,1610612748,Miami Heat,2,10,27,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Center(C),24+ ft.,24,-71,235,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,133,2544,LeBron James,1610612748,Miami Heat,2,9,32,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,20,12,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,194,2544,LeBron James,1610612748,Miami Heat,2,4,47,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,15,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,217,2544,LeBron James,1610612748,Miami Heat,2,2,27,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,6,21,58,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,232,2544,LeBron James,1610612748,Miami Heat,2,1,8,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-15,15,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,278,2544,LeBron James,1610612748,Miami Heat,3,9,14,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-13,20,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,294,2544,LeBron James,1610612748,Miami Heat,3,7,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,21,-161,137,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,309,2544,LeBron James,1610612748,Miami Heat,3,4,53,Made Shot,Fadeaway Jump Shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,9,-70,58,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,313,2544,LeBron James,1610612748,Miami Heat,3,4,11,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,16,129,97,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,434,2544,LeBron James,1610612748,Miami Heat,4,4,35,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,17,17,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000951,465,2544,LeBron James,1610612748,Miami Heat,4,0,33,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,29,9,1,1,20110308,MIA,POR
+Shot Chart Detail,0021000964,65,2544,LeBron James,1610612748,Miami Heat,1,4,57,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,16,-161,-5,1,1,20110310,MIA,LAL
+Shot Chart Detail,0021000964,84,2544,LeBron James,1610612748,Miami Heat,1,2,59,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-13,12,1,1,20110310,MIA,LAL
+Shot Chart Detail,0021000964,125,2544,LeBron James,1610612748,Miami Heat,1,0,0,Made Shot,Jump Bank Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,9,-90,20,1,1,20110310,MIA,LAL
+Shot Chart Detail,0021000964,314,2544,LeBron James,1610612748,Miami Heat,3,5,20,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,0,19,1,1,20110310,MIA,LAL
+Shot Chart Detail,0021000964,358,2544,LeBron James,1610612748,Miami Heat,3,1,0,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-19,19,1,1,20110310,MIA,LAL
+Shot Chart Detail,0021000964,369,2544,LeBron James,1610612748,Miami Heat,3,0,0,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-139,142,1,1,20110310,MIA,LAL
+Shot Chart Detail,0021000964,482,2544,LeBron James,1610612748,Miami Heat,4,1,27,Made Shot,Running Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,29,3,1,1,20110310,MIA,LAL
+Shot Chart Detail,0021000976,25,2544,LeBron James,1610612748,Miami Heat,1,8,37,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,24,17,1,1,20110312,MIA,MEM
+Shot Chart Detail,0021000976,85,2544,LeBron James,1610612748,Miami Heat,1,2,38,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-105,170,1,1,20110312,MIA,MEM
+Shot Chart Detail,0021000976,89,2544,LeBron James,1610612748,Miami Heat,1,1,55,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-139,131,1,1,20110312,MIA,MEM
+Shot Chart Detail,0021000976,92,2544,LeBron James,1610612748,Miami Heat,1,1,21,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,116,228,1,1,20110312,MIA,MEM
+Shot Chart Detail,0021000976,206,2544,LeBron James,1610612748,Miami Heat,2,3,35,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,18,105,148,1,1,20110312,MIA,MEM
+Shot Chart Detail,0021000976,267,2544,LeBron James,1610612748,Miami Heat,3,10,44,Made Shot,Running Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,16,-95,131,1,1,20110312,MIA,MEM
+Shot Chart Detail,0021000976,269,2544,LeBron James,1610612748,Miami Heat,3,10,15,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-209,123,1,1,20110312,MIA,MEM
+Shot Chart Detail,0021000976,295,2544,LeBron James,1610612748,Miami Heat,3,7,55,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-10,11,1,1,20110312,MIA,MEM
+Shot Chart Detail,0021000976,300,2544,LeBron James,1610612748,Miami Heat,3,6,52,Made Shot,Running Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,10,91,44,1,1,20110312,MIA,MEM
+Shot Chart Detail,0021000976,312,2544,LeBron James,1610612748,Miami Heat,3,6,3,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,11,1,1,20110312,MIA,MEM
+Shot Chart Detail,0021000993,61,2544,LeBron James,1610612748,Miami Heat,1,4,53,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,20,127,157,1,1,20110314,MIA,SAS
+Shot Chart Detail,0021000993,81,2544,LeBron James,1610612748,Miami Heat,1,2,22,Made Shot,Floating Jump shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,11,-68,97,1,1,20110314,MIA,SAS
+Shot Chart Detail,0021000993,265,2544,LeBron James,1610612748,Miami Heat,3,9,30,Made Shot,Jump Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,2,31,1,1,20110314,MIA,SAS
+Shot Chart Detail,0021000993,361,2544,LeBron James,1610612748,Miami Heat,3,0,58,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,19,9,194,1,1,20110314,MIA,SAS
+Shot Chart Detail,0021000993,395,2544,LeBron James,1610612748,Miami Heat,4,10,14,Made Shot,Running Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-8,19,1,1,20110314,MIA,SAS
+Shot Chart Detail,0021000993,407,2544,LeBron James,1610612748,Miami Heat,4,9,13,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,20,-82,184,1,1,20110314,MIA,SAS
+Shot Chart Detail,0021000993,434,2544,LeBron James,1610612748,Miami Heat,4,6,32,Made Shot,Turnaround Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,6,6,61,1,1,20110314,MIA,SAS
+Shot Chart Detail,0021000993,479,2544,LeBron James,1610612748,Miami Heat,4,2,48,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,11,-111,31,1,1,20110314,MIA,SAS
+Shot Chart Detail,0021001006,2,2544,LeBron James,1610612748,Miami Heat,1,11,44,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,29,11,1,1,20110316,MIA,OKC
+Shot Chart Detail,0021001006,32,2544,LeBron James,1610612748,Miami Heat,1,8,3,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,17,15,1,1,20110316,MIA,OKC
+Shot Chart Detail,0021001006,41,2544,LeBron James,1610612748,Miami Heat,1,7,22,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,24,12,1,1,20110316,MIA,OKC
+Shot Chart Detail,0021001006,194,2544,LeBron James,1610612748,Miami Heat,2,5,23,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,19,118,153,1,1,20110316,MIA,OKC
+Shot Chart Detail,0021001006,242,2544,LeBron James,1610612748,Miami Heat,2,1,25,Made Shot,Reverse Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-23,14,1,1,20110316,MIA,OKC
+Shot Chart Detail,0021001006,244,2544,LeBron James,1610612748,Miami Heat,2,1,7,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,16,9,1,1,20110316,MIA,OKC
+Shot Chart Detail,0021001006,396,2544,LeBron James,1610612748,Miami Heat,3,1,33,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,19,-46,186,1,1,20110316,MIA,OKC
+Shot Chart Detail,0021001006,468,2544,LeBron James,1610612748,Miami Heat,4,6,39,Made Shot,Turnaround Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,14,-62,126,1,1,20110316,MIA,OKC
+Shot Chart Detail,0021001020,33,2544,LeBron James,1610612748,Miami Heat,1,7,12,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-144,195,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,53,2544,LeBron James,1610612748,Miami Heat,1,4,45,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),8-16 ft.,14,-15,149,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,67,2544,LeBron James,1610612748,Miami Heat,1,3,49,Made Shot,Running Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,15,6,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,80,2544,LeBron James,1610612748,Miami Heat,1,1,53,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,19,-187,50,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,82,2544,LeBron James,1610612748,Miami Heat,1,1,32,Made Shot,Running Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,0,3,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,91,2544,LeBron James,1610612748,Miami Heat,1,0,23,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,11,-2,115,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,160,2544,LeBron James,1610612748,Miami Heat,2,6,12,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,19,-174,94,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,168,2544,LeBron James,1610612748,Miami Heat,2,5,29,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,23,-234,52,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,265,2544,LeBron James,1610612748,Miami Heat,3,10,17,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,18,-60,176,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,282,2544,LeBron James,1610612748,Miami Heat,3,7,41,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,25,-131,213,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,296,2544,LeBron James,1610612748,Miami Heat,3,6,47,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,Left Side(L),24+ ft.,22,-226,37,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,303,2544,LeBron James,1610612748,Miami Heat,3,6,5,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,22,28,222,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,306,2544,LeBron James,1610612748,Miami Heat,3,5,42,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,24,187,162,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,316,2544,LeBron James,1610612748,Miami Heat,3,4,36,Made Shot,Running Jump Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,9,37,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,343,2544,LeBron James,1610612748,Miami Heat,3,2,25,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-155,126,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001020,378,2544,LeBron James,1610612748,Miami Heat,3,0,35,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,21,-23,214,1,1,20110318,ATL,MIA
+Shot Chart Detail,0021001030,48,2544,LeBron James,1610612748,Miami Heat,1,7,38,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,21,-152,145,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,77,2544,LeBron James,1610612748,Miami Heat,1,4,31,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-168,176,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,86,2544,LeBron James,1610612748,Miami Heat,1,4,14,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-21,11,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,89,2544,LeBron James,1610612748,Miami Heat,1,3,47,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-2,12,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,98,2544,LeBron James,1610612748,Miami Heat,1,2,33,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,15,-142,71,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,123,2544,LeBron James,1610612748,Miami Heat,1,0,20,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,20,99,179,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,183,2544,LeBron James,1610612748,Miami Heat,2,6,52,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,6,-62,12,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,236,2544,LeBron James,1610612748,Miami Heat,2,2,14,Made Shot,Jump Bank Shot,2PT Field Goal,In The Paint (Non-RA),Right Side(R),8-16 ft.,9,67,66,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,240,2544,LeBron James,1610612748,Miami Heat,2,1,45,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-95,168,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,280,2544,LeBron James,1610612748,Miami Heat,3,10,34,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,18,-116,143,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,300,2544,LeBron James,1610612748,Miami Heat,3,8,12,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,21,-194,97,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,350,2544,LeBron James,1610612748,Miami Heat,3,3,5,Made Shot,Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-18,1,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,367,2544,LeBron James,1610612748,Miami Heat,3,1,31,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,12,7,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,443,2544,LeBron James,1610612748,Miami Heat,4,7,13,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,0,6,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001030,524,2544,LeBron James,1610612748,Miami Heat,4,0,21,Made Shot,Running Bank Hook Shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,9,91,11,1,1,20110319,MIA,DEN
+Shot Chart Detail,0021001058,12,2544,LeBron James,1610612748,Miami Heat,1,10,7,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,1,0,1,1,20110323,DET,MIA
+Shot Chart Detail,0021001058,176,2544,LeBron James,1610612748,Miami Heat,2,5,22,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,0,-2,1,1,20110323,DET,MIA
+Shot Chart Detail,0021001058,192,2544,LeBron James,1610612748,Miami Heat,2,3,58,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,10,-2,1,1,20110323,DET,MIA
+Shot Chart Detail,0021001058,194,2544,LeBron James,1610612748,Miami Heat,2,3,15,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,9,-92,14,1,1,20110323,DET,MIA
+Shot Chart Detail,0021001058,215,2544,LeBron James,1610612748,Miami Heat,2,1,31,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,1,1,1,1,20110323,DET,MIA
+Shot Chart Detail,0021001058,348,2544,LeBron James,1610612748,Miami Heat,4,11,43,Made Shot,Running Jump Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,4,34,1,1,20110323,DET,MIA
+Shot Chart Detail,0021001058,367,2544,LeBron James,1610612748,Miami Heat,4,9,23,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-4,1,1,1,20110323,DET,MIA
+Shot Chart Detail,0021001058,428,2544,LeBron James,1610612748,Miami Heat,4,3,52,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-4,-2,1,1,20110323,DET,MIA
+Shot Chart Detail,0021001072,11,2544,LeBron James,1610612748,Miami Heat,1,10,42,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,4,1,1,20110325,MIA,PHI
+Shot Chart Detail,0021001072,22,2544,LeBron James,1610612748,Miami Heat,1,9,1,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,9,-97,17,1,1,20110325,MIA,PHI
+Shot Chart Detail,0021001072,92,2544,LeBron James,1610612748,Miami Heat,1,1,18,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),8-16 ft.,15,6,159,1,1,20110325,MIA,PHI
+Shot Chart Detail,0021001072,103,2544,LeBron James,1610612748,Miami Heat,1,0,13,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-2,20,1,1,20110325,MIA,PHI
+Shot Chart Detail,0021001072,236,2544,LeBron James,1610612748,Miami Heat,2,1,13,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,13,14,1,1,20110325,MIA,PHI
+Shot Chart Detail,0021001072,262,2544,LeBron James,1610612748,Miami Heat,3,10,58,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-193,148,1,1,20110325,MIA,PHI
+Shot Chart Detail,0021001072,285,2544,LeBron James,1610612748,Miami Heat,3,8,27,Made Shot,Tip Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,1,11,1,1,20110325,MIA,PHI
+Shot Chart Detail,0021001072,294,2544,LeBron James,1610612748,Miami Heat,3,7,21,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-8,7,1,1,20110325,MIA,PHI
+Shot Chart Detail,0021001072,299,2544,LeBron James,1610612748,Miami Heat,3,6,49,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,12,3,1,1,20110325,MIA,PHI
+Shot Chart Detail,0021001072,316,2544,LeBron James,1610612748,Miami Heat,3,4,52,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,16,-109,127,1,1,20110325,MIA,PHI
+Shot Chart Detail,0021001072,476,2544,LeBron James,1610612748,Miami Heat,4,3,39,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,0,12,1,1,20110325,MIA,PHI
+Shot Chart Detail,0021001089,23,2544,LeBron James,1610612748,Miami Heat,1,9,14,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,23,7,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,34,2544,LeBron James,1610612748,Miami Heat,1,7,42,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,16,-78,142,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,81,2544,LeBron James,1610612748,Miami Heat,1,3,12,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-15,4,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,101,2544,LeBron James,1610612748,Miami Heat,1,1,59,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-16,0,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,114,2544,LeBron James,1610612748,Miami Heat,1,0,51,Made Shot,Jump Bank Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,4,32,25,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,201,2544,LeBron James,1610612748,Miami Heat,2,6,4,Made Shot,Alley Oop Layup shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-11,6,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,272,2544,LeBron James,1610612748,Miami Heat,2,0,29,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,23,9,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,316,2544,LeBron James,1610612748,Miami Heat,3,9,40,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,2,4,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,341,2544,LeBron James,1610612748,Miami Heat,3,6,19,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-21,3,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,391,2544,LeBron James,1610612748,Miami Heat,3,2,4,Made Shot,Driving Jump shot,2PT Field Goal,In The Paint (Non-RA),Right Side(R),8-16 ft.,8,64,63,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,408,2544,LeBron James,1610612748,Miami Heat,3,0,30,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,20,11,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,494,2544,LeBron James,1610612748,Miami Heat,4,5,6,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,11,-71,91,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001089,505,2544,LeBron James,1610612748,Miami Heat,4,3,35,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),16-24 ft.,19,-26,195,1,1,20110327,MIA,HOU
+Shot Chart Detail,0021001101,33,2544,LeBron James,1610612748,Miami Heat,1,7,54,Made Shot,Jump Bank Shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,15,151,45,1,1,20110329,CLE,MIA
+Shot Chart Detail,0021001101,47,2544,LeBron James,1610612748,Miami Heat,1,6,27,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,19,-196,20,1,1,20110329,CLE,MIA
+Shot Chart Detail,0021001101,73,2544,LeBron James,1610612748,Miami Heat,1,3,38,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,4,24,34,1,1,20110329,CLE,MIA
+Shot Chart Detail,0021001101,93,2544,LeBron James,1610612748,Miami Heat,1,1,50,Made Shot,Jump Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,10,31,1,1,20110329,CLE,MIA
+Shot Chart Detail,0021001101,386,2544,LeBron James,1610612748,Miami Heat,3,1,6,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-8,-5,1,1,20110329,CLE,MIA
+Shot Chart Detail,0021001101,392,2544,LeBron James,1610612748,Miami Heat,3,0,49,Made Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,6,55,1,1,20110329,CLE,MIA
+Shot Chart Detail,0021001101,405,2544,LeBron James,1610612748,Miami Heat,3,0,0,Made Shot,Jump Shot,3PT Field Goal,Backcourt,Back Court(BC),Back Court Shot,53,191,499,1,1,20110329,CLE,MIA
+Shot Chart Detail,0021001101,519,2544,LeBron James,1610612748,Miami Heat,4,2,38,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-2,-14,1,1,20110329,CLE,MIA
+Shot Chart Detail,0021001101,534,2544,LeBron James,1610612748,Miami Heat,4,0,55,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,7,1,1,1,20110329,CLE,MIA
+Shot Chart Detail,0021001101,551,2544,LeBron James,1610612748,Miami Heat,4,0,9,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),8-16 ft.,15,-7,159,1,1,20110329,CLE,MIA
+Shot Chart Detail,0021001110,11,2544,LeBron James,1610612748,Miami Heat,1,10,47,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,1,0,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001110,54,2544,LeBron James,1610612748,Miami Heat,1,6,54,Made Shot,Running Bank shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,5,48,19,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001110,104,2544,LeBron James,1610612748,Miami Heat,1,0,19,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,24,-14,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001110,124,2544,LeBron James,1610612748,Miami Heat,2,11,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,15,-142,66,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001110,211,2544,LeBron James,1610612748,Miami Heat,2,5,30,Made Shot,Driving Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-2,-6,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001110,302,2544,LeBron James,1610612748,Miami Heat,3,11,35,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,12,-11,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001110,345,2544,LeBron James,1610612748,Miami Heat,3,6,52,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,9,1,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001110,481,2544,LeBron James,1610612748,Miami Heat,4,7,2,Made Shot,Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-18,7,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001110,498,2544,LeBron James,1610612748,Miami Heat,4,5,48,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-226,94,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001110,500,2544,LeBron James,1610612748,Miami Heat,4,5,26,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,10,-6,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001110,534,2544,LeBron James,1610612748,Miami Heat,4,3,37,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,20,-182,83,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001110,554,2544,LeBron James,1610612748,Miami Heat,4,0,53,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,21,124,181,1,1,20110330,WAS,MIA
+Shot Chart Detail,0021001126,31,2544,LeBron James,1610612748,Miami Heat,1,8,32,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-73,179,1,1,20110401,MIN,MIA
+Shot Chart Detail,0021001126,111,2544,LeBron James,1610612748,Miami Heat,1,1,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),8-16 ft.,12,-92,89,1,1,20110401,MIN,MIA
+Shot Chart Detail,0021001126,186,2544,LeBron James,1610612748,Miami Heat,2,6,10,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,0,14,1,1,20110401,MIN,MIA
+Shot Chart Detail,0021001126,213,2544,LeBron James,1610612748,Miami Heat,2,3,34,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-2,-8,1,1,20110401,MIN,MIA
+Shot Chart Detail,0021001126,251,2544,LeBron James,1610612748,Miami Heat,2,0,37,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,0,3,1,1,20110401,MIN,MIA
+Shot Chart Detail,0021001126,306,2544,LeBron James,1610612748,Miami Heat,3,7,50,Made Shot,Tip Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,1,-6,1,1,20110401,MIN,MIA
+Shot Chart Detail,0021001126,310,2544,LeBron James,1610612748,Miami Heat,3,7,19,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,18,-114,140,1,1,20110401,MIN,MIA
+Shot Chart Detail,0021001126,449,2544,LeBron James,1610612748,Miami Heat,4,6,44,Made Shot,Running Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,9,29,88,1,1,20110401,MIN,MIA
+Shot Chart Detail,0021001126,476,2544,LeBron James,1610612748,Miami Heat,4,4,4,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,0,12,1,1,20110401,MIN,MIA
+Shot Chart Detail,0021001126,482,2544,LeBron James,1610612748,Miami Heat,4,2,57,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-2,3,1,1,20110401,MIN,MIA
+Shot Chart Detail,0021001126,492,2544,LeBron James,1610612748,Miami Heat,4,2,56,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,4,8,1,1,20110401,MIN,MIA
+Shot Chart Detail,0021001142,12,2544,LeBron James,1610612748,Miami Heat,1,9,50,Made Shot,Alley Oop Layup shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,7,14,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,15,2544,LeBron James,1610612748,Miami Heat,1,9,18,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,28,12,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,22,2544,LeBron James,1610612748,Miami Heat,1,8,52,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-16,17,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,27,2544,LeBron James,1610612748,Miami Heat,1,8,17,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),8-16 ft.,14,140,26,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,39,2544,LeBron James,1610612748,Miami Heat,1,6,18,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,18,11,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,41,2544,LeBron James,1610612748,Miami Heat,1,5,36,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,16,-160,-2,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,91,2544,LeBron James,1610612748,Miami Heat,1,1,24,Made Shot,Driving Reverse Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,13,11,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,177,2544,LeBron James,1610612748,Miami Heat,2,4,45,Made Shot,Driving Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-21,14,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,196,2544,LeBron James,1610612748,Miami Heat,2,2,51,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,23,15,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,230,2544,LeBron James,1610612748,Miami Heat,2,0,0,Made Shot,Driving Jump shot,2PT Field Goal,In The Paint (Non-RA),Center(C),Less Than 8 ft.,6,-4,60,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,298,2544,LeBron James,1610612748,Miami Heat,3,5,39,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,21,14,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,459,2544,LeBron James,1610612748,Miami Heat,4,3,57,Made Shot,Floating Jump shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,10,34,96,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001142,471,2544,LeBron James,1610612748,Miami Heat,4,3,6,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,12,14,1,1,20110403,NJN,MIA
+Shot Chart Detail,0021001164,179,2544,LeBron James,1610612748,Miami Heat,2,5,29,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,25,-168,195,1,1,20110406,MIA,MIL
+Shot Chart Detail,0021001164,181,2544,LeBron James,1610612748,Miami Heat,2,4,45,Made Shot,Floating Jump shot,2PT Field Goal,In The Paint (Non-RA),Left Side(L),8-16 ft.,10,-65,86,1,1,20110406,MIA,MIL
+Shot Chart Detail,0021001164,189,2544,LeBron James,1610612748,Miami Heat,2,4,19,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-19,15,1,1,20110406,MIA,MIL
+Shot Chart Detail,0021001164,259,2544,LeBron James,1610612748,Miami Heat,3,11,2,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,18,170,71,1,1,20110406,MIA,MIL
+Shot Chart Detail,0021001164,284,2544,LeBron James,1610612748,Miami Heat,3,7,6,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Right Side Center(RC),24+ ft.,25,189,173,1,1,20110406,MIA,MIL
+Shot Chart Detail,0021001164,306,2544,LeBron James,1610612748,Miami Heat,3,4,32,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,17,-139,102,1,1,20110406,MIA,MIL
+Shot Chart Detail,0021001164,321,2544,LeBron James,1610612748,Miami Heat,3,3,15,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,18,-155,101,1,1,20110406,MIA,MIL
+Shot Chart Detail,0021001164,326,2544,LeBron James,1610612748,Miami Heat,3,2,26,Made Shot,Jump Shot,3PT Field Goal,Right Corner 3,Right Side(R),24+ ft.,24,241,33,1,1,20110406,MIA,MIL
+Shot Chart Detail,0021001164,401,2544,LeBron James,1610612748,Miami Heat,4,6,0,Made Shot,Running Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,3,8,1,1,20110406,MIA,MIL
+Shot Chart Detail,0021001164,449,2544,LeBron James,1610612748,Miami Heat,4,1,35,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-4,9,1,1,20110406,MIA,MIL
+Shot Chart Detail,0021001182,117,2544,LeBron James,1610612748,Miami Heat,1,1,46,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Center(C),8-16 ft.,14,1,146,1,1,20110408,MIA,CHA
+Shot Chart Detail,0021001182,121,2544,LeBron James,1610612748,Miami Heat,1,1,4,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,17,-95,146,1,1,20110408,MIA,CHA
+Shot Chart Detail,0021001182,125,2544,LeBron James,1610612748,Miami Heat,1,0,31,Made Shot,Alley Oop Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,-16,26,1,1,20110408,MIA,CHA
+Shot Chart Detail,0021001182,209,2544,LeBron James,1610612748,Miami Heat,2,4,42,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,6,12,1,1,20110408,MIA,CHA
+Shot Chart Detail,0021001182,233,2544,LeBron James,1610612748,Miami Heat,2,3,10,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-16,23,1,1,20110408,MIA,CHA
+Shot Chart Detail,0021001182,239,2544,LeBron James,1610612748,Miami Heat,2,2,0,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,15,15,1,1,20110408,MIA,CHA
+Shot Chart Detail,0021001182,303,2544,LeBron James,1610612748,Miami Heat,3,7,3,Made Shot,Slam Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,0,6,1,1,20110408,MIA,CHA
+Shot Chart Detail,0021001182,349,2544,LeBron James,1610612748,Miami Heat,3,2,23,Made Shot,Turnaround Jump Shot,2PT Field Goal,In The Paint (Non-RA),Center(C),8-16 ft.,9,18,89,1,1,20110408,MIA,CHA
+Shot Chart Detail,0021001182,495,2544,LeBron James,1610612748,Miami Heat,4,1,9,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,-7,26,1,1,20110408,MIA,CHA
+Shot Chart Detail,0021001194,38,2544,LeBron James,1610612748,Miami Heat,1,7,54,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,13,9,1,1,20110410,MIA,BOS
+Shot Chart Detail,0021001194,65,2544,LeBron James,1610612748,Miami Heat,1,5,31,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-13,11,1,1,20110410,MIA,BOS
+Shot Chart Detail,0021001194,67,2544,LeBron James,1610612748,Miami Heat,1,5,1,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,6,23,1,1,20110410,MIA,BOS
+Shot Chart Detail,0021001194,199,2544,LeBron James,1610612748,Miami Heat,2,4,46,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,3,31,12,1,1,20110410,MIA,BOS
+Shot Chart Detail,0021001194,226,2544,LeBron James,1610612748,Miami Heat,2,3,6,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,16,-76,142,1,1,20110410,MIA,BOS
+Shot Chart Detail,0021001194,277,2544,LeBron James,1610612748,Miami Heat,3,11,10,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-8,17,1,1,20110410,MIA,BOS
+Shot Chart Detail,0021001194,404,2544,LeBron James,1610612748,Miami Heat,4,10,25,Made Shot,Dunk Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,-18,4,1,1,20110410,MIA,BOS
+Shot Chart Detail,0021001194,406,2544,LeBron James,1610612748,Miami Heat,4,9,43,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side(R),16-24 ft.,20,209,9,1,1,20110410,MIA,BOS
+Shot Chart Detail,0021001194,481,2544,LeBron James,1610612748,Miami Heat,4,3,24,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,2,17,14,1,1,20110410,MIA,BOS
+Shot Chart Detail,0021001194,487,2544,LeBron James,1610612748,Miami Heat,4,2,50,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Right Side Center(RC),16-24 ft.,16,77,149,1,1,20110410,MIA,BOS
+Shot Chart Detail,0021001194,490,2544,LeBron James,1610612748,Miami Heat,4,2,30,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-138,143,1,1,20110410,MIA,BOS
+Shot Chart Detail,0021001202,57,2544,LeBron James,1610612748,Miami Heat,1,6,17,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,20,-117,170,1,1,20110411,ATL,MIA
+Shot Chart Detail,0021001202,93,2544,LeBron James,1610612748,Miami Heat,1,2,15,Made Shot,Running Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,12,-2,1,1,20110411,ATL,MIA
+Shot Chart Detail,0021001202,102,2544,LeBron James,1610612748,Miami Heat,1,1,51,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,25,-89,242,1,1,20110411,ATL,MIA
+Shot Chart Detail,0021001202,113,2544,LeBron James,1610612748,Miami Heat,1,1,9,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,9,4,1,1,20110411,ATL,MIA
+Shot Chart Detail,0021001202,214,2544,LeBron James,1610612748,Miami Heat,2,3,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,Left Side Center(LC),24+ ft.,24,-196,146,1,1,20110411,ATL,MIA
+Shot Chart Detail,0021001202,225,2544,LeBron James,1610612748,Miami Heat,2,1,45,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,Left Side Center(LC),16-24 ft.,19,-138,135,1,1,20110411,ATL,MIA
+Shot Chart Detail,0021001202,232,2544,LeBron James,1610612748,Miami Heat,2,1,11,Made Shot,Alley Oop Layup shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-5,3,1,1,20110411,ATL,MIA
+Shot Chart Detail,0021001202,315,2544,LeBron James,1610612748,Miami Heat,3,4,51,Made Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,Left Side(L),16-24 ft.,17,-174,26,1,1,20110411,ATL,MIA
+Shot Chart Detail,0021001202,394,2544,LeBron James,1610612748,Miami Heat,4,10,58,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,1,13,11,1,1,20110411,ATL,MIA
+Shot Chart Detail,0021001202,512,2544,LeBron James,1610612748,Miami Heat,4,0,47,Made Shot,Layup Shot,2PT Field Goal,Restricted Area,Center(C),Less Than 8 ft.,0,-5,6,1,1,20110411,ATL,MIA

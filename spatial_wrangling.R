@@ -224,65 +224,179 @@ for (year in 2004:2025) {
 
 ### STATE MAP ###
 
-# Load packages
+library(tidyverse)
+library(lubridate)
+
+# Load data
+lebron <- read_csv("data/combined/LeBron_GameLog_2025_WithTeamInfo.csv")
+team_states <- read_csv("data/NBA_Teams_By_State.csv")
+
+# Create team-to-state lookup (1 team per row)
+team_lookup <- team_states %>%
+  separate_rows(Teams, sep = ",") %>%
+  mutate(
+    Teams = str_trim(Teams),
+    State = str_to_title(State),
+    Mascot = word(Teams, -1)  # Get last word (e.g., "Thunder")
+  )
+
+# Prepare LeBron data
+lebron <- lebron %>%
+  mutate(
+    Opponent = str_trim(Opponent),
+    GameState = if_else(`Home/Away` == "Home", "California", NA)
+  )
+
+# Join by matching mascot names
+lebron <- lebron %>%
+  left_join(team_lookup, by = c("Opponent" = "Mascot")) %>%
+  mutate(
+    GameState = if_else(`Home/Away` == "Away", State, GameState)
+  )
+
+# Summarize total points by state
+points_by_state <- lebron %>%
+  filter(!is.na(GameState)) %>%
+  group_by(GameState) %>%
+  summarise(TotalPoints = sum(PTS, na.rm = TRUE)) %>%
+  arrange(desc(TotalPoints))
+
+print(points_by_state)
+
+# Load required libraries
+library(maps)
+library(ggplot2)
+
+# Get US map data
+states_map <- map_data("state")
+
+# Prepare for merge
+points_by_state_map <- points_by_state %>%
+  mutate(region = str_to_lower(GameState))
+
+# Merge
+map_data_joined <- left_join(states_map, points_by_state_map, by = "region")
+
+# Plot with stepped blue scale
+ggplot(map_data_joined, aes(x = long, y = lat, group = group)) +
+  geom_polygon(aes(fill = TotalPoints), color = "white", size = 0.2) +
+  scale_fill_stepsn(
+    colors = c("#deebf7", "#9ecae1", "#4292c6", "#2171b5", "#084594"),
+    n.breaks = 6,
+    na.value = "grey90"
+  ) +
+  coord_fixed(1.3) +
+  theme_void() +
+  labs(
+    title = "LeBron James: Total Points by State (2025 Season)",
+    fill = "Total Points",
+    caption = "Home = California; Away = matched to Opponent Team's State"
+  )
+
+
+### LOGIC TO MAKE ALL OF THE MAPS ###
+
 library(tidyverse)
 library(lubridate)
 library(maps)
 library(ggplot2)
 
-# === Load data ===
-lebron <- read_csv("data/combined/LeBron_GameLog_2025_WithTeamInfo.csv")
+# === Load team-to-state mapping ===
 team_states <- read_csv("data/NBA_Teams_By_State.csv")
 
-# === Expand team_states to long format (one team per row) ===
-team_states_long <- team_states %>%
+# Build team-to-state lookup for mascots
+team_lookup <- team_states %>%
   separate_rows(Teams, sep = ",") %>%
   mutate(
     Teams = str_trim(Teams),
-    State = str_to_title(State)
-  )
-
-# === Create opponent → state lookup table ===
-team_lookup <- team_states_long %>%
-  distinct(Teams, State) %>%
-  rename(Opponent = Teams, OpponentState = State)
-
-# === Clean LeBron data and join on opponent team ===
-lebron <- lebron %>%
-  mutate(
-    Opponent = str_trim(Opponent),
-    GameState = if_else(`Home/Away` == "Home", "California", NA)
+    State = str_to_title(State),
+    Mascot = word(Teams, -1)
   ) %>%
-  left_join(team_lookup, by = "Opponent") %>%
-  mutate(
-    GameState = if_else(`Home/Away` == "Away", OpponentState, GameState)
-  )
+  distinct(Mascot, State)
 
-# === Summarize total points by state ===
-points_by_state <- lebron %>%
-  filter(!is.na(GameState)) %>%
-  group_by(GameState) %>%
-  summarise(TotalPoints = sum(PTS, na.rm = TRUE)) %>%
-  mutate(region = str_to_lower(GameState))
+# Define home state by team/year
+get_home_state <- function(year) {
+  if (year %in% 2004:2010 || year %in% 2015:2018) {
+    return("Ohio")
+  } else if (year %in% 2011:2014) {
+    return("Florida")
+  } else if (year %in% 2019:2025) {
+    return("California")
+  } else {
+    return(NA)
+  }
+}
 
-# === Get U.S. map data ===
-states_map <- map_data("state")
+# === Define LeBron eras ===
+eras <- list(
+  "Cavs (2004–2010)" = 2004:2010,
+  "Heat (2011–2014)" = 2011:2014,
+  "Cavs (2015–2018)" = 2015:2018,
+  "Lakers (2019–2025)" = 2019:2025
+)
 
-# Join map data with point totals
-map_data_joined <- left_join(states_map, points_by_state, by = "region")
+# === Function to load game logs across a range of years ===
+load_lebron_era <- function(years) {
+  bind_rows(lapply(years, function(y) {
+    file_path <- paste0("data/combined/LeBron_GameLog_", y, "_WithTeamInfo.csv")
+    if (file.exists(file_path)) {
+      df <- read_csv(file_path, show_col_types = FALSE) %>%
+        mutate(Season = y)
+      return(df)
+    } else {
+      warning(paste("Missing file for", y))
+      return(NULL)
+    }
+  }))
+}
 
-# === Plot ===
-ggplot(map_data_joined, aes(x = long, y = lat, group = group)) +
-  geom_polygon(aes(fill = TotalPoints), color = "white") +
-  scale_fill_viridis_c(option = "plasma", na.value = "grey90") +
-  theme_minimal() +
-  labs(
-    title = "LeBron James: Total Points by State (2025 Season)",
-    fill = "Total Points",
-    caption = "Home games = California; Away games matched to opponent team state"
-  ) +
-  coord_fixed(1.3)
-
+# === Loop over eras ===
+for (era_name in names(eras)) {
+  years <- eras[[era_name]]
+  lebron <- load_lebron_era(years)
+  
+  # Assign home state based on year + Home/Away
+  lebron <- lebron %>%
+    mutate(
+      Opponent = str_trim(Opponent),
+      HomeState = map_chr(Season, get_home_state),
+      GameState = if_else(`Home/Away` == "Home", HomeState, NA)
+    ) %>%
+    left_join(team_lookup, by = c("Opponent" = "Mascot")) %>%
+    mutate(
+      GameState = if_else(`Home/Away` == "Away", State, GameState)
+    )
+  
+  # Summarize points by state
+  points_by_state <- lebron %>%
+    filter(!is.na(GameState)) %>%
+    group_by(GameState) %>%
+    summarise(TotalPoints = sum(PTS, na.rm = TRUE)) %>%
+    mutate(region = str_to_lower(GameState))
+  
+  # Merge with US map
+  states_map <- map_data("state")
+  map_data_joined <- left_join(states_map, points_by_state, by = "region")
+  
+  # Plot map
+  p <- ggplot(map_data_joined, aes(x = long, y = lat, group = group)) +
+    geom_polygon(aes(fill = TotalPoints), color = "white", size = 0.2) +
+    scale_fill_stepsn(
+      colors = c("#deebf7", "#9ecae1", "#4292c6", "#2171b5", "#084594"),
+      n.breaks = 6,
+      na.value = "grey90"
+    ) +
+    coord_fixed(1.3) +
+    theme_void() +
+    labs(
+      title = paste("LeBron James: Total Points by State\n", era_name),
+      fill = "Total Points",
+      caption = "Home states assigned by team: Ohio (CLE), Florida (MIA), California (LAL)"
+    )
+  
+  # Print map for each era
+  print(p)
+}
 
 
 
