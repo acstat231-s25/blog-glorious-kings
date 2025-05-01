@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Our Glorious King",
     "section": "",
-    "text": "Read in the dataset\n# A tibble: 3 × 5\n   PTS_z  AST_z  size withinss cluster\n   &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt; &lt;fct&gt;  \n1  0.550  0.231    68     46.8 1      \n2 -0.628 -0.525   115     22.9 2      \n3  2.04   2.63     17     38.7 3"
+    "text": "Over the course of two decades, LeBron James has had one of the most enduring and shape-shifting careers in NBA history. From his debut with the Cleveland Cavaliers in 2003 to his current tenure with the Los Angeles Lakers, LeBron has not only won championships and accumulated accolades — he has continually redefined his role to fit the moment.\nAcross four distinct eras, LeBron adapted to new teammates, coaching systems, and league-wide changes in playing style:\nThis project explores how LeBron’s game has evolved — not just over time, but across geographic and strategic contexts. We analyze his career from four perspectives:\nTogether, these views help explain how LeBron has stayed not just relevant, but dominant, by evolving alongside — and often ahead of — the game itself."
   },
   {
     "objectID": "index.html#website-project-structure",
@@ -109,6 +109,34 @@
     "href": "index.html#lebron-james-shot-charts",
     "title": "Our Glorious King",
     "section": "LeBron James Shot Charts",
-    "text": "LeBron James Shot Charts\n\nRookie Season (2004)Most Recent Season (2025)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAttaching package: 'maps'\n\n\nThe following object is masked from 'package:purrr':\n\n    map\n\n\nRows: 23 Columns: 2\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2): State, Teams\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
+    "text": "LeBron James Shot Charts"
+  },
+  {
+    "objectID": "index.html#spatial-analysis---lebrons-scoring-by-era",
+    "href": "index.html#spatial-analysis---lebrons-scoring-by-era",
+    "title": "Our Glorious King",
+    "section": "Spatial Analysis - LeBron’s Scoring by Era",
+    "text": "Spatial Analysis - LeBron’s Scoring by Era\nLeBron’s scoring impact isn’t just about how much — it’s also about where. Over the course of his career, he’s played in nearly every NBA arena, logging minutes and putting up points across the country. His production by state reflects not only the teams he played for, but also the matchups, rivalries, and playoff runs that defined each era.\nIn his first stint with the Cavaliers, most of his scoring came in the Eastern Conference, especially in cities like New York, Chicago, and Boston — places that often hosted nationally televised games and postseason series. In Miami, his offensive efficiency increased, and he put up consistently strong road numbers, particularly against high-profile teams in both conferences. His return to Cleveland saw a similar pattern, but with an even greater focus on pacing and spacing, which opened up more perimeter opportunities away from home.\nSince joining the Lakers, LeBron’s West Coast presence has expanded. Naturally, he scores the most in California, but he’s also produced heavily in Western Conference cities like Denver, Phoenix, and Dallas — arenas that have hosted some of his biggest performances in recent years.\nThe maps below break down total points by U.S. state for each of LeBron’s four team eras:\n\nCleveland (2004–2010, 2015–2018)\nMiami (2011–2014)\nLos Angeles (2019–2025)\n\nThese visualizations help highlight:\n\nWhere LeBron consistently produced the most points — both home and away\nWhich states show up as high-volume territories due to playoff frequency or conference alignment\nHow geography, travel, and conference play shape long-term scoring patterns\n\n\nFirst Cleveland EraMiami EraSecond Cleveland EraLakers Era\n\n\nSome information in one tab\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\n\n\n\n\n\n\n\n\n\nSome information in a different tab"
+  },
+  {
+    "objectID": "index.html#lebron-and-his-teammates",
+    "href": "index.html#lebron-and-his-teammates",
+    "title": "Our Glorious King",
+    "section": "LeBron and His Teammates",
+    "text": "LeBron and His Teammates\nNow that we have established Lebron’s legacy through his own statistics as well as the successes of his teammates, let’s take a deep dive into his connections with teammates. In addition, we can observe the changes in the game of basketball and the evolution of his career through the years that he played on each respective team.\n\n\n\n\n\n\n\n\n\nImage courtesy of palmbeachpost.com"
+  },
+  {
+    "objectID": "index.html#the-network",
+    "href": "index.html#the-network",
+    "title": "Our Glorious King",
+    "section": "The Network",
+    "text": "The Network\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe clustering visualized above is sepereated by the different teams players played with LeBron\n\n\n\n\n\nCluster 1 are considered superstars. These players had high point and assist production.\nCLuster 2 are average players. These players were important to the team and put up average points and assists\nCluster 3 are below average players/bench player. These players did not have a big impact on the team\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe network is weighted based on the total amount of games played with other players. These are 18 players who have played over 100 games with LeBron. As we can see, many of the other nodes (players) have a significant amount of edges connected to them as well. We can see how LeBron cultivated a strong culture in many different areas, especially early in his career.\n\n\n\n\nHere is a list of teams he has played for and the years he was there, as well as the players in the network who played on these teams.\n\n\n\n\nCleveland Cavaliers (2003-2010): - Zydrunas Ilgauskas - James Jones - Anderson Varejao - Sasha Pavlovic - Danny Green Miami Heat (2010-2014): - Zydrunas Ilgauskas - James Jones - Dwayne Wade - Mario Chalmers - Chris Bosh\n\n\n\n\nCleveland Cavaliers (2014-2018): - Anderson Varejao - Dwayne Wade - Tristan Thompson - Kevin Love - Mo Williams - Kyle Korver - Kyrie Irving - Channing Frye - Iman Shumpert - Richard Jefferson - Matthew Dellavadova\n\n\n\n\nLA Lakers (2018-2025): - Tristan Thompson - Anthony Davis - Danny Green\n\n\n\n\nAs we can see, there is a large overlap between teams. LeBron sticks with his teammates and builds friendships with them over multiple seasons, resulting in success for both him and others. In addition, we can see how much his game has evolved as he has the most seasons played in LA but a lot less players who have played with him for over a season. It seems as if both his strategy for success is changing, alongside the leagues general strategy for team building and winning has evolved, largely due to how much success he had in his runs with both the Heat and the Cavaliers."
+  },
+  {
+    "objectID": "index.html#shot-selection-over-time",
+    "href": "index.html#shot-selection-over-time",
+    "title": "Our Glorious King",
+    "section": "Shot Selection Over Time",
+    "text": "Shot Selection Over Time\nLeBron’s offensive approach has evolved in clear, measurable ways over the course of his career. Early on, he relied heavily on athleticism — attacking the basket in transition, posting up smaller defenders, and creating mid-range looks off the dribble. In those early Cleveland years, much of the offense was built around his ability to collapse defenses and finish through contact.\nAs he moved into his Miami years, and later returned to Cleveland, his shot selection became more deliberate. He still attacked the paint, but he began incorporating more post play, baseline turnarounds, and selective three-point shooting — especially from the corners. With a more balanced roster around him, LeBron didn’t need to force as many contested drives and was able to read the floor more patiently.\nIn Los Angeles, LeBron’s game has become even more perimeter-oriented. Whether due to age, roster fit, or broader shifts in league strategy, he now shoots threes at a higher volume and uses off-ball movement to find cleaner looks. While he still gets to the rim when needed, he often defers to teammates in the regular season and picks his spots more carefully.\nThe charts below provide a snapshot of this evolution — comparing his rookie season shot locations to those from his most recent campaign.\n\nTrack the shift from interior-heavy scoring to a more balanced perimeter approach\nObserve changes in shot clustering by zone\nReflect on how age, team context, and league-wide trends have reshaped his role\n\n\nRookie Season (2004)Most Recent Season (2025)"
   }
 ]

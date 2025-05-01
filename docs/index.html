@@ -125,8 +125,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lebron-james-shot-charts" id="toc-lebron-james-shot-charts" class="nav-link active" data-scroll-target="#lebron-james-shot-charts">LeBron James Shot Charts</a></li>
-  <li><a href="#panel-tabsets" id="toc-panel-tabsets" class="nav-link" data-scroll-target="#panel-tabsets">Panel tabsets</a></li>
+  <li><a href="#shot-selection-over-time" id="toc-shot-selection-over-time" class="nav-link active" data-scroll-target="#shot-selection-over-time">Shot Selection Over Time</a></li>
+  <li><a href="#spatial-analysis---lebrons-scoring-by-era" id="toc-spatial-analysis---lebrons-scoring-by-era" class="nav-link" data-scroll-target="#spatial-analysis---lebrons-scoring-by-era">Spatial Analysis - LeBron’s Scoring by Era</a></li>
+  <li><a href="#lebron-and-his-teammates" id="toc-lebron-and-his-teammates" class="nav-link" data-scroll-target="#lebron-and-his-teammates">LeBron and His Teammates</a></li>
+  <li><a href="#the-network" id="toc-the-network" class="nav-link" data-scroll-target="#the-network">The Network</a></li>
   </ul>
 </nav>
     </div>
@@ -182,19 +184,33 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Read in the dataset</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 5
-   PTS_z  AST_z  size withinss cluster
-   &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt; &lt;fct&gt;  
-1  0.550  0.231    68     46.8 1      
-2 -0.628 -0.525   115     22.9 2      
-3  2.04   2.63     17     38.7 3      </code></pre>
-</div>
-</div>
-<section id="lebron-james-shot-charts" class="level2">
-<h2 class="anchored" data-anchor-id="lebron-james-shot-charts">LeBron James Shot Charts</h2>
+<p>Over the course of two decades, LeBron James has had one of the most enduring and shape-shifting careers in NBA history. From his debut with the Cleveland Cavaliers in 2003 to his current tenure with the Los Angeles Lakers, LeBron has not only won championships and accumulated accolades — he has continually redefined his role to fit the moment.</p>
+<p>Across four distinct eras, LeBron adapted to new teammates, coaching systems, and league-wide changes in playing style:</p>
+<ul>
+<li><p><strong>Cleveland (2003–2010)</strong>: As a rising star on a young Cavs roster, LeBron quickly became the central offensive engine. His play in this era was characterized by explosive drives, high usage, and sheer athleticism. He often carried the scoring load and functioned as a point-forward before the term became widely used.</p></li>
+<li><p><strong>Miami (2010–2014)</strong>: Teaming up with Dwyane Wade and Chris Bosh, LeBron entered a more structured, efficient role. In Miami, he developed a reliable post game, improved his off-ball awareness, and committed to defensive intensity. This era brought his first championships and marked a shift toward smarter, more selective shot-taking.</p></li>
+<li><p><strong>Cleveland (2014–2018)</strong>: Returning to Cleveland with championship experience, LeBron transitioned into more of a distributor while still scoring at a high level. Surrounded by sharpshooters and secondary creators like Kyrie Irving and Kevin Love, he became the central decision-maker in a fast-paced, spacing-oriented offense that culminated in a title in 2016.</p></li>
+<li><p><strong>Los Angeles (2018–present)</strong>: In LA, LeBron entered a veteran phase. His role has been fluid — at times the lead scorer, at other times the facilitator, and often both. His game now leans on craft, vision, and positional versatility. He’s added range and adapted to a more three-heavy league, while mentoring younger players and taking over when needed.</p></li>
+</ul>
+<p>This project explores how LeBron’s game has evolved — not just over time, but across geographic and strategic contexts. We analyze his career from four perspectives:</p>
+<ul>
+<li><strong>Shot selection</strong>: How LeBron’s scoring profile has shifted across the years, from rim attacks to perimeter shooting.</li>
+<li><strong>Scoring geography</strong>: A breakdown of which states saw the most production from LeBron, and how this aligns with his team locations.</li>
+<li><strong>Teammate roles</strong>: Using statistical clustering, we explore the types of players LeBron has worked with, and how that influenced his on-court responsibilities.</li>
+<li><strong>Career network</strong>: A graph-based look at who he’s played the most games with, and how those connections span multiple teams.</li>
+</ul>
+<p>Together, these views help explain how LeBron has stayed not just relevant, but dominant, by evolving alongside — and often ahead of — the game itself.</p>
+<section id="shot-selection-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="shot-selection-over-time">Shot Selection Over Time</h2>
+<p>LeBron’s offensive approach has evolved in clear, measurable ways over the course of his career. Early on, he relied heavily on athleticism — attacking the basket in transition, posting up smaller defenders, and creating mid-range looks off the dribble. In those early Cleveland years, much of the offense was built around his ability to collapse defenses and finish through contact.</p>
+<p>As he moved into his Miami years, and later returned to Cleveland, his shot selection became more deliberate. He still attacked the paint, but he began incorporating more post play, baseline turnarounds, and selective three-point shooting — especially from the corners. With a more balanced roster around him, LeBron didn’t need to force as many contested drives and was able to read the floor more patiently.</p>
+<p>In Los Angeles, LeBron’s game has become even more perimeter-oriented. Whether due to age, roster fit, or broader shifts in league strategy, he now shoots threes at a higher volume and uses off-ball movement to find cleaner looks. While he still gets to the rim when needed, he often defers to teammates in the regular season and picks his spots more carefully.</p>
+<p>The charts below provide a snapshot of this evolution — comparing his rookie season shot locations to those from his most recent campaign.</p>
+<ul>
+<li>Track the shift from interior-heavy scoring to a more balanced perimeter approach</li>
+<li>Observe changes in shot clustering by zone</li>
+<li>Reflect on how age, team context, and league-wide trends have reshaped his role</li>
+</ul>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Rookie Season (2004)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Most Recent Season (2025)</a></li></ul>
 <div class="tab-content">
@@ -222,32 +238,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'maps'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:purrr':
-
-    map</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 23 Columns: 2
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (2): State, Teams
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-</div>
 </section>
-<section id="panel-tabsets" class="level2">
-<h2 class="anchored" data-anchor-id="panel-tabsets">Panel tabsets</h2>
-<p>Use the following format to add information or tables or visualizations in <a href="https://quarto.org/docs/interactive/layout.html#tabset-panel">tabset panels</a>.</p>
+<section id="spatial-analysis---lebrons-scoring-by-era" class="level2">
+<h2 class="anchored" data-anchor-id="spatial-analysis---lebrons-scoring-by-era">Spatial Analysis - LeBron’s Scoring by Era</h2>
+<p>LeBron’s scoring impact isn’t just about how much — it’s also about where. Over the course of his career, he’s played in nearly every NBA arena, logging minutes and putting up points across the country. His production by state reflects not only the teams he played for, but also the matchups, rivalries, and playoff runs that defined each era.</p>
+<p>In his first stint with the Cavaliers, most of his scoring came in the Eastern Conference, especially in cities like New York, Chicago, and Boston — places that often hosted nationally televised games and postseason series. In Miami, his offensive efficiency increased, and he put up consistently strong road numbers, particularly against high-profile teams in both conferences. His return to Cleveland saw a similar pattern, but with an even greater focus on pacing and spacing, which opened up more perimeter opportunities away from home.</p>
+<p>Since joining the Lakers, LeBron’s West Coast presence has expanded. Naturally, he scores the most in California, but he’s also produced heavily in Western Conference cities like Denver, Phoenix, and Dallas — arenas that have hosted some of his biggest performances in recent years.</p>
+<p>The maps below break down total points by U.S. state for each of LeBron’s four team eras:</p>
+<ul>
+<li><strong>Cleveland</strong> (2004–2010, 2015–2018)</li>
+<li><strong>Miami</strong> (2011–2014)</li>
+<li><strong>Los Angeles</strong> (2019–2025)</li>
+</ul>
+<p>These visualizations help highlight:</p>
+<ul>
+<li>Where LeBron consistently produced the most points — both home and away</li>
+<li>Which states show up as high-volume territories due to playoff frequency or conference alignment</li>
+<li>How geography, travel, and conference play shape long-term scoring patterns</li>
+</ul>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Tab 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Tab 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Tab 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">Tab 4</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">First Cleveland Era</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Miami Era</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Second Cleveland Era</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">Lakers Era</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <p>Some information in one tab</p>
@@ -301,7 +311,9 @@ chr (2): State, Teams
 </div>
 </div>
 </div>
-<p>#LeBron and His Teammates</p>
+</section>
+<section id="lebron-and-his-teammates" class="level2">
+<h2 class="anchored" data-anchor-id="lebron-and-his-teammates">LeBron and His Teammates</h2>
 <p>Now that we have established Lebron’s legacy through his own statistics as well as the successes of his teammates, let’s take a deep dive into his connections with teammates. In addition, we can observe the changes in the game of basketball and the evolution of his career through the years that he played on each respective team.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -317,7 +329,9 @@ chr (2): State, Teams
 </div>
 </div>
 </div>
-<p>##The Network</p>
+</section>
+<section id="the-network" class="level2">
+<h2 class="anchored" data-anchor-id="the-network">The Network</h2>
 <div>
 
 </div>
