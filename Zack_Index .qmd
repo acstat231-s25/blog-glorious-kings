@@ -102,3 +102,10 @@ ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z, color = cluster)) +
   theme_minimal()
 ```
 
+save plot
+```{r}
+ggsave("Images/lebron_clusters.png", width = 8, height = 5, dpi = 300)
+```
+
+
+
