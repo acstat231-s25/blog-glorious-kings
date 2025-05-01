@@ -128,7 +128,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#citations-cross-referencing-and-linking-between-pages" id="toc-citations-cross-referencing-and-linking-between-pages" class="nav-link active" data-scroll-target="#citations-cross-referencing-and-linking-between-pages">Citations, cross-referencing, and linking between pages</a></li>
   <li><a href="#quarto-website-features" id="toc-quarto-website-features" class="nav-link" data-scroll-target="#quarto-website-features">Quarto website features</a>
   <ul class="collapse">
-  <li><a href="#including-images-or-gifs" id="toc-including-images-or-gifs" class="nav-link" data-scroll-target="#including-images-or-gifs">Including images or gifs</a></li>
   <li><a href="#panel-tabsets" id="toc-panel-tabsets" class="nav-link" data-scroll-target="#panel-tabsets">Panel tabsets</a></li>
   <li><a href="#panel-layouts-for-content" id="toc-panel-layouts-for-content" class="nav-link" data-scroll-target="#panel-layouts-for-content">Panel layouts for content</a></li>
   </ul></li>
@@ -192,33 +191,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="quarto-website-features" class="level1">
 <h1>Quarto website features</h1>
-<p>Below I demonstrate examples for customizing aspects of your webpage. In the <code>_quarto.yml</code> file you’ll see additional links and information about customizing the website further.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Focus on completing the blog content first! You can play with features and customization <em>after</em> you’re happy with the contents of the blog.</p>
-</div>
-</div>
-<section id="including-images-or-gifs" class="level2">
-<h2 class="anchored" data-anchor-id="including-images-or-gifs">Including images or gifs</h2>
-<p>I would strongly recommend using <strong>knitr</strong>’s <code>include_graphics()</code> functions within code chunks to include images or gifs within your blog. This makes it easier to modify figures, add captions and links, and visually find the code for figures quickly if you need to modify something about the output. There is also <a href="https://quarto.org/docs/authoring/figures.html">markdown syntax to display or embed images</a>, but I would typically not recommend it.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://giphy.com/gifs/insecurehbo-3og0IT6sIWd1eh7bJm"><img src="https://i.giphy.com/3og0IT6sIWd1eh7bJm.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Image courtesy of giphy.com"></a></p>
+<p><a href="https://www.palmbeachpost.com/story/sports/2017/08/17/how-do-heat-fans-feel/7460287007/"><img src="https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/ghows-LK-f7d46477-c106-4e06-9871-c87a2237a617-1b058829.jpeg?width=660&amp;height=372&amp;fit=crop&amp;format=pjpg&amp;auto=webp" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Image courtesy of businessinsider.com"></a></p>
 </figure>
 </div>
-<figcaption>Image courtesy of giphy.com</figcaption>
+<figcaption>Image courtesy of businessinsider.com</figcaption>
 </figure>
 </div>
 </div>
@@ -238,7 +220,6 @@ Note
 <p>The first figure of your blog will be used as the display image on our course’s landing page!</p>
 </div>
 </div>
-</section>
 <section id="panel-tabsets" class="level2">
 <h2 class="anchored" data-anchor-id="panel-tabsets">Panel tabsets</h2>
 <p>Use the following format to add information or tables or visualizations in <a href="https://quarto.org/docs/interactive/layout.html#tabset-panel">tabset panels</a>.</p>
@@ -256,8 +237,6 @@ Note
 </section>
 <section id="panel-layouts-for-content" class="level2">
 <h2 class="anchored" data-anchor-id="panel-layouts-for-content">Panel layouts for content</h2>
-<p>Use the following format to have more control over the <a href="https://quarto.org/docs/authoring/figures.html#complex-layouts">panel layout</a> of various components.</p>
-<p>The syntax “[ [1], [1,1] ]” indicates that we have three pieces of content that we want to spread across two rows. The first piece of content will be in its own row, and then the next two components will be split across two columns of equal width in a second row.</p>
 <div data-layout="[ [1] ]">
 <section id="row-1-with-only-one-output" class="level3">
 <h3 class="anchored" data-anchor-id="row-1-with-only-one-output">Row 1 with only one output</h3>
