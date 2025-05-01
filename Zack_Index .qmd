@@ -19,35 +19,47 @@ Read in the dataset
 Teammates_stats <- read.csv("data/Teammates_Stats.csv")
 
 
-
-#standardized stats first
-Stats_stdz <- Teammates_stats |>
-  select(Player, PTS, AST) |>
-   mutate(across(where(is.numeric)
-                , ~ (.x - mean(.x)) / sd(.x)
-                , .names = "{.col}_z")) |>
-  select(Player, ends_with("_z"))
 ```
 
 
-Create elbow plot for choosing the number of clusters
+
+
 
 ```{r}
-#| fig-height: 4
-#| fig-width: 4.5
-# iterate through clustering algorithm for 10 different values of k
+
+#Need to assign players to one primary team
+teammates_clean <- Teammates_stats |>
+  mutate(Team = case_when(
+    str_detect(Team.s., "Cavs") ~ "Cavs",
+    str_detect(Team.s., "Heat") ~ "Heat",
+    str_detect(Team.s., "Lakers") ~ "Lakers",
+    TRUE ~ Team.s.
+  ))
+
+#Standardize PTS and ASTs across the whole dataset
+Stats_stdz <- teammates_clean |>
+  select(Player, Team, PTS, AST) |>
+  mutate(across(c(PTS, AST), 
+                ~ (.x - mean(.x)) / sd(.x),
+                .names = "{.col}_z")) |>
+  select(Player, Team, ends_with("_z"))
+```
+
+```{r}
+# Iterate through clustering algorithm for 10 different values of k
 elbow_plot <- tibble(k = 1:10) |>
   mutate(
     # List-column of 10 kmeans objects 
     # (apply `kmeans()` to each value of `k`)
-    kmeans_results = purrr::map(k, ~kmeans(Stats_stdz, .x, nstart=20)),
+    kmeans_results = purrr::map(k, ~kmeans(Stats_stdz |> select(PTS_z, AST_z), .x, nstart = 20)),
     # List-column of "glanced" model summaries for each kmeans object
     # (apply `glance()` to each corresponding result after running `kmeans()`)
-    glanced = purrr::map(kmeans_results, glance)) |>
+    glanced = purrr::map(kmeans_results, glance)
+  ) |>
   # Turn `glanced` list-column into regular tibble columns
   unnest(cols = c(glanced))
 
-# construct elbow plot
+# Construct elbow plot
 Elbw_plot <- ggplot(elbow_plot, aes(x = k, y = tot.withinss)) +
   geom_point() + 
   geom_line() +
@@ -57,193 +69,36 @@ Elbw_plot <- ggplot(elbow_plot, aes(x = k, y = tot.withinss)) +
 Elbw_plot
 ```
 
-Appears that the center should either be 3 or 4
+Looks like k = 3 would be the best choice
 
 
 perform clustering
 
 ```{r}
-#set the seed for reproducibility
-set.seed(231)
-
-#perform k-means clustering with k = 3
-Stats_kmeans3 <- Stats_stdz |>
+#Perform k-means clustering with k = 3
+set.seed(123)
+Stats_kmeans3 <- Stats_stdz |> 
   select(PTS_z, AST_z) |>
   kmeans(centers = 3, nstart = 20)
 
-#summarize the kmeans object
+Stats_stdz_c3 <- Stats_stdz |>
+  mutate(cluster = as.factor(Stats_kmeans3$cluster))
+
 Stats_kmeans3_summary <- tidy(Stats_kmeans3)
 Stats_kmeans3_summary
-
-
 ```
 
-CLuster 1 are considered the superstars who have played with LeBron James. Cluster 2 are role players who had above average scoring and assit production. Cluster 3 are bench players who did not have that much impact on the game
 
-
-
-Visualize the Clustering
-
+Visualize clustering based on team
 ```{r}
 
-#augment cluster assignments onto original standardized data
-Stats_stdz_c3 <- augment(Stats_kmeans3, Stats_stdz)
-
-#visualize the cluster assignments and centroids
-ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z)) + 
-  geom_point(aes(color = .cluster, shape = .cluster)) +
-  scale_x_continuous(breaks = scales::breaks_width(0.5)) +
-  scale_y_continuous(breaks = scales::breaks_width(0.5)) +
-  #Add centroid labels to plot
-  geom_label(data = Stats_kmeans3_summary, aes(x = PTS_z, y = AST_z, label = cluster, color = cluster),
-             size = 3,
-             label.r = unit(0.5, "lines"),
-             label.size = 1.5,
-             label.padding = unit(0.5, "lines"),
-             show.legend = FALSE) +
-  labs(x = "Standardized Points per Game (PTS_z)",
+ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z, color = cluster)) +
+  geom_point(size = 3) +
+  facet_wrap(~ Team) +
+  labs(title = "Clustering of LeBron’s Teammates Based on Teams He Played For",
+       x = "Standardized Points per Game (PTS_z)",
        y = "Standardized Assists per Game (AST_z)",
-       color = "Cluster",
-       shape = "Cluster") +
-  theme_classic()
-
+       color = "Cluster") +
+  theme_minimal()
 ```
-
-now creating a table with select players
-
-```{r}
-
-
-player_clusters <- Stats_stdz_c3 |>
- filter(Player %in%c("LeBron James", "Tristan Thompson", "Richard Jefferson", "Kevin Love",
-                  "Anthony Davis", "Kyrie Irving", "Danny Green", "Kyle Korver",
-                  "JR Smith", "Channing Frye", "Anderson Varejao", "Matthew Dellavedova",
-                  "Dwyane Wade", "Sasha Pavlovic", "Zydrunas Ilgauskas", "Iman Shumpert",
-                  "Mo Williams", "James Jones", "Chris Bosh", "Mario Chalmers")) |>
-  select("Player Name" = Player,
-         "Cluster Assignment" = .cluster,
-         "Standardized Points (PTS_z)" = PTS_z,
-         "Standardized Assists (AST_z)" = AST_z) |>
-  kable(booktabs = TRUE, digits = 2, caption = "Cluster Assignments and Standardized Stats", align = "c") |>
-  kable_styling("striped", position = "center")
-
-player_clusters
-
-```
-
-
-
-
-Perform the clustering on the network players
-
-```{r}
-
-Ntwk_players <- Teammates_stats |>
-  filter(Player %in% c("LeBron James", "Tristan Thompson", "Richard Jefferson", "Kevin Love",
-                  "Anthony Davis", "Kyrie Irving", "Danny Green", "Kyle Korver",
-                  "JR Smith", "Channing Frye", "Anderson Varejao", "Matthew Dellavedova",
-                  "Dwyane Wade", "Sasha Pavlovic", "Zydrunas Ilgauskas", "Iman Shumpert",
-                  "Mo Williams", "James Jones", "Chris Bosh", "Mario Chalmers"))
-
-#standardize the data
-Ntwk_stdz <- Ntwk_players |>
-  select(Player, PTS, AST) |>
-   mutate(across(where(is.numeric)
-                , ~ (.x - mean(.x)) / sd(.x)
-                , .names = "{.col}_z")) |>
-  select(Player, ends_with("_z"))
-
-```
-
-
-Create elbow plot for choosing the number of clusters
-
-```{r}
-#| fig-height: 4
-#| fig-width: 4.5
-# iterate through clustering algorithm for 10 different values of k
-elbow_plot_ntwk <- tibble(k = 1:10) |>
-  mutate(
-    # List-column of 10 kmeans objects 
-    # (apply `kmeans()` to each value of `k`)
-    kmeans_results1 = purrr::map(k, ~kmeans(Ntwk_stdz, .x, nstart=20)),
-    # List-column of "glanced" model summaries for each kmeans object
-    # (apply `glance()` to each corresponding result after running `kmeans()`)
-    glanced = purrr::map(kmeans_results1, glance)) |>
-  # Turn `glanced` list-column into regular tibble columns
-  unnest(cols = c(glanced))
-
-# construct elbow plot
-Elbw_plot_ntwk <- ggplot(elbow_plot_ntwk, aes(x = k, y = tot.withinss)) +
-  geom_point() + 
-  geom_line() +
-  scale_x_continuous(breaks = 1:10) +
-  labs(x = "Number of clusters (k)", 
-       y = "Total within-cluster sum of squares")
-Elbw_plot_ntwk
-```
-
-
-
-
-
-
-```{r}
-#set the seed for reproducibility
-set.seed(231)
-
-#perform k-means clustering with k = 3
-Ntwk_kmeans4 <- Ntwk_stdz |>
-  select(PTS_z, AST_z) |>
-  kmeans(centers = 3, nstart = 20)
-
-#summarize the kmeans object
-Stats_kmeans4_summary <- tidy(Ntwk_kmeans4)
-Stats_kmeans4_summary
-
-
-```
-
-
-```{r}
-
-#augment cluster assignments onto original standardized data
-Ntwk_stdz_c4 <- augment(Ntwk_kmeans4, Ntwk_stdz)
-
-#visualize the cluster assignments and centroids
-ggplot(Ntwk_stdz_c4, aes(x = PTS_z, y = AST_z)) + 
-  geom_point(aes(color = .cluster, shape = .cluster)) +
-  scale_x_continuous(breaks = scales::breaks_width(0.5)) +
-  scale_y_continuous(breaks = scales::breaks_width(0.5)) +
-  #Add centroid labels to plot
-  geom_label(data = Stats_kmeans4_summary, aes(x = PTS_z, y = AST_z, label = cluster, color = cluster),
-             size = 3,
-             label.r = unit(0.5, "lines"),
-             label.size = 1.5,
-             label.padding = unit(0.5, "lines"),
-             show.legend = FALSE) +
-  labs(x = "Standardized Points per Game (PTS_z)",
-       y = "Standardized Assists per Game (AST_z)",
-       color = "Cluster",
-       shape = "Cluster") +
-  theme_classic()
-
-```
-
-
-```{r}
-Ntwk_clusters <- Ntwk_stdz_c4 |>
-  select("Player Name" = Player,
-         "Cluster Assignment" = .cluster,
-         "Standardized Points (PTS_z)" = PTS_z,
-         "Standardized Assists (AST_z)" = AST_z) |>
-  kable(booktabs = TRUE, digits = 2, caption = "Cluster Assignments and Standardized Stats", align = "c") |>
-  kable_styling("striped", position = "center")
-
-Ntwk_clusters
-
-
-```
-
-
 
