@@ -38,7 +38,7 @@ library(broom)
 #| out-width: 100%
 #| fig-link: "https://www.shoepalace.com/blogs/all/the-story-of-lebron-james"
 
-include_graphics("https://i.shgcdn.com/b552e6b1-f338-439a-8c12-1b8610d5895a/-/format/auto/-/preview/3000x3000/-/quality/lighter/")
+include_graphics("Images/KingJames.webp")
 ```
 
 ```{r include = FALSE}

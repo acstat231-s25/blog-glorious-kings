@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,12 +39,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-40b3c76289deb7cbf45fecf6c75ab496.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4889ea36da1ebf92e0baab29227ed795.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#shot-selection-over-time" id="toc-shot-selection-over-time" class="nav-link active" data-scroll-target="#shot-selection-over-time">Shot Selection Over Time</a></li>
   <li><a href="#spatial-analysis---lebrons-scoring-by-era" id="toc-spatial-analysis---lebrons-scoring-by-era" class="nav-link" data-scroll-target="#spatial-analysis---lebrons-scoring-by-era">Spatial Analysis - LeBron’s Scoring by Era</a></li>
   <li><a href="#lebron-and-his-teammates" id="toc-lebron-and-his-teammates" class="nav-link" data-scroll-target="#lebron-and-his-teammates">LeBron and His Teammates</a></li>
-  <li><a href="#the-network" id="toc-the-network" class="nav-link" data-scroll-target="#the-network">The Network</a></li>
+  <li><a href="#the-k-means-analysis" id="toc-the-k-means-analysis" class="nav-link" data-scroll-target="#the-k-means-analysis">The K-means Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://i.shgcdn.com/b552e6b1-f338-439a-8c12-1b8610d5895a/-/format/auto/-/preview/3000x3000/-/quality/lighter/.png" class="img-fluid figure-img"></p>
+<p><img src="Images/KingJames.webp" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -236,6 +236,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'maps' was built under R version 4.4.3</code></pre>
 </div>
 </div>
 </section>
@@ -330,8 +335,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="the-network" class="level2">
-<h2 class="anchored" data-anchor-id="the-network">The Network</h2>
+<section id="the-k-means-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="the-k-means-analysis">The K-means Analysis</h2>
 <div>
 
 </div>
@@ -349,20 +354,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p>The clustering visualized above is sepereated by the different teams players played with LeBron</p>
+<p>The clustering visualized above is separated by the different teams players played with LeBron.</p>
 </div>
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <ul>
-<li>Cluster 1 are considered superstars. These players had high point and assist production.</li>
-<li>CLuster 2 are average players. These players were important to the team and put up average points and assists</li>
-<li>Cluster 3 are below average players/bench player. These players did not have a big impact on the team</li>
+<li>Cluster 1 are average players. These players were important to the team and put up average and slightly above average points and assists</li>
+<li>Cluster 2 are below average players/bench players. These players did not have a big impact on the team and put up below average points and Assists</li>
+<li>Cluster 3 are superstars that played with LeBron. These players put up high point and assist averages while playing with LeBron</li>
 </ul>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="cell quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>We are able to see that there was only one considered superstar that played with LeBron on the Miami Heat. This is when LeBron was playing his best basketball as he was not surrounded by the talent he was surrounded with on the Cavaliers and Lakers. [More to be Added]</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<section id="the-network" class="level2 cell quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<h2 class="anchored" data-anchor-id="the-network">The Network</h2>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -370,7 +381,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
-</div>
+</section>
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
@@ -638,6 +649,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
