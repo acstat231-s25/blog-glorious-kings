@@ -186,7 +186,7 @@ include_graphics("https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/g
 
 ##The Network
 
-::: {layout="[ [1] ]"}
+::: {layout="[ [1], [1] ]"}
 
 ```{r}
 #| echo: FALSE 
@@ -204,9 +204,6 @@ ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z, color = cluster)) +
   theme_minimal()
 ```
 
-
-
-::: {layout="[ [1] ]"}
 
 
 ```{r} 
