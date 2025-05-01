@@ -393,7 +393,7 @@ include_graphics("https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/g
 ```
 
 
-## The Network
+## The K-means Analysis
 
 ::: {layout="[ [1], [1] ]"}
 
@@ -413,11 +413,15 @@ ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z, color = cluster)) +
   theme_minimal()
 ```
 
-The clustering visualized above is sepereated by the different teams players played with LeBron
+The clustering visualized above is separated by the different teams players played with LeBron. 
 
-- Cluster 1 are considered superstars. These players had high point and assist production.
-- CLuster 2 are average players. These players were important to the team and put up average points and assists
-- Cluster 3 are below average players/bench player. These players did not have a big impact on the team
+- Cluster 1 are average players. These players were important to the team and put up average and slightly above average points and assists
+- Cluster 2 are below average players/bench players. These players did not have a big impact on the team and put up below average points and Assists
+- Cluster 3 are superstars that played with LeBron. These players put up high point and assist averages while playing with LeBron
+
+We are able to see that there was only one considered superstar that played with LeBron on the Miami Heat. This is when LeBron was playing his best basketball as he was not surrounded by the talent he was surrounded with on the Cavaliers and Lakers. [More to be Added]
+
+## The Network
 
 ```{r} 
 #| echo: FALSE 
