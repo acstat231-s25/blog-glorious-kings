@@ -22,6 +22,7 @@ library(tidygraph)
 library(ggraph)
 library(mdsr)
 library(broom)
+library(ggplot2)
 
 ```
 
@@ -67,9 +68,31 @@ Stats_kmeans3_summary <- tidy(Stats_kmeans3)
 #Stats_kmeans3_summary
 ```
 
+```{r}
+#Create dataframe for interactive table that shows the players stats and cluster assignment
+Data_table_stats <- left_join(teammates_clean, Stats_stdz_c3, by = "Player") |>
+   mutate(Cluster = case_when(
+    cluster == 1 ~ "Average/Above Average Players",
+    cluster == 2 ~ "Bench Players",
+    cluster == 3 ~ "Superstars"
+  )) |>
+  select(Player, Team.x, PTS, AST, Cluster)
+  
+
+
+```
+
+
+
+
+
 ## The K-means Analysis
 
 ::: {layout="[ [1], [1] ]"}
+
+What makes a great teammate for LeBron James? Over a career spanning two decades, four championships, and stints with the Cavaliers, Heat, and Lakers, LeBron has played alongside a wide range of players—some who elevated his game, and others who struggled to make an impact. To explore patterns among his many teammates, I used k-means clustering to group players based on their average points and assists per game while playing with LeBron. I also separated players by team to see how their supporting casts differed across each era. This analysis reveals what types of players surrounded LeBron on each team, offering insights into which rosters were superstar-heavy and which required him to carry more of the load, highlighting just how dominant he was, even when the help was limited.
+
+
 
 ```{r}
 #| echo: FALSE 
@@ -84,13 +107,40 @@ ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z, color = cluster)) +
        x = "Standardized Points per Game (PTS_z)",
        y = "Standardized Assists per Game (AST_z)",
        color = "Cluster") +
+  scale_color_manual( values = c("1" = "#1f77b4", "2" = "#ff7f0e", "3" = "#2ca02c"),
+                      labels = c("1" = "Average/Above Average Players", "2" = "Bench Players", "3" = "Superstars")) +
   theme_minimal()
 ```
 
-The clustering visualized above is separated by the different teams players played with LeBron. 
+Descriptions of each clustering group is provided below.
 
-- Cluster 1 are average players. These players were important to the team and put up average and slightly above average points and assists
-- Cluster 2 are below average players/bench players. These players did not have a big impact on the team and put up below average points and Assists
-- Cluster 3 are superstars that played with LeBron. These players put up high point and assist averages while playing with LeBron
+
+- **SuperStars**: This cluster includes players with high points per game and high assists per game while playing with LeBron. Notably, LeBron played with only one superstar during his time with the Miami Heat. Yet, he won back-to-back NBA Championships, highlighting that this was likely when he was playing some of the best basketball of his career.
+
+
+- **Average/Above Average Players**: These players were essential pieces of the team. They put up consistent numbers each game, and LeBron could rely on these players to have an average performance each night. These players were key for playoff runs, and this group includes scorers and passers who benefited from LeBron being on the floor. Again, we can see that LeBron was not surrounded by many of these players in Miami, highlighting that he played arguably the best basketball of his career to carry this team to back-to-back championships.
+
+
+- **Bench Players**: This grouping of players had a limited impact on offensive production. Many of these players in this cluster were big men who rebounded the ball or role players known for their excellent defense and hustle. Some members of this group saw minimal playing time and were statistically below average by NBA standards. There impact may not have been seen on the court but they likely contributed to the team in other ways such as leadership, team chemistry, and work ethic
+
+
 
 We are able to see that there was only one considered superstar that played with LeBron on the Miami Heat. This is when LeBron was playing his best basketball as he was not surrounded by the talent he was surrounded with on the Cavaliers and Lakers. [More to be Added]
+
+
+## Table of LeBron's Teammates and Statistics
+
+
+```{r}
+DT::datatable(Data_table_stats,
+              options = list(pageLength = 10, autoWidth = TRUE),
+              rownames = FALSE,
+              caption = "Table: Player Stats and Cluster Assignments")
+
+
+```
+
+
+
+
+
