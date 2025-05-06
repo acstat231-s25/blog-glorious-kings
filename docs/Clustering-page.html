@@ -2,16 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Paul Grajzl">
-<meta name="author" content="Zack Jesse">
-<meta name="author" content="Matt Tabet">
+<meta name="author" content="Zachary Jesse">
 <meta name="dcterms.date" content="2025-05-06">
 
-<title>Our Glorious King – King James</title>
+<title>LeBron’s Teammates Clustering Analysis – King James</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,12 +37,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e846426629f353d263e112904baba500.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4889ea36da1ebf92e0baab29227ed795.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,6 +70,26 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
+<script src="site_libs/datatables-binding-0.33/datatables.js"></script>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+
+<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -95,12 +113,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> <i class="bi bi-house" role="img">
+    <a class="nav-link" href="./index.html"> <i class="bi bi-house" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Clustering-page.html"> 
+    <a class="nav-link active" href="./Clustering-page.html" aria-current="page"> 
 <span class="menu-text">LeBron’s Teammates Clustering Analysis</span></a>
   </li>  
   <li class="nav-item">
@@ -124,8 +142,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#shot-selection-over-time" id="toc-shot-selection-over-time" class="nav-link active" data-scroll-target="#shot-selection-over-time">Shot Selection Over Time</a></li>
-  <li><a href="#spatial-analysis---lebrons-scoring-by-era" id="toc-spatial-analysis---lebrons-scoring-by-era" class="nav-link" data-scroll-target="#spatial-analysis---lebrons-scoring-by-era">Spatial Analysis - LeBron’s Scoring by Era</a></li>
+  <li><a href="#the-k-means-analysis" id="toc-the-k-means-analysis" class="nav-link active" data-scroll-target="#the-k-means-analysis">The K-means Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -134,8 +151,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Our Glorious King</h1>
-<p class="subtitle lead">Lebron James</p>
+<h1 class="title">LeBron’s Teammates Clustering Analysis</h1>
 </div>
 
 
@@ -143,11 +159,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Paul Grajzl </p>
-             <p>Zack Jesse </p>
-             <p>Matt Tabet </p>
+             <p>Zachary Jesse </p>
           </div>
   </div>
     
@@ -161,155 +175,68 @@ ul.task-list li input[type="checkbox"] {
     
   </div>
   
-<div>
-  <div class="abstract">
-    <div class="block-title">Abstract</div>
-    LeBron’s legacy is large on the statsheet, but extends much further than just putting the ball in the basket. Through his greatness, he has broken records, cultivated lifelong friendships through teammates, and made those around him into better players. His over 20 year career has changed fundamentally changed the game of basketball, which is displayed through the evolution of his playstyle.
-  </div>
-</div>
 
 
 </header>
 
 
-<div class="cell">
+<section id="the-k-means-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="the-k-means-analysis">The K-means Analysis</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[ [1], [1] ]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>What makes a great teammate for LeBron James? Over a career spanning two decades, four championships, and stints with the Cavaliers, Heat, and Lakers, LeBron has played alongside a wide range of players—some who elevated his game, and others who struggled to make an impact. To explore patterns among his many teammates, I used k-means clustering to group players based on their average points and assists per game while playing with LeBron. I also separated players by team to see how their supporting casts differed across each era. This analysis reveals what types of players surrounded LeBron on each team, offering insights into which rosters were superstar-heavy and which required him to carry more of the load, highlighting just how dominant he was, even when the help was limited.</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Images/KingJames.webp" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Over the course of two decades, LeBron James has had one of the most enduring and shape-shifting careers in NBA history. From his debut with the Cleveland Cavaliers in 2003 to his current tenure with the Los Angeles Lakers, LeBron has not only won championships and accumulated accolades — he has continually redefined his role to fit the moment.</p>
-<p>Across four distinct eras, LeBron adapted to new teammates, coaching systems, and league-wide changes in playing style:</p>
-<ul>
-<li><p><strong>Cleveland (2003–2010)</strong>: As a rising star on a young Cavs roster, LeBron quickly became the central offensive engine. His play in this era was characterized by explosive drives, high usage, and sheer athleticism. He often carried the scoring load and functioned as a point-forward before the term became widely used.</p></li>
-<li><p><strong>Miami (2010–2014)</strong>: Teaming up with Dwyane Wade and Chris Bosh, LeBron entered a more structured, efficient role. In Miami, he developed a reliable post game, improved his off-ball awareness, and committed to defensive intensity. This era brought his first championships and marked a shift toward smarter, more selective shot-taking.</p></li>
-<li><p><strong>Cleveland (2014–2018)</strong>: Returning to Cleveland with championship experience, LeBron transitioned into more of a distributor while still scoring at a high level. Surrounded by sharpshooters and secondary creators like Kyrie Irving and Kevin Love, he became the central decision-maker in a fast-paced, spacing-oriented offense that culminated in a title in 2016.</p></li>
-<li><p><strong>Los Angeles (2018–present)</strong>: In LA, LeBron entered a veteran phase. His role has been fluid — at times the lead scorer, at other times the facilitator, and often both. His game now leans on craft, vision, and positional versatility. He’s added range and adapted to a more three-heavy league, while mentoring younger players and taking over when needed.</p></li>
-</ul>
-<p>This project explores how LeBron’s game has evolved — not just over time, but across geographic and strategic contexts. We analyze his career from four perspectives:</p>
-<ul>
-<li><strong>Shot selection</strong>: How LeBron’s scoring profile has shifted across the years, from rim attacks to perimeter shooting.</li>
-<li><strong>Scoring geography</strong>: A breakdown of which states saw the most production from LeBron, and how this aligns with his team locations.</li>
-<li><strong>Teammate roles</strong>: Using statistical clustering, we explore the types of players LeBron has worked with, and how that influenced his on-court responsibilities.</li>
-<li><strong>Career network</strong>: A graph-based look at who he’s played the most games with, and how those connections span multiple teams.</li>
-</ul>
-<p>Together, these views help explain how LeBron has stayed not just relevant, but dominant, by evolving alongside — and often ahead of — the game itself.</p>
-<section id="shot-selection-over-time" class="level2">
-<h2 class="anchored" data-anchor-id="shot-selection-over-time">Shot Selection Over Time</h2>
-<p>LeBron’s offensive approach has evolved in clear, measurable ways over the course of his career. Early on, he relied heavily on athleticism — attacking the basket in transition, posting up smaller defenders, and creating mid-range looks off the dribble. In those early Cleveland years, much of the offense was built around his ability to collapse defenses and finish through contact.</p>
-<p>As he moved into his Miami years, and later returned to Cleveland, his shot selection became more deliberate. He still attacked the paint, but he began incorporating more post play, baseline turnarounds, and selective three-point shooting — especially from the corners. With a more balanced roster around him, LeBron didn’t need to force as many contested drives and was able to read the floor more patiently.</p>
-<p>In Los Angeles, LeBron’s game has become even more perimeter-oriented. Whether due to age, roster fit, or broader shifts in league strategy, he now shoots threes at a higher volume and uses off-ball movement to find cleaner looks. While he still gets to the rim when needed, he often defers to teammates in the regular season and picks his spots more carefully.</p>
-<p>The charts below provide a snapshot of this evolution — comparing his rookie season shot locations to those from his most recent campaign.</p>
-<ul>
-<li>Track the shift from interior-heavy scoring to a more balanced perimeter approach</li>
-<li>Observe changes in shot clustering by zone</li>
-<li>Reflect on how age, team context, and league-wide trends have reshaped his role</li>
-</ul>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Rookie Season (2004)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Most Recent Season (2025)</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/shotchart-2004-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Clustering-page_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1152"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/shotchart-2025-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>Descriptions of each clustering group is provided below.</p>
 </div>
 </div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<ul>
+<li><p><strong>SuperStars</strong>: This cluster includes players with high points per game and high assists per game while playing with LeBron. Notably, LeBron played with only one superstar during his time with the Miami Heat. Yet, he won back-to-back NBA Championships, highlighting that this was likely when he was playing some of the best basketball of his career.</p></li>
+<li><p><strong>Average/Above Average Players</strong>: These players were essential pieces of the team. They put up consistent numbers each game, and LeBron could rely on these players to have an average performance each night. These players were key for playoff runs, and this group includes scorers and passers who benefited from LeBron being on the floor. Again, we can see that LeBron was not surrounded by many of these players in Miami, highlighting that he played arguably the best basketball of his career to carry this team to back-to-back championships.</p></li>
+<li><p><strong>Bench Players</strong>: This grouping of players had a limited impact on offensive production. Many of these players in this cluster were big men who rebounded the ball or role players known for their excellent defense and hustle. Some members of this group saw minimal playing time and were statistically below average by NBA standards. There impact may not have been seen on the court but they likely contributed to the team in other ways such as leadership, team chemistry, and work ethic</p></li>
+</ul>
 </div>
 </div>
-</div>
-</div>
+<div class="quarto-layout-row">
+<section id="table-of-lebrons-teammates-and-statistics" class="level2 quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<h2 class="anchored" data-anchor-id="table-of-lebrons-teammates-and-statistics">Table of LeBron’s Teammates and Statistics</h2>
+<p>The interactive table below allows you to search through all of LeBron’s teammates and see which players are in what cluster, as well as the team they played with LeBron and their points and assist averages.</p>
 </section>
-<section id="spatial-analysis---lebrons-scoring-by-era" class="level2">
-<h2 class="anchored" data-anchor-id="spatial-analysis---lebrons-scoring-by-era">Spatial Analysis - LeBron’s Scoring by Era</h2>
-<p>LeBron’s scoring impact isn’t just about how much — it’s also about where. Over the course of his career, he’s played in nearly every NBA arena, logging minutes and putting up points across the country. His production by state reflects not only the teams he played for, but also the matchups, rivalries, and playoff runs that defined each era.</p>
-<p>In his first stint with the Cavaliers, most of his scoring came in the Eastern Conference, especially in cities like New York, Chicago, and Boston — places that often hosted nationally televised games and postseason series. In Miami, his offensive efficiency increased, and he put up consistently strong road numbers, particularly against high-profile teams in both conferences. His return to Cleveland saw a similar pattern, but with an even greater focus on pacing and spacing, which opened up more perimeter opportunities away from home.</p>
-<p>Since joining the Lakers, LeBron’s West Coast presence has expanded. Naturally, he scores the most in California, but he’s also produced heavily in Western Conference cities like Denver, Phoenix, and Dallas — arenas that have hosted some of his biggest performances in recent years.</p>
-<p>The maps below break down total points by U.S. state for each of LeBron’s four team eras:</p>
-<ul>
-<li><strong>Cleveland</strong> (2004–2010, 2015–2018)</li>
-<li><strong>Miami</strong> (2011–2014)</li>
-<li><strong>Los Angeles</strong> (2019–2025)</li>
-</ul>
-<p>These visualizations help highlight:</p>
-<ul>
-<li>Where LeBron consistently produced the most points — both home and away</li>
-<li>Which states show up as high-volume territories due to playoff frequency or conference alignment</li>
-<li>How geography, travel, and conference play shape long-term scoring patterns</li>
-</ul>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">First Cleveland Era</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Miami Era</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Second Cleveland Era</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">Lakers Era</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>Some information in one tab</p>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-ℹ Please use `linewidth` instead.</code></pre>
 </div>
+<div class="quarto-layout-row">
+<div class="cell quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-735d05eac75555269eef" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-735d05eac75555269eef">{"x":{"filter":"none","vertical":false,"caption":"<caption>Table: Player Stats and Cluster Assignments<\/caption>","data":[["Zydrunas Ilgauskas","Anderson Varejao","James Jones","Dwyane Wade","Mario Chalmers","Chris Bosh","Tristan Thompson","Sasha Pavlovic","J.R. Smith","Kevin Love","Drew Gooden","Anthony Davis","Daniel Gibson","Eric Snow","Norris Cole","Udonis Haslem","Shane Battier","Joel Anthony","Austin Reaves","Kyrie Irving","Mike Miller","Ira Newble","Iman Shumpert","Damon Jones","Mo Williams","Donyell Marshall","Kentavious Caldwell-Pope","Ray Allen","Kyle Kuzma","Delonte West","Richard Jefferson","Larry Hughes","Matt Dellavedova","Channing Frye","Chris Andersen","Rui Hachimura","J.J. Hickson","Kyle Korver","Timofey Mozgov","Max Christie","Rashard Lewis","Alex Caruso","JaVale McGee","D'Angelo Russell","Wally Szczerbiak","Dwight Howard","Jaxson Hayes","Dennis Schroder","Jeff McInnis","Rajon Rondo","Danny Green","Ben Wallace","Juwan Howard","Jeff Green","Russell Westbrook","Talen Horton-Tucker","DeSagana Diop","Avery Bradley","Anthony Parker","Jarred Vanderbilt","Darnell Jackson","Devin Brown","Gabe Vincent","Kevin Ollie","Markieff Morris","Cedi Osman","Taurean Prince","Joe Smith","Carlos Boozer","Robert Traylor","Lucious Harris","Jose Calderon","Cam Reddish","Dalton Knecht","Michael Beasley","Jamario Moon","Jared Dudley","Shaquille O'Neal","Wenyen Gabriel","Quinn Cook","Troy Brown, Jr.","Eddie House","Jawad Williams","Tarence Kinsey","Dwayne Jones","DeAndre Liggins","Shawn Marion","Jae Crowder","Dajuan Wagner","Joe Harris","Malik Monk","Alan Henderson","Lonnie Walker","Erick Dampier","Montrezl Harrell","Josh Hart","Tony Battie","Jordan McRae","Jordan Clarkson","Eric Williams","Carlos Arroyo","Carmelo Anthony","Lance Stephenson","Larry Nance, Jr.","Luke Jackson","George Hill","Christian Wood","Wesley Matthews","Marc Gasol","Dion Waiters","Mike Bibby","Jason Kapono","Ante Zizic","Dexter Pittman","Jared Cunningham","Flip Murray","Rodney Hood","Dorian Finney-Smith","Deron Williams","Troy Daniels","Maxwell Lewis","Darius Miles","Patrick Beverley","Kay Felder","Mike Wilks","Brandon Ingram","Lonzo Ball","Stanley Johnson","Toney Douglas","Tyson Chandler","Thomas Bryant","Shannon Brown","David Wesley","Antawn Jamison","Kedrick Brown","J.R. Bremer","Kendrick Nunn","Spencer Dinwiddie","Terrel Harris","Wayne Ellington","Derrick Williams","Christian Koloko","Moe Wagner","Roger Mason","Dahntay Jones","Scot Pollard","Ronny Turiaf","Greg Oden","John Holland","Luka Doncic","Malik Beasley","Juan Toscano-Anderson","Kendrick Perkins","Alfonzo McKinnie","Ricky Davis","Lee Nailon","Chris Mihm","Kent Bazemore","Svi Mykhailiuk","Shake Milton","Damian Jones","Sasha Kaun","Mike Dunleavy","DeAndre Jordan","Jalen Hood-Schifino","Bronny James","Jordan Goodwin","Trevor Ariza","Leon Powe","Jamaal Magloire","Isaiah Thomas","Scott Williams","Trey Jemison","Lorenzen Wright","Derrick Rose","Ivica Zubac","Jiri Welsch","Brendan Haywood","Reggie Bullock","Johnathan Williams","Colin Castleton","London Perrantes","Eddy Curry","D.J. Augustin","Stephen Graham","Skylar Mays","Zendon Hamilton","Andre Drummond","Isaac Bonga","Matt Ryan","Mike Muscala","Devontae Cacok","Kostas Antetokounmpo","Lou Amundson","Ben McLemore","Mohamed Bamba","Will Cherry","Billy Thomas","Armel Traore","Shaquille Harrison"],["Heat","Cavaliers","Heat","Heat","Heat","Heat","Lakers","Cavaliers","Lakers","Cavaliers","Cavaliers","Lakers","Cavaliers","Cavaliers","Heat","Heat","Heat","Heat","Lakers","Cavaliers","Heat","Cavaliers","Cavaliers","Cavaliers","Cavaliers","Cavaliers","Lakers","Heat","Lakers","Cavaliers","Cavaliers","Cavaliers","Cavaliers","Cavaliers","Heat","Lakers","Cavaliers","Cavaliers","Cavaliers","Lakers","Heat","Lakers","Lakers","Lakers","Cavaliers","Lakers","Lakers","Lakers","Cavaliers","Lakers","Lakers","Cavaliers","Heat","Cavaliers","Lakers","Lakers","Cavaliers","Lakers","Cavaliers","Lakers","Cavaliers","Cavaliers","Lakers","Cavaliers","Lakers","Cavaliers","Lakers","Cavaliers","Cavaliers","Cavaliers","Cavaliers","Cavaliers","Lakers","Lakers","Heat","Cavaliers","Lakers","Cavaliers","Lakers","Lakers","Lakers","Heat","Cavaliers","Cavaliers","Cavaliers","Heat","Cavaliers","Cavaliers","Cavaliers","Cavaliers","Lakers","Cavaliers","Lakers","Heat","Lakers","Lakers","Cavaliers","Cavaliers","Cavaliers","Cavaliers","Heat","Lakers","Lakers","Cavaliers","Cavaliers","Cavaliers","Lakers","Lakers","Lakers","Lakers","Heat","Cavaliers","Cavaliers","Heat","Cavaliers","Cavaliers","Cavaliers","Lakers","Cavaliers","Lakers","Lakers","Cavaliers","Lakers","Cavaliers","Cavaliers","Lakers","Lakers","Lakers","Heat","Lakers","Lakers","Cavaliers","Cavaliers","Cavaliers","Cavaliers","Cavaliers","Lakers","Lakers","Heat","Lakers","Cavaliers","Lakers","Lakers","Heat","Cavaliers","Cavaliers","Heat","Heat","Cavaliers","Lakers","Lakers","Lakers","Cavaliers","Lakers","Cavaliers","Cavaliers","Cavaliers","Lakers","Lakers","Lakers","Lakers","Cavaliers","Cavaliers","Lakers","Lakers","Lakers","Lakers","Lakers","Cavaliers","Heat","Lakers","Cavaliers","Lakers","Cavaliers","Cavaliers","Lakers","Cavaliers","Cavaliers","Lakers","Lakers","Lakers","Cavaliers","Heat","Lakers","Cavaliers","Lakers","Cavaliers","Lakers","Lakers","Lakers","Lakers","Lakers","Lakers","Cavaliers","Lakers","Lakers","Cavaliers","Cavaliers","Lakers","Lakers"],[12.3,6.7,3.6,20.5,8.6,16.7,7.5,5.8,10.1,16.7,11.7,24.6,7,4,5.6,4.6,5.1,2.2,14.3,22.5,3.9,3.9,6.2,5.9,14.4,7.5,9.199999999999999,10,13.3,10.3,5.3,13.5,5.9,7.3,5.7,12.1,6.2,8.9,7.6,5.1,4.3,5.9,8.4,15.3,7.1,6.5,4.9,12,12.5,7.3,7.2,3,1.6,10.2,16.3,8.1,1.8,7.5,7.4,4.7,1.3,7.4,5.3,4,5.3,3.4,8.4,6.9,15.3,5.4,4.2,4,4.4,8.1,6.7,4.2,1.1,11.9,4.5,4.1,5.9,5.2,3.3,1.8,0.9,2.3,4.2,8.6,5.4,1.9,12.8,2.5,9.699999999999999,2.5,13,7.7,5.3,3.4,9.4,9,5.6,13.4,7.5,7,2.7,9.300000000000001,7.1,4.6,4.8,9.6,5.5,3.6,3.3,2.1,2.4,11.6,8.4,7.6,5,4,0.3,8.9,7.1,3.3,1.2,17.7,8.9,6.2,2.9,2.5,11.4,3.5,1.7,15.1,5,3.5,5.4,5.6,2.7,6.1,5.3,2.1,4.2,3,1.3,0.7,2.6,2.5,2.3,27.7,7.1,2.7,2.2,1.7,15.3,7.7,6.9,4,3.5,3.4,3.2,0.7,4.2,4.1,1.6,1.6,4,3.8,3.5,1.6,13.6,1.7,2.2,1.1,9.800000000000001,5.8,2.9,1.4,8.6,5.7,1.3,0.5,1.5,6,2.3,1.5,2.3,10.9,0.8,4.7,2.4,2.3,1.7,1.2,2.6,2,1.9,1.9,1.5,1.3],[1.1,0.8,0.3,4.5,3.4,1.5,0.7,1,1.6,2.1,1.1,3.2,1.5,3.7,2.1,0.5,0.9,0.2,4.2,5.1,0.9,0.8,1.3,1.7,4,0.6,1.4,1.7,1.5,3.5,0.8,3.2,3.4,0.7,0.3,1.1,0.3,1,0.6,0.9,0.6,2.2,0.5,5.2,1.1,0.6,0.6,4.1,5.8,5.9,1.2,0.7,0.3,1.3,6.9,2.3,0.5,1,1.8,1.1,0.1,2.2,1.3,2.8,0.9,0.6,1.4,0.6,1.9,0.8,0.6,1.8,0.8,0.8,0.6,0.7,0.5,1.5,0.4,0.9,1,1,0.5,0.1,0.1,0.8,0.8,1.1,1.2,0.4,2.6,0.2,1.1,0.4,1,1.1,0.8,0.5,1.3,1.8,2,0.9,1.7,1,0.6,2.5,1,0.9,2.1,1.9,1.9,0.4,0.2,0.2,0.5,2.3,1.3,1.2,2.6,0.4,0.2,2.2,2.6,1.2,0.5,2.4,4.7,1.5,1.4,0.6,0.7,0.4,0.9,1.4,1.1,1.3,0.8,1.9,0.7,0.8,0.5,0.4,0.7,0.8,0.1,0,0.2,0.1,0.2,7.3,0.8,0.8,0.3,0.1,5,0.8,0.5,0.8,0.9,1,0.2,0.1,0.9,0.6,0.4,0.5,1,1.1,0,0.3,3.9,0.4,0.2,0.2,1.6,0.6,1.2,0.1,0.9,0.4,0.2,0.4,0.1,1.3,0.2,0.7,0,0.2,0.4,0.3,0.4,0.2,0.2,0.4,0.3,0.4,1,0.1,0.1,1.1],["Average/Above Average Players","Average/Above Average Players","Bench Players","Superstars","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Bench Players","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Superstars","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Superstars","Superstars","Bench Players","Bench Players","Average/Above Average Players","Average/Above Average Players","Superstars","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Superstars","Bench Players","Superstars","Average/Above Average Players","Average/Above Average Players","Bench Players","Average/Above Average Players","Bench Players","Average/Above Average Players","Average/Above Average Players","Bench Players","Bench Players","Average/Above Average Players","Average/Above Average Players","Superstars","Average/Above Average Players","Bench Players","Bench Players","Superstars","Superstars","Superstars","Average/Above Average Players","Bench Players","Bench Players","Average/Above Average Players","Superstars","Average/Above Average Players","Bench Players","Average/Above Average Players","Average/Above Average Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Average/Above Average Players","Bench Players","Average/Above Average Players","Average/Above Average Players","Bench Players","Bench Players","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Bench Players","Average/Above Average Players","Average/Above Average Players","Bench Players","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Bench Players","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Average/Above Average Players","Bench Players","Bench Players","Average/Above Average Players","Average/Above Average Players","Bench Players","Bench Players","Superstars","Superstars","Average/Above Average Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Superstars","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Superstars","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Superstars","Bench Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Average/Above Average Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players","Bench Players"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Player<\/th>\n      <th>Team<\/th>\n      <th>PTS<\/th>\n      <th>AST<\/th>\n      <th>Cluster<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"autoWidth":true,"columnDefs":[{"className":"dt-right","targets":[2,3]},{"name":"Player","targets":0},{"name":"Team","targets":1},{"name":"PTS","targets":2},{"name":"AST","targets":3},{"name":"Cluster","targets":4}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>Some information in a different tab</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<div class="quarto-layout-row">
 
+</div>
+<div class="quarto-layout-row">
 
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -539,6 +466,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
