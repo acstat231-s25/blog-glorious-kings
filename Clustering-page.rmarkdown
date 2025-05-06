@@ -63,7 +63,6 @@ Stats_stdz_c3 <- Stats_stdz |>
   mutate(cluster = as.factor(Stats_kmeans3$cluster))
 
 Stats_kmeans3_summary <- tidy(Stats_kmeans3)
-#Stats_kmeans3_summary
 ```
 
 ```{r}
@@ -133,6 +132,8 @@ Descriptions of each clustering group is provided below.
 ## Table of LeBron's Teammates and Statistics
 
 The interactive table below allows you to search through all of LeBron's teammates and see which players are in what cluster, as well as the team they played with LeBron and their points and assist averages.
+
+
 
 
 
