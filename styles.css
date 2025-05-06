@@ -1,1 +1,10 @@
 /* css styles */
+
+/* Import Libre Baskerville from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Apply Libre Baskerville site-wide */
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', serif;
+}
+

@@ -37,7 +37,7 @@ format:
     highlight-style: arrow
     # See https://quarto.org/docs/output-formats/html-themes.html
     theme: 
-      light: minty
+      light: united
       dark: superhero
     fontsize: 13pt
     # If you want to customize beyond a built-in theme, you can add content to
