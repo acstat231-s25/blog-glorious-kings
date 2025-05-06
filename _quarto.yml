@@ -5,7 +5,7 @@ project:
 # Can customize this section with options from the following page:
 # https://quarto.org/docs/websites/website-navigation.html
 website:
-  title: "Website title"
+  title: "King James"
   navbar:
     left:
       - href: index.qmd # Must be included as index.qmd
