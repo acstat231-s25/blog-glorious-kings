@@ -74,7 +74,8 @@ Data_table_stats <- left_join(teammates_clean, Stats_stdz_c3, by = "Player") |>
     cluster == 2 ~ "Bench Players",
     cluster == 3 ~ "Superstars"
   )) |>
-  select(Player, Team.x, PTS, AST, Cluster)
+  rename(Team = Team.x) |>
+  select(Player, Team, PTS, AST, Cluster)
   
 
 
@@ -98,7 +99,7 @@ What makes a great teammate for LeBron James? Over a career spanning two decades
 
 ```{r}
 #| echo: FALSE 
-#| fig.width: 10
+#| fig.width: 12
 #| fig.height: 10
 #| warning: FALSE
 
@@ -129,10 +130,9 @@ Descriptions of each clustering group is provided below.
 
 
 
-We are able to see that there was only one considered superstar that played with LeBron on the Miami Heat. This is when LeBron was playing his best basketball as he was not surrounded by the talent he was surrounded with on the Cavaliers and Lakers. [More to be Added]
-
-
 ## Table of LeBron's Teammates and Statistics
+
+The interactive table below allows you to search through all of LeBron's teammates and see which players are in what cluster, as well as the team they played with LeBron and their points and assist averages.
 
 
 
