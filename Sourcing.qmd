@@ -1,0 +1,138 @@
+---
+title: "LeBron's Teammates Network Graph"
+author: "Matt Tabet"
+---
+
+This is *yet* another page that can be linked! You are not required to include more than just *index.qmd*, but you are welcome to make content on different pages, if desired. This may help with managing GitHub commits, as well. 
+
+## A note {#sec-note} 
+
+Notice that you can also modify the YAML headings at the top of each page as I did in the [first subpage](another-page.qmd) or completely delete them, as I did here.
+
+```{r}
+#| label: setup
+#| include: false
+
+# Improve digit display and NA display for kable tables
+options(scipen = 1, knitr.kable.NA = "")
+
+# Load necessary packages
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(dplyr)
+library(tidyverse)
+library(knitr)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(mdsr)
+library(broom)
+
+```
+
+```{r include = FALSE}
+Lebron <- read.csv("data/lebron_teammates.csv") |>
+  mutate(name = "LeBron James")
+Thompson <- read.csv("data/thompson_teammates.csv")
+Jefferson <- read.csv("data/jefferson_teammates.csv")
+Love <- read.csv("data/love_teammates.csv")
+Davis <- read.csv("data/ad_teammates.csv")
+Kyrie <- read.csv("data/kyrie_teammates.csv")
+Green <- read.csv("data/green_teammates.csv")
+Korver <- read.csv("data/korver_teammates.csv")
+JR <- read.csv("data/jrsmith_teammates.csv")
+Frye <- read.csv("data/frye_teammates.csv")
+Anderson <- read.csv("data/Anderson_teammates.csv")
+Delly <- read.csv("data/delly_teammates.csv")
+Dwayne <- read.csv("data/DWade_teammates.csv")
+Sasha <- read.csv("data/Sasha_teammates.csv")
+Zydrunas <- read.csv("data/zydrunas_teammates.csv")
+Shumpert <- read.csv("data/shumpert_teammates.csv")
+Mo <- read.csv("data/mo_teammates.csv")
+Johnson <- read.csv("data/JamesJ_teammates.csv")
+Bosh <- read.csv("data/Bosh_teammates.csv")
+Chalmers <- read.csv("data/chalmers_teammates.csv")
+
+lebron_network <- bind_rows(
+  Lebron, Thompson, Jefferson, Love, Davis, Kyrie, Green, Korver,
+  JR, Frye, Anderson, Delly, Dwayne, Sasha, Zydrunas, Shumpert, Mo,
+  Johnson, Bosh, Chalmers
+)
+
+player_names <- c("LeBron James", "Tristan Thompson", "Richard Jefferson", "Kevin Love",
+                  "Anthony Davis", "Kyrie Irving", "Danny Green", "Kyle Korver",
+                  "JR Smith", "Channing Frye", "Anderson Varejao", "Matthew Dellavedova",
+                  "Dwyane Wade", "Sasha Pavlovic", "Zydrunas Ilgauskas", "Iman Shumpert",
+                  "Mo Williams", "James Jones", "Chris Bosh", "Mario Chalmers")
+
+edges <- lebron_network |>
+  rename(from = name, to = Player, weight = GP) |>
+  filter(from %in% player_names & to %in% player_names)
+
+edges <- edges |>
+  rowwise() |>
+  mutate(player1 = min(from, to),
+         player2 = max(from, to)) |>
+  group_by(player1, player2) |>
+  summarise(weight = sum(weight), .groups = 'drop') |>
+  rename(from = player1, to = player2)
+
+lebron_plot <- graph_from_data_frame(edges, directed = FALSE)
+
+```
+
+## The Network
+
+```{r} 
+#| echo: FALSE 
+#| fig.width: 20
+#| fig.height: 16 
+#| warning: FALSE
+
+as_tbl_graph(lebron_plot) |>
+ggraph(layout = "linear", circular = TRUE) +
+  geom_edge_link(aes(width = weight), alpha = 0.5, color = "lightblue") +
+  geom_node_point(size = 12, color = "red") +
+  geom_node_text(aes(label = name), repel = TRUE, size = 8, color = "black") +
+  theme_void()
+
+```
+
+The network is weighted based on the total amount of games played with other players. These are 18 players who have played over 100 games with LeBron. As we can see, many of the other nodes (players) have a significant amount of edges connected to them as well. We can see how LeBron cultivated a strong culture in many different areas, especially early in his career. 
+
+Here is a list of teams he has played for and the years he was there, as well as the players in the network who played on these teams. 
+
+Cleveland Cavaliers (2003-2010):
+- Zydrunas Ilgauskas
+- James Jones
+- Anderson Varejao
+- Sasha Pavlovic
+- Danny Green 
+Miami Heat (2010-2014):
+- Zydrunas Ilgauskas
+- James Jones
+- Dwayne Wade
+- Mario Chalmers
+- Chris Bosh
+
+Cleveland Cavaliers (2014-2018):
+- Anderson Varejao
+- Dwayne Wade
+- Tristan Thompson
+- Kevin Love
+- Mo Williams
+- Kyle Korver
+- Kyrie Irving 
+- Channing Frye
+- Iman Shumpert
+- Richard Jefferson
+- Matthew Dellavadova
+
+LA Lakers (2018-2025):
+- Tristan Thompson 
+- Anthony Davis
+- Danny Green
+
+As we can see, there is a large overlap between teams. LeBron sticks with his teammates and builds friendships with them over multiple seasons, resulting in success for both him and others. In addition, we can see how much his game has evolved as he has the most seasons played in LA but a lot less players who have played with him for over a season. It seems as if both his strategy for success is changing, alongside the leagues general strategy for team building and winning has evolved, largely due to how much success he had in his runs with both the Heat and the Cavaliers. 
+
