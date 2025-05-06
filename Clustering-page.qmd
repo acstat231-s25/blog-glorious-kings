@@ -110,8 +110,8 @@ ggplot(filter(Stats_stdz_c3, Team == "Cavaliers"),
        aes(x = PTS_z, y = AST_z, color = cluster)) +
   geom_point(size = 3) +
   labs(title = "Clustering for Cavaliers",
-       x = "Standardized Points per Game (PTS_z)",
-       y = "Standardized Assists per Game (AST_z)",
+       x = "Standardized Points per Game (PTS)",
+       y = "Standardized Assists per Game (AST)",
        color = "Cluster") +
   scale_color_manual(values = c("1" = "#1f77b4", "2" = "#ff7f0e", "3" = "#2ca02c"),
                      labels = c("1" = "Average/Above Average Players",
@@ -131,8 +131,8 @@ ggplot(filter(Stats_stdz_c3, Team == "Heat"),
        aes(x = PTS_z, y = AST_z, color = cluster)) +
   geom_point(size = 3) +
   labs(title = "Clustering for Heat",
-       x = "Standardized Points per Game (PTS_z)",
-       y = "Standardized Assists per Game (AST_z)",
+       x = "Standardized Points per Game (PTS)",
+       y = "Standardized Assists per Game (AST)",
        color = "Cluster") +
   scale_color_manual(values = c("1" = "#1f77b4", "2" = "#ff7f0e", "3" = "#2ca02c"),
                      labels = c("1" = "Average/Above Average Players",
@@ -152,8 +152,8 @@ ggplot(filter(Stats_stdz_c3, Team == "Lakers"),
        aes(x = PTS_z, y = AST_z, color = cluster)) +
   geom_point(size = 3) +
   labs(title = "Clustering for Lakers",
-       x = "Standardized Points per Game (PTS_z)",
-       y = "Standardized Assists per Game (AST_z)",
+       x = "Standardized Points per Game (PTS)",
+       y = "Standardized Assists per Game (AST)",
        color = "Cluster") +
   scale_color_manual(values = c("1" = "#1f77b4", "2" = "#ff7f0e", "3" = "#2ca02c"),
                      labels = c("1" = "Average/Above Average Players",
