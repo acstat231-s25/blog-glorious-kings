@@ -84,36 +84,88 @@ Data_table_stats <- left_join(teammates_clean, Stats_stdz_c3, by = "Player") |>
 
 ## Introduction
 
-What makes a great teammate for LeBron James? Over a career spanning two decades, four championships, and stints with the Cavaliers, Heat, and Lakers, LeBron has played alongside a wide range of players—some who elevated his game, and others who struggled to make an impact. To explore patterns among his many teammates, I used k-means clustering to group players based on their average points and assists per game while playing with LeBron. I also separated players by team to see how their supporting casts differed across each era. This analysis reveals what types of players surrounded LeBron on each team, offering insights into which rosters were superstar-heavy and which required him to carry more of the load, highlighting just how dominant he was, even when the help was limited.
+What makes a great teammate for LeBron James? Over a career spanning two decades, four championships, and stints with the Cavaliers, Heat, and Lakers, LeBron has played alongside a wide range of players—some who elevated his game, and others who struggled to make an impact. To explore patterns among his many teammates, I used k-means clustering to group players into three groups based on their average points and assists per game while playing with LeBron. I also separated players by team to see how their supporting casts differed across each era. This analysis reveals what types of players surrounded LeBron on each team, offering insights into which rosters were superstar-heavy and which required him to carry more of the load, highlighting just how dominant he was, even when the help was limited.
 
 
 
 
 ## The K-means Analysis
 
-::: {layout="[ [1], [1] ]"}
+The following sections break down these clusters by the team LeBron played for—the Cavaliers, the Heat, and the Lakers, revealing how his supporting casts varied during each phase of his career.
 
+These visualizations help highlight:
+- The different players LeBron played with on each different team he was on throughout his carrer
+- LeBron was not surrounded by many superstars in his time with the Heat, but still won back-to-back championships
+- His current team, the Lakers, have gone through many different players during LeBron's time there but have not had much success
 
+::: {.panel-tabset}
+
+### Cleveland Cavaliers
 
 ```{r}
 #| echo: FALSE 
-#| fig.width: 12
-#| fig.height: 10
-#| warning: FALSE
 
-ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z, color = cluster)) +
+#Cavs Clustering
+ggplot(filter(Stats_stdz_c3, Team == "Cavaliers"), 
+       aes(x = PTS_z, y = AST_z, color = cluster)) +
   geom_point(size = 3) +
-  facet_wrap(~ Team) +
-  labs(title = "Clustering of LeBron’s Teammates Based on Teams He Played For",
+  labs(title = "Clustering for Cavaliers",
        x = "Standardized Points per Game (PTS_z)",
        y = "Standardized Assists per Game (AST_z)",
        color = "Cluster") +
-  scale_color_manual( values = c("1" = "#1f77b4", "2" = "#ff7f0e", "3" = "#2ca02c"),
-                      labels = c("1" = "Average/Above Average Players", "2" = "Bench Players", "3" = "Superstars")) +
+  scale_color_manual(values = c("1" = "#1f77b4", "2" = "#ff7f0e", "3" = "#2ca02c"),
+                     labels = c("1" = "Average/Above Average Players",
+                                "2" = "Bench Players",
+                                "3" = "Superstars")) +
   theme_minimal()
-
-#need to turn this into tabs for each team
 ```
+
+
+### Miami Heat
+
+```{r}
+#| echo: FALSE 
+
+
+ggplot(filter(Stats_stdz_c3, Team == "Heat"), 
+       aes(x = PTS_z, y = AST_z, color = cluster)) +
+  geom_point(size = 3) +
+  labs(title = "Clustering for Heat",
+       x = "Standardized Points per Game (PTS_z)",
+       y = "Standardized Assists per Game (AST_z)",
+       color = "Cluster") +
+  scale_color_manual(values = c("1" = "#1f77b4", "2" = "#ff7f0e", "3" = "#2ca02c"),
+                     labels = c("1" = "Average/Above Average Players",
+                                "2" = "Bench Players",
+                                "3" = "Superstars")) +
+  theme_minimal()
+```
+
+
+### Los Angeles Lakers
+
+```{r}
+#| echo: FALSE 
+
+
+ggplot(filter(Stats_stdz_c3, Team == "Lakers"), 
+       aes(x = PTS_z, y = AST_z, color = cluster)) +
+  geom_point(size = 3) +
+  labs(title = "Clustering for Lakers",
+       x = "Standardized Points per Game (PTS_z)",
+       y = "Standardized Assists per Game (AST_z)",
+       color = "Cluster") +
+  scale_color_manual(values = c("1" = "#1f77b4", "2" = "#ff7f0e", "3" = "#2ca02c"),
+                     labels = c("1" = "Average/Above Average Players",
+                                "2" = "Bench Players",
+                                "3" = "Superstars")) +
+  theme_minimal()
+```
+
+
+:::
+
+
 
 Descriptions of each clustering group is provided below.
 
