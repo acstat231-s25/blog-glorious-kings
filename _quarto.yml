@@ -10,11 +10,14 @@ website:
     left:
       - href: index.qmd # Must be included as index.qmd
         text: "Home"
-        icon: house # Get icon names: https://icons.getbootstrap.com/?q=home
+        icon: dribbble # Get icon names: https://icons.getbootstrap.com/?q=home
       # Add or remove additional pages below in desired order of appearance
-      - Clustering-page.qmd
+      - href: Clustering-page.qmd
+        text: "Clustering"
+        icon: yin-yang
       - href: yet-another-page.qmd
         text: "Network Graph"
+        icon: bezier2
         
 format:
   html:
