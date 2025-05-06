@@ -1,4 +1,4 @@
-
+This file contains code needed for teammate wrangling.
 
 ```{r}
 library(rvest)
