@@ -281,8 +281,6 @@ These visualizations help highlight:
 
 ### First Cleveland Era
 
-Some information in one tab 
-
 ```{r}
 plot_lebron_map(2004, 2010, "Ohio")
 ```
@@ -291,7 +289,6 @@ plot_lebron_map(2004, 2010, "Ohio")
 
 ### Miami Era
 
-Some information in a different tab
 
 ```{r}
 plot_lebron_map(2011, 2014, "Florida")
@@ -310,3 +307,5 @@ plot_lebron_map(2015, 2018, "Ohio")
 plot_lebron_map(2019, 2025, "California")
 ```
 :::
+
+While LeBron’s geographic scoring trends reflect shifts in team affiliation and conference play, they also highlight the impact of roster composition on his offensive strategy. Whether attacking the rim in Cleveland, spacing the floor in Miami, or adapting to modern pace-and-space systems in Los Angeles, LeBron’s game has continually evolved alongside the players around him. To better understand how these teammates shaped his role — and how their own skill sets clustered into distinct archetypes — we now turn to a data-driven analysis using k-means clustering. This approach offers new insight into the types of teammates LeBron has played with, and how those combinations influenced both his performance and the broader team dynamic.
