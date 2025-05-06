@@ -84,7 +84,7 @@ Data_table_stats <- left_join(teammates_clean, Stats_stdz_c3, by = "Player") |>
 
 ## Introduction
 
-What makes a great teammate for LeBron James? Over a career spanning two decades, four championships, and stints with the Cavaliers, Heat, and Lakers, LeBron has played alongside a wide range of players—some who elevated his game, and others who struggled to make an impact. To explore patterns among his many teammates, I used k-means clustering to group players into three groups based on their average points and assists per game while playing with LeBron. I also separated players by team to see how their supporting casts differed across each era. This analysis reveals what types of players surrounded LeBron on each team, offering insights into which rosters were superstar-heavy and which required him to carry more of the load, highlighting just how dominant he was, even when the help was limited.
+What makes a great teammate for LeBron James? Over a career spanning two decades, four championships, and stints with the Cavaliers, Heat, and Lakers, LeBron has played alongside a wide range of players—some who elevated his game, and others who struggled to make an impact. To explore patterns among his many teammates, we use k-means clustering to group players into three groups based on their average points and assists per game while playing with LeBron. We also separated players by team to see how their supporting casts differed across each era. This analysis reveals what types of players surrounded LeBron on each team, offering insights into which rosters were superstar-heavy and which required him to carry more of the load, highlighting just how dominant he was, even when the help was limited.
 
 
 
@@ -197,6 +197,6 @@ DT::datatable(Data_table_stats,
 ```
 
 
-
+While the clustering analysis reveals the types of players LeBron shared the court with — from superstars to reliable contributors to role players — it doesn’t tell the whole story. Basketball is a team sport built on chemistry, familiarity, and shared experience. Though stats help classify the types of players LeBron played with, they don't capture how those players were connected — or how often their careers overlapped. Beyond being the focal point of each team, LeBron often served as the unifying force that brought players together, forming core units that spanned multiple seasons and sometimes even franchises. To better understand those relationships, we now turn to a network analysis of LeBron’s career — mapping how frequently he shared the floor with different teammates and revealing the interconnected structure of the rosters that defined each chapter of his journey.
 
 
