@@ -3,7 +3,6 @@ title: "Sources and Glossary"
 author: "Matt Tabet"
 ---
 
-
 ```{r}
 #| label: setup
 #| include: false
@@ -110,7 +109,11 @@ arc_points <- function(center = c(0, 0), radius = 1, start = 0, end = pi, npoint
 
 ```
 
+
+
 # Glossary
+
+
 
 ```{r}
 #| echo: false
@@ -156,8 +159,11 @@ ggplot() +
       )
 
 ```
+
+
 # Sourcing
 
 We pulled our data from multiple sources off of the internet. For the shot chart, the data was pulled from from an API on NBA.com. For Lebron's general stats and the map of his scoring, we used basketballreference.com and realgm.com. realgm.com was also used to collect data for the teammates of LeBron for both the clustering and network visuals.
+
 
 
