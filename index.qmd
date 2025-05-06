@@ -207,13 +207,30 @@ plot_lebron_map <- function(start_year, end_year, home_state) {
     summarise(TotalPoints = sum(PTS, na.rm = TRUE)) %>%
     mutate(region = str_to_lower(GameState))
 
-  # Get US map and merge
+  # Get US map and merge with point data
   states_map <- map_data("state")
   map_data_joined <- left_join(states_map, points_by_state, by = "region")
 
+  # Split home vs. others
+  home_state_lower <- tolower(home_state)
+  map_other <- map_data_joined %>% filter(region != home_state_lower)
+  map_home  <- map_data_joined %>% filter(region == home_state_lower)
+
   # Plot
-  ggplot(map_data_joined, aes(x = long, y = lat, group = group)) +
-    geom_polygon(aes(fill = TotalPoints), color = "white", size = 0.2) +
+  ggplot() +
+    # All other states filled with gradient
+    geom_polygon(
+      data = map_other,
+      aes(x = long, y = lat, group = group, fill = TotalPoints),
+      color = "white", linewidth = 0.2
+    ) +
+    # Home state: no fill, just thin black border
+    geom_polygon(
+      data = map_home,
+      aes(x = long, y = lat, group = group),
+      fill = NA,
+      color = "black", linewidth = 0.3
+    ) +
     scale_fill_stepsn(
       colors = c("#deebf7", "#9ecae1", "#4292c6", "#2171b5", "#084594"),
       n.breaks = 6,
@@ -224,10 +241,11 @@ plot_lebron_map <- function(start_year, end_year, home_state) {
     labs(
       title = paste("Total Points by State (", start_year, "–", end_year, ")"),
       fill = "Total Points",
-      caption = paste("Home games played in", home_state)
+      caption = paste("Home state (", home_state, ") outlined in black and excluded from color scale")
     )
 }
 ```
+
 
 
 ## Spatial Analysis - LeBron's Scoring by Era
