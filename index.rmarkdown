@@ -182,7 +182,7 @@ This project explores how LeBron’s game has evolved — not just over time, bu
 
 - **Shot selection**: How LeBron's scoring profile has shifted across the years, from rim attacks to perimeter shooting.
 - **Scoring geography**: A breakdown of which states saw the most production from LeBron, and how this aligns with his team locations.
-- **Teammate roles**: Using statistical clustering, we explore the types of players LeBron has worked with, and how that influenced his on-court responsibilities.
+- **Teammate roles**: Using statistical clustering, we explore the types of players LeBron has worked with, and how that influenced his on-court responsibilities. [first subpage](Clustering-page.qmd)
 - **Career network**: A graph-based look at who he's played the most games with, and how those connections span multiple teams.
 
 Together, these views help explain how LeBron has stayed not just relevant, but dominant, by evolving alongside — and often ahead of — the game itself.

@@ -12,10 +12,9 @@ website:
         text: "Home"
         icon: house # Get icon names: https://icons.getbootstrap.com/?q=home
       # Add or remove additional pages below in desired order of appearance
-      - another-page.qmd
+      - Clustering-page.qmd
       - href: yet-another-page.qmd
         text: "Network Graph"
-        icon: arrow-through-heart-fill
         
 format:
   html:

@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Paul Grajzl">
 <meta name="author" content="Zack Jesse">
 <meta name="author" content="Matt Tabet">
-<meta name="dcterms.date" content="2025-05-01">
+<meta name="dcterms.date" content="2025-05-06">
 
 <title>Our Glorious King – King James</title>
 <style>
@@ -39,12 +39,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-e846426629f353d263e112904baba500.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4889ea36da1ebf92e0baab29227ed795.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -100,12 +100,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./another-page.html"> 
+    <a class="nav-link" href="./Clustering-page.html"> 
 <span class="menu-text">LeBron’s Teammates Clustering Analysis</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./yet-another-page.html"> <i class="bi bi-arrow-through-heart-fill" role="img">
-</i> 
+    <a class="nav-link" href="./yet-another-page.html"> 
 <span class="menu-text">Network Graph</span></a>
   </li>  
 </ul>
@@ -127,8 +126,6 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#shot-selection-over-time" id="toc-shot-selection-over-time" class="nav-link active" data-scroll-target="#shot-selection-over-time">Shot Selection Over Time</a></li>
   <li><a href="#spatial-analysis---lebrons-scoring-by-era" id="toc-spatial-analysis---lebrons-scoring-by-era" class="nav-link" data-scroll-target="#spatial-analysis---lebrons-scoring-by-era">Spatial Analysis - LeBron’s Scoring by Era</a></li>
-  <li><a href="#lebron-and-his-teammates" id="toc-lebron-and-his-teammates" class="nav-link" data-scroll-target="#lebron-and-his-teammates">LeBron and His Teammates</a></li>
-  <li><a href="#the-k-means-analysis" id="toc-the-k-means-analysis" class="nav-link" data-scroll-target="#the-k-means-analysis">The K-means Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -157,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Last updated</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2025</p>
+      <p class="date">May 6, 2025</p>
     </div>
   </div>
   
@@ -196,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Shot selection</strong>: How LeBron’s scoring profile has shifted across the years, from rim attacks to perimeter shooting.</li>
 <li><strong>Scoring geography</strong>: A breakdown of which states saw the most production from LeBron, and how this aligns with his team locations.</li>
-<li><strong>Teammate roles</strong>: Using statistical clustering, we explore the types of players LeBron has worked with, and how that influenced his on-court responsibilities.</li>
+<li><strong>Teammate roles</strong>: Using statistical clustering, we explore the types of players LeBron has worked with, and how that influenced his on-court responsibilities. <a href="./Clustering-page.html">first subpage</a></li>
 <li><strong>Career network</strong>: A graph-based look at who he’s played the most games with, and how those connections span multiple teams.</li>
 </ul>
 <p>Together, these views help explain how LeBron has stayed not just relevant, but dominant, by evolving alongside — and often ahead of — the game itself.</p>
@@ -236,11 +233,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'maps' was built under R version 4.4.3</code></pre>
 </div>
 </div>
 </section>
@@ -316,110 +308,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-</section>
-<section id="lebron-and-his-teammates" class="level2">
-<h2 class="anchored" data-anchor-id="lebron-and-his-teammates">LeBron and His Teammates</h2>
-<p>Now that we have established Lebron’s legacy through his own statistics as well as the successes of his teammates, let’s take a deep dive into his connections with teammates. In addition, we can observe the changes in the game of basketball and the evolution of his career through the years that he played on each respective team.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.palmbeachpost.com/story/sports/2017/08/17/how-do-heat-fans-feel/7460287007/"><img src="https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/ghows-LK-f7d46477-c106-4e06-9871-c87a2237a617-1b058829.jpeg?width=660&amp;height=372&amp;fit=crop&amp;format=pjpg&amp;auto=webp" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Image courtesy of palmbeachpost.com"></a></p>
-</figure>
-</div>
-<figcaption>Image courtesy of palmbeachpost.com</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="the-k-means-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="the-k-means-analysis">The K-means Analysis</h2>
-<div>
 
-</div>
-<div class="quarto-layout-panel" data-layout="[ [1], [1] ]">
-<div class="quarto-layout-row">
-<div class="cell quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p>The clustering visualized above is separated by the different teams players played with LeBron.</p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<ul>
-<li>Cluster 1 are average players. These players were important to the team and put up average and slightly above average points and assists</li>
-<li>Cluster 2 are below average players/bench players. These players did not have a big impact on the team and put up below average points and Assists</li>
-<li>Cluster 3 are superstars that played with LeBron. These players put up high point and assist averages while playing with LeBron</li>
-</ul>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p>We are able to see that there was only one considered superstar that played with LeBron on the Miami Heat. This is when LeBron was playing his best basketball as he was not surrounded by the talent he was surrounded with on the Cavaliers and Lakers. [More to be Added]</p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<section id="the-network" class="level2 cell quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<h2 class="anchored" data-anchor-id="the-network">The Network</h2>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="1920"></p>
-</figure>
-</div>
-</div>
-</section>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p>The network is weighted based on the total amount of games played with other players. These are 18 players who have played over 100 games with LeBron. As we can see, many of the other nodes (players) have a significant amount of edges connected to them as well. We can see how LeBron cultivated a strong culture in many different areas, especially early in his career.</p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p>Here is a list of teams he has played for and the years he was there, as well as the players in the network who played on these teams.</p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p>Cleveland Cavaliers (2003-2010): - Zydrunas Ilgauskas - James Jones - Anderson Varejao - Sasha Pavlovic - Danny Green Miami Heat (2010-2014): - Zydrunas Ilgauskas - James Jones - Dwayne Wade - Mario Chalmers - Chris Bosh</p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p>Cleveland Cavaliers (2014-2018): - Anderson Varejao - Dwayne Wade - Tristan Thompson - Kevin Love - Mo Williams - Kyle Korver - Kyrie Irving - Channing Frye - Iman Shumpert - Richard Jefferson - Matthew Dellavadova</p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p>LA Lakers (2018-2025): - Tristan Thompson - Anthony Davis - Danny Green</p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p>As we can see, there is a large overlap between teams. LeBron sticks with his teammates and builds friendships with them over multiple seasons, resulting in success for both him and others. In addition, we can see how much his game has evolved as he has the most seasons played in LA but a lot less players who have played with him for over a season. It seems as if both his strategy for success is changing, alongside the leagues general strategy for team building and winning has evolved, largely due to how much success he had in his runs with both the Heat and the Cavaliers.</p>
-</div>
-</div>
-<div class="quarto-layout-row">
 
-</div>
-<div class="quarto-layout-row">
-
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -649,8 +539,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
