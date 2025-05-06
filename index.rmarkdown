@@ -182,10 +182,10 @@ This project explores how LeBron’s game has evolved — not just over time, bu
 
 - **Shot selection**: How LeBron's scoring profile has shifted across the years, from rim attacks to perimeter shooting.
 - **Scoring geography**: A breakdown of which states saw the most production from LeBron, and how this aligns with his team locations.
-- **Teammate roles**: Using statistical clustering, we explore the types of players LeBron has worked with, and how that influenced his on-court responsibilities. [first subpage](Clustering-page.qmd)
+- **Teammate roles**: Using statistical clustering, we explore the types of players LeBron has worked with, and how that influenced his on-court responsibilities. [Second subpage](Clustering-page.qmd)
 - **Career network**: A graph-based look at who he's played the most games with, and how those connections span multiple teams.
 
-Together, these views help explain how LeBron has stayed not just relevant, but dominant, by evolving alongside — and often ahead of — the game itself.
+Together, these views help explain how LeBron has stayed not just relevant, but dominant, by evolving alongside — and often ahead of — the game itself. [Third subpage](yet-another-page.qmd)
 
 ## Shot Selection Over Time
 
@@ -403,113 +403,5 @@ plot_lebron_map(2019, 2025, "California")
 
 :::
 
-## LeBron and His Teammates
-
-Now that we have established Lebron's legacy through his own statistics as well as the successes of his teammates, let's take a deep dive into his connections with teammates. In addition, we can observe the changes in the game of basketball and the evolution of his career through the years that he played on each respective team. 
-
-
-
-
-```{r}
-#| fig-cap: "Image courtesy of palmbeachpost.com"
-#| fig-align: center
-#| out-width: 100%
-#| fig-link: "https://www.palmbeachpost.com/story/sports/2017/08/17/how-do-heat-fans-feel/7460287007/"
-
-include_graphics("https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/ghows-LK-f7d46477-c106-4e06-9871-c87a2237a617-1b058829.jpeg?width=660&height=372&fit=crop&format=pjpg&auto=webp")
-```
-
-
-
-
-## The K-means Analysis
-
-::: {layout="[ [1], [1] ]"}
-
-
-
-```{r}
-#| echo: FALSE 
-#| fig.width: 10
-#| fig.height: 10
-#| warning: FALSE
-
-ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z, color = cluster)) +
-  geom_point(size = 3) +
-  facet_wrap(~ Team) +
-  labs(title = "Clustering of LeBron’s Teammates Based on Teams He Played For",
-       x = "Standardized Points per Game (PTS_z)",
-       y = "Standardized Assists per Game (AST_z)",
-       color = "Cluster") +
-  theme_minimal()
-```
-
-
-
-The clustering visualized above is separated by the different teams players played with LeBron. 
-
-- Cluster 1 are average players. These players were important to the team and put up average and slightly above average points and assists
-- Cluster 2 are below average players/bench players. These players did not have a big impact on the team and put up below average points and Assists
-- Cluster 3 are superstars that played with LeBron. These players put up high point and assist averages while playing with LeBron
-
-We are able to see that there was only one considered superstar that played with LeBron on the Miami Heat. This is when LeBron was playing his best basketball as he was not surrounded by the talent he was surrounded with on the Cavaliers and Lakers. [More to be Added]
-
-## The Network
-
-
-
-```{r} 
-#| echo: FALSE 
-#| fig.width: 20
-#| fig.height: 16 
-#| warning: FALSE
-
-as_tbl_graph(lebron_plot) |>
-ggraph(layout = "linear", circular = TRUE) +
-  geom_edge_link(aes(width = weight), alpha = 0.5, color = "lightblue") +
-  geom_node_point(size = 12, color = "red") +
-  geom_node_text(aes(label = name), repel = TRUE, size = 8, color = "black") +
-  theme_void()
-
-```
-
-
-
-The network is weighted based on the total amount of games played with other players. These are 18 players who have played over 100 games with LeBron. As we can see, many of the other nodes (players) have a significant amount of edges connected to them as well. We can see how LeBron cultivated a strong culture in many different areas, especially early in his career. 
-
-Here is a list of teams he has played for and the years he was there, as well as the players in the network who played on these teams. 
-
-Cleveland Cavaliers (2003-2010):
-- Zydrunas Ilgauskas
-- James Jones
-- Anderson Varejao
-- Sasha Pavlovic
-- Danny Green 
-Miami Heat (2010-2014):
-- Zydrunas Ilgauskas
-- James Jones
-- Dwayne Wade
-- Mario Chalmers
-- Chris Bosh
-
-Cleveland Cavaliers (2014-2018):
-- Anderson Varejao
-- Dwayne Wade
-- Tristan Thompson
-- Kevin Love
-- Mo Williams
-- Kyle Korver
-- Kyrie Irving 
-- Channing Frye
-- Iman Shumpert
-- Richard Jefferson
-- Matthew Dellavadova
-
-LA Lakers (2018-2025):
-- Tristan Thompson 
-- Anthony Davis
-- Danny Green
-
-As we can see, there is a large overlap between teams. LeBron sticks with his teammates and builds friendships with them over multiple seasons, resulting in success for both him and others. In addition, we can see how much his game has evolved as he has the most seasons played in LA but a lot less players who have played with him for over a season. It seems as if both his strategy for success is changing, alongside the leagues general strategy for team building and winning has evolved, largely due to how much success he had in his runs with both the Heat and the Cavaliers. 
 
 
