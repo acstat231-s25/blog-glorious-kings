@@ -119,29 +119,33 @@ arc_points <- function(center = c(0, 0), radius = 1, start = 0, end = pi, npoint
 glossary_data |>
   kable()
 
+```
 
+# Annotated Half Court Diagram
+
+```{r}
 ggplot() +
       draw_half_court() +
       
       # Free Throw Label
       annotate("text", x = 0, y = 142.5, label = "Free Throw Line",
-               size = 4, fontface = "bold", family = "Source Serif Pro", vjust = -1) +
+               size = 4, fontface = "bold", vjust = -1) +
       
       # Three Point Line Label with Arrow
       annotate("text", x = 0, y = 260, label = "Three Point Line",
-               size = 4, fontface = "bold", family = "Source Serif Pro", vjust = -1) +
+               size = 4, fontface = "bold", vjust = -1) +
       annotate("segment", x = 0, xend = 0, y = 260, yend = 237.5,
                arrow = arrow(length = unit(0.2, "inches")), color = "#8B0000") +
       
       # Hoop Label
       annotate("text", x = 0, y = -15, label = "Hoop",
-               size = 4, fontface = "bold", family = "Source Serif Pro", vjust = 1) +
+               size = 4, fontface = "bold", vjust = 1) +
       
       # Out of Bounds Labels (vertical sides)
       annotate("text", x = -260, y = 200, label = "Out of Bounds", angle = 90,
-               size = 4, fontface = "bold", family = "Source Serif Pro", hjust = 0.5) +
+               size = 4, fontface = "bold", hjust = 0.5) +
       annotate("text", x = 260, y = 200, label = "Out of Bounds", angle = 90,
-               size = 4, fontface = "bold", family = "Source Serif Pro", hjust = 0.5) +
+               size = 4, fontface = "bold", hjust = 0.5) +
       
       coord_fixed() +
       
@@ -150,7 +154,7 @@ ggplot() +
         subtitle = "Note: Field Goals (FG) include all made shots except for Free Throws"
       ) +
       
-      theme_void(base_family = "Source Serif Pro") +
+      theme_void() +
       theme(
         plot.background = element_rect(fill = "gray90", color = NA)
       )
