@@ -2,6 +2,7 @@
 title: "LeBron's Teammates Network Graph"
 author: "Matt Tabet"
 ---
+
 ```{r}
 #| label: setup
 #| include: false
@@ -75,9 +76,13 @@ lebron_plot <- graph_from_data_frame(edges, directed = FALSE)
 
 ```
 
+
+
 ## LeBron and His Teammates
 
 Now that we have established Lebron's legacy through his own statistics as well as the successes of his teammates, let's take a deep dive into his connections with teammates. In addition, we can observe the changes in the game of basketball and the evolution of his career through the years that he played on each respective team. 
+
+
 
 
 ```{r}
@@ -90,7 +95,11 @@ include_graphics("https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/g
 ```
 
 
+
+
 ## The Network
+
+
 
 
 ```{r} 
@@ -113,6 +122,8 @@ ggraph(layout = "linear", circular = TRUE) +
         )
 
 ```
+
+
 
 The network is weighted based on the total amount of games played with other players. These are 18 players who have played over 100 games with LeBron. As we can see, many of the other nodes (players) have a significant amount of edges connected to them as well. We can see how LeBron cultivated a strong culture in many different areas, especially early in his career. 
 
@@ -151,4 +162,5 @@ LA Lakers (2018-2025):
 - Danny Green
 
 As we can see, there is a large overlap between teams. LeBron sticks with his teammates and builds friendships with them over multiple seasons, resulting in success for both him and others. In addition, we can see how much his game has evolved as he has the most seasons played in LA but a lot less players who have played with him for over a season. It seems as if both his strategy for success is changing, alongside the leagues general strategy for team building and winning has evolved, largely due to how much success he had in his runs with both the Heat and the Cavaliers. 
+
 

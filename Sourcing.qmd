@@ -1,5 +1,5 @@
 ---
-title: "Sources and Glossary"
+title: "Data Sources and Glossary"
 author: "Matt Tabet"
 ---
 
@@ -160,8 +160,27 @@ ggplot() +
       )
 
 ```
-# Sourcing
 
-We pulled our data from multiple sources off of the internet. For the shot chart, the data was pulled from from an API on NBA.com. For Lebron's general stats and the map of his scoring, we used basketballreference.com and realgm.com. realgm.com was also used to collect data for the teammates of LeBron for both the clustering and network visuals.
 
+# Data Sources
+
+- **[NBA Stats API](https://www.nba.com/stats) via `nba_api` (Python)**  
+  - Shot location data for LeBron James, including X/Y court coordinates (`LOC_X`, `LOC_Y`) and shot outcomes.  
+  - Used to generate shot charts for the 2003–04 and 2023–24 seasons.  
+  - Enabled spatial comparison of LeBron’s shot profile over time.
+
+- **[RealGM](https://basketball.realgm.com/player/LeBron-James/GameLogs/250)**  
+  - Comprehensive individual game logs for LeBron James from 2003–04 through 2024–25.  
+  - Included date, opponent, home/away designation, and points scored.  
+  - Formed the backbone of the state-by-state scoring maps.
+
+- **[Basketball Reference](https://www.basketball-reference.com/)**  
+  - Provided season-level statistics for LeBron’s teammates, including points per game (PTS) and assists per game (AST).  
+  - Data were used in the k-means clustering analysis to classify players as superstars, average contributors, or bench players.  
+  - Also consulted for cross-referencing team rosters and player affiliations by season.
+
+- **[Wikipedia](https://en.wikipedia.org/)**  
+  - Used to determine the U.S. states associated with each NBA team, enabling geographic scoring analysis.  
+  - Helped resolve ambiguities between teams with name changes or relocations (e.g., New Jersey vs. Brooklyn Nets).  
+  - Informed the manual construction of the team-to-state mapping CSV file.
 
