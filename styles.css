@@ -1,10 +1,63 @@
-/* css styles */
-
-/* Import Libre Baskerville from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* Apply Libre Baskerville site-wide */
+/* Global font */
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Libre Baskerville', serif !important;
+}
+
+/* Color palette */
+:root {
+  --lakers-purple: #4B2E83;
+  --lakers-gold: #FDB927;
+}
+
+/* Headings: Purple color and underline */
+h1, h2, h3 {
+  color: var(--lakers-purple) !important;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--lakers-gold);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* Links: Purple text and gold on hover */
+a {
+  color: var(--lakers-purple);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--lakers-gold);
+}
+
+/* Navbar hover (more targeted) */
+.navbar .nav-link:hover {
+  background-color: rgba(253, 185, 39, 0.2);
+  border-radius: 5px;
+}
+
+/* Change the navbar background to Lakers purple */
+.navbar {
+  background-color: #4B2E83 !important;  /* deep purple */
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #FDB927 !important;  /* gold */
+}
+
+/* Stronger override for "On This Page" current section highlight */
+nav#TOC .nav-link.active,
+.sidebar nav#TOC .nav-link.active {
+  color: #4B2E83 !important;
+  font-weight: bold !important;
+  border-left: 3px solid #4B2E83 !important;
+  background-color: rgba(75, 46, 131, 0.1) !important;
 }
 

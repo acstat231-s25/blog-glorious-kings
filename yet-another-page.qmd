@@ -82,6 +82,21 @@ lebron_plot <- graph_from_data_frame(edges, directed = FALSE)
 
 ```
 
+## LeBron and His Teammates
+
+Now that we have established Lebron's legacy through his own statistics as well as the successes of his teammates, let's take a deep dive into his connections with teammates. In addition, we can observe the changes in the game of basketball and the evolution of his career through the years that he played on each respective team. 
+
+
+```{r}
+#| fig-cap: "Image courtesy of palmbeachpost.com"
+#| fig-align: center
+#| out-width: 100%
+#| fig-link: "https://www.palmbeachpost.com/story/sports/2017/08/17/how-do-heat-fans-feel/7460287007/"
+
+include_graphics("https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/ghows-LK-f7d46477-c106-4e06-9871-c87a2237a617-1b058829.jpeg?width=660&height=372&fit=crop&format=pjpg&auto=webp")
+```
+
+
 ## The Network
 
 ```{r} 
