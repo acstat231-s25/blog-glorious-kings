@@ -1,5 +1,5 @@
 ---
-title: "LeBron's Teammates Network Graph"
+title: "Sources and Glossary"
 author: "Matt Tabet"
 ---
 
@@ -29,110 +29,45 @@ library(ggraph)
 library(mdsr)
 library(broom)
 
-```
 
-```{r include = FALSE}
-Lebron <- read.csv("data/lebron_teammates.csv") |>
-  mutate(name = "LeBron James")
-Thompson <- read.csv("data/thompson_teammates.csv")
-Jefferson <- read.csv("data/jefferson_teammates.csv")
-Love <- read.csv("data/love_teammates.csv")
-Davis <- read.csv("data/ad_teammates.csv")
-Kyrie <- read.csv("data/kyrie_teammates.csv")
-Green <- read.csv("data/green_teammates.csv")
-Korver <- read.csv("data/korver_teammates.csv")
-JR <- read.csv("data/jrsmith_teammates.csv")
-Frye <- read.csv("data/frye_teammates.csv")
-Anderson <- read.csv("data/Anderson_teammates.csv")
-Delly <- read.csv("data/delly_teammates.csv")
-Dwayne <- read.csv("data/DWade_teammates.csv")
-Sasha <- read.csv("data/Sasha_teammates.csv")
-Zydrunas <- read.csv("data/zydrunas_teammates.csv")
-Shumpert <- read.csv("data/shumpert_teammates.csv")
-Mo <- read.csv("data/mo_teammates.csv")
-Johnson <- read.csv("data/JamesJ_teammates.csv")
-Bosh <- read.csv("data/Bosh_teammates.csv")
-Chalmers <- read.csv("data/chalmers_teammates.csv")
 
-lebron_network <- bind_rows(
-  Lebron, Thompson, Jefferson, Love, Davis, Kyrie, Green, Korver,
-  JR, Frye, Anderson, Delly, Dwayne, Sasha, Zydrunas, Shumpert, Mo,
-  Johnson, Bosh, Chalmers
+
+
+glossary_data <- data.frame(
+  Abbreviation = c("PTS", "FG", "2P", "3P", "FT", "FGA", "2PA", "3PA", "FGX", "AST", "TRB", "STL", "BLK", "TOV", "G", "MP",
+                   "FG%", "2P%", "3P%", "FT%", "PPG", "MPG", "APG", "RPG", "SPG", "FTA", "DRB", "ORB", "PF", "TRIP"),
+  Name = c("Points", "Field Goals Made", "2 Point Field Goals", "3 Point Field Goals", "Free Throws Made", "Field Goals Attempted",
+           "2 Pointers Attempted", "Three Pointers Attempted", "Field Goals Missed", "Assists", "Total Rebounds", "Steals",
+           "Blocks", "Turnovers", "Games Played", "Minutes Played", "Field Goal Percentage", "2 Point Percentage", "Three Point Percentage",
+           "Free Throw Percentage", "Points Per Game", "Minutes Per Game", "Assists Per Game", "Rebounds Per Game",
+           "Steals Per Game", "Free Throws Attempted", "Defensive Rebounds", "Offensive Rebounds", "Personal Fouls", "Triple Doubles"),
+  Definition = c("Points scored by adding all made 1s, 2s, and 3s.",
+                 "Total made field goals (excluding free throws).",
+                 "2-point field goals made.", "3-point field goals made.", "Free throws made.",
+                 "Total field goals attempted.", "2-point shots attempted.", "3-point shots attempted.",
+                 "Missed field goals.", "Passes leading to made baskets.",
+                 "Total offensive and defensive rebounds.", "Steals (excluding deflections).",
+                 "Blocks on field goal attempts.", "Turnovers committed.",
+                 "Games played.", "Total minutes played.",
+                 "FGM / FGA.", "2PM / 2PA.", "3PM / 3PA.", "FTM / FTA.",
+                 "Points per game.", "Minutes per game.", "Assists per game.",
+                 "Rebounds per game.", "Steals per game.", "Free throws attempted.",
+                 "Defensive rebounds.", "Offensive rebounds.", "Personal fouls.",
+                 "Double digits in 3 stats in one game.")
 )
 
-player_names <- c("LeBron James", "Tristan Thompson", "Richard Jefferson", "Kevin Love",
-                  "Anthony Davis", "Kyrie Irving", "Danny Green", "Kyle Korver",
-                  "JR Smith", "Channing Frye", "Anderson Varejao", "Matthew Dellavedova",
-                  "Dwyane Wade", "Sasha Pavlovic", "Zydrunas Ilgauskas", "Iman Shumpert",
-                  "Mo Williams", "James Jones", "Chris Bosh", "Mario Chalmers")
+```
 
-edges <- lebron_network |>
-  rename(from = name, to = Player, weight = GP) |>
-  filter(from %in% player_names & to %in% player_names)
+# Glossary
 
-edges <- edges |>
-  rowwise() |>
-  mutate(player1 = min(from, to),
-         player2 = max(from, to)) |>
-  group_by(player1, player2) |>
-  summarise(weight = sum(weight), .groups = 'drop') |>
-  rename(from = player1, to = player2)
+```{r}
+#| echo: false
+#| warning: false
 
-lebron_plot <- graph_from_data_frame(edges, directed = FALSE)
+glossary_data |>
+  kable()
 
 ```
 
-## The Network
 
-```{r} 
-#| echo: FALSE 
-#| fig.width: 20
-#| fig.height: 16 
-#| warning: FALSE
-
-as_tbl_graph(lebron_plot) |>
-ggraph(layout = "linear", circular = TRUE) +
-  geom_edge_link(aes(width = weight), alpha = 0.5, color = "lightblue") +
-  geom_node_point(size = 12, color = "red") +
-  geom_node_text(aes(label = name), repel = TRUE, size = 8, color = "black") +
-  theme_void()
-
-```
-
-The network is weighted based on the total amount of games played with other players. These are 18 players who have played over 100 games with LeBron. As we can see, many of the other nodes (players) have a significant amount of edges connected to them as well. We can see how LeBron cultivated a strong culture in many different areas, especially early in his career. 
-
-Here is a list of teams he has played for and the years he was there, as well as the players in the network who played on these teams. 
-
-Cleveland Cavaliers (2003-2010):
-- Zydrunas Ilgauskas
-- James Jones
-- Anderson Varejao
-- Sasha Pavlovic
-- Danny Green 
-Miami Heat (2010-2014):
-- Zydrunas Ilgauskas
-- James Jones
-- Dwayne Wade
-- Mario Chalmers
-- Chris Bosh
-
-Cleveland Cavaliers (2014-2018):
-- Anderson Varejao
-- Dwayne Wade
-- Tristan Thompson
-- Kevin Love
-- Mo Williams
-- Kyle Korver
-- Kyrie Irving 
-- Channing Frye
-- Iman Shumpert
-- Richard Jefferson
-- Matthew Dellavadova
-
-LA Lakers (2018-2025):
-- Tristan Thompson 
-- Anthony Davis
-- Danny Green
-
-As we can see, there is a large overlap between teams. LeBron sticks with his teammates and builds friendships with them over multiple seasons, resulting in success for both him and others. In addition, we can see how much his game has evolved as he has the most seasons played in LA but a lot less players who have played with him for over a season. It seems as if both his strategy for success is changing, alongside the leagues general strategy for team building and winning has evolved, largely due to how much success he had in his runs with both the Heat and the Cavaliers. 
 
