@@ -82,6 +82,9 @@ Data_table_stats <- left_join(teammates_clean, Stats_stdz_c3, by = "Player") |>
 
 ```
 
+## Introduction
+
+What makes a great teammate for LeBron James? Over a career spanning two decades, four championships, and stints with the Cavaliers, Heat, and Lakers, LeBron has played alongside a wide range of players—some who elevated his game, and others who struggled to make an impact. To explore patterns among his many teammates, I used k-means clustering to group players based on their average points and assists per game while playing with LeBron. I also separated players by team to see how their supporting casts differed across each era. This analysis reveals what types of players surrounded LeBron on each team, offering insights into which rosters were superstar-heavy and which required him to carry more of the load, highlighting just how dominant he was, even when the help was limited.
 
 
 
@@ -89,8 +92,6 @@ Data_table_stats <- left_join(teammates_clean, Stats_stdz_c3, by = "Player") |>
 ## The K-means Analysis
 
 ::: {layout="[ [1], [1] ]"}
-
-What makes a great teammate for LeBron James? Over a career spanning two decades, four championships, and stints with the Cavaliers, Heat, and Lakers, LeBron has played alongside a wide range of players—some who elevated his game, and others who struggled to make an impact. To explore patterns among his many teammates, I used k-means clustering to group players based on their average points and assists per game while playing with LeBron. I also separated players by team to see how their supporting casts differed across each era. This analysis reveals what types of players surrounded LeBron on each team, offering insights into which rosters were superstar-heavy and which required him to carry more of the load, highlighting just how dominant he was, even when the help was limited.
 
 
 
@@ -110,6 +111,8 @@ ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z, color = cluster)) +
   scale_color_manual( values = c("1" = "#1f77b4", "2" = "#ff7f0e", "3" = "#2ca02c"),
                       labels = c("1" = "Average/Above Average Players", "2" = "Bench Players", "3" = "Superstars")) +
   theme_minimal()
+
+#need to turn this into tabs for each team
 ```
 
 Descriptions of each clustering group is provided below.
@@ -125,7 +128,7 @@ Descriptions of each clustering group is provided below.
 
 
 
-## Table of LeBron's Teammates and Statistics
+## Table
 
 The interactive table below allows you to search through all of LeBron's teammates and see which players are in what cluster, as well as the team they played with LeBron and their points and assist averages.
 

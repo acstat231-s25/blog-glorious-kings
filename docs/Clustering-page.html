@@ -113,16 +113,18 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> <i class="bi bi-house" role="img">
+    <a class="nav-link" href="./index.html"> <i class="bi bi-dribbble" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Clustering-page.html" aria-current="page"> 
-<span class="menu-text">LeBron’s Teammates Clustering Analysis</span></a>
+    <a class="nav-link active" href="./Clustering-page.html" aria-current="page"> <i class="bi bi-yin-yang" role="img">
+</i> 
+<span class="menu-text">Clustering</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./yet-another-page.html"> 
+    <a class="nav-link" href="./yet-another-page.html"> <i class="bi bi-bezier2" role="img">
+</i> 
 <span class="menu-text">Network Graph</span></a>
   </li>  
 </ul>
@@ -142,7 +144,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-k-means-analysis" id="toc-the-k-means-analysis" class="nav-link active" data-scroll-target="#the-k-means-analysis">The K-means Analysis</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-k-means-analysis" id="toc-the-k-means-analysis" class="nav-link" data-scroll-target="#the-k-means-analysis">The K-means Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -180,17 +183,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>What makes a great teammate for LeBron James? Over a career spanning two decades, four championships, and stints with the Cavaliers, Heat, and Lakers, LeBron has played alongside a wide range of players—some who elevated his game, and others who struggled to make an impact. To explore patterns among his many teammates, I used k-means clustering to group players based on their average points and assists per game while playing with LeBron. I also separated players by team to see how their supporting casts differed across each era. This analysis reveals what types of players surrounded LeBron on each team, offering insights into which rosters were superstar-heavy and which required him to carry more of the load, highlighting just how dominant he was, even when the help was limited.</p>
+</section>
 <section id="the-k-means-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="the-k-means-analysis">The K-means Analysis</h2>
 <div>
 
 </div>
 <div class="quarto-layout-panel" data-layout="[ [1], [1] ]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p>What makes a great teammate for LeBron James? Over a career spanning two decades, four championships, and stints with the Cavaliers, Heat, and Lakers, LeBron has played alongside a wide range of players—some who elevated his game, and others who struggled to make an impact. To explore patterns among his many teammates, I used k-means clustering to group players based on their average points and assists per game while playing with LeBron. I also separated players by team to see how their supporting casts differed across each era. This analysis reveals what types of players surrounded LeBron on each team, offering insights into which rosters were superstar-heavy and which required him to carry more of the load, highlighting just how dominant he was, even when the help was limited.</p>
-</div>
-</div>
 <div class="quarto-layout-row">
 <div class="cell quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <div class="cell-output-display">
@@ -217,8 +219,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="quarto-layout-row">
-<section id="table-of-lebrons-teammates-and-statistics" class="level2 quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<h2 class="anchored" data-anchor-id="table-of-lebrons-teammates-and-statistics">Table of LeBron’s Teammates and Statistics</h2>
+<section id="table" class="level2 quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<h2 class="anchored" data-anchor-id="table">Table</h2>
 <p>The interactive table below allows you to search through all of LeBron’s teammates and see which players are in what cluster, as well as the team they played with LeBron and their points and assist averages.</p>
 </section>
 </div>
