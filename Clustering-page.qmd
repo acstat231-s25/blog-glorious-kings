@@ -91,7 +91,7 @@ What makes a great teammate for LeBron James? Over a career spanning two decades
 
 ## The K-means Analysis
 
-The following sections break down these clusters by the team LeBron played for—the Cavaliers, the Heat, and the Lakers, revealing how his supporting casts varied during each phase of his career.
+The following sections break down these clusters by the team LeBron played for—the Cavaliers, the Heat, and the Lakers, revealing how his supporting casts varied during each phase of his career. To evaluate impact in a way that’s both measurable and relevant to LeBron’s playstyle, we focus on two core stats: points per game (PTS) and assists per game (AST). These metrics capture not only how much a player contributed to scoring, but also how involved they were in facilitating offense — a crucial dynamic when playing alongside someone as versatile as LeBron. Players who score efficiently or help generate shots for others tend to play larger roles in the flow of the game. By clustering teammates based on these two variables, we can differentiate between high-usage stars, complementary scorers, and role players — offering a practical lens through which to view their value within each era of LeBron’s career.
 
 These visualizations help highlight:
 - The different players LeBron played with on each different team he was on throughout his carrer
