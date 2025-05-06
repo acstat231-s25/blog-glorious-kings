@@ -15,7 +15,7 @@ website:
       - href: Clustering-page.qmd
         text: "Clustering"
         icon: yin-yang
-      - href: yet-another-page.qmd
+      - href: Network-page.qmd
         text: "Network Graph"
         icon: bezier2
       - href: Sourcing.qmd

@@ -41,100 +41,6 @@ library(broom)
 include_graphics("Images/KingJames.webp")
 ```
 
-```{r include = FALSE}
-Lebron <- read.csv("data/lebron_teammates.csv") |>
-  mutate(name = "LeBron James")
-Thompson <- read.csv("data/thompson_teammates.csv")
-Jefferson <- read.csv("data/jefferson_teammates.csv")
-Love <- read.csv("data/love_teammates.csv")
-Davis <- read.csv("data/ad_teammates.csv")
-Kyrie <- read.csv("data/kyrie_teammates.csv")
-Green <- read.csv("data/green_teammates.csv")
-Korver <- read.csv("data/korver_teammates.csv")
-JR <- read.csv("data/jrsmith_teammates.csv")
-Frye <- read.csv("data/frye_teammates.csv")
-Anderson <- read.csv("data/Anderson_teammates.csv")
-Delly <- read.csv("data/delly_teammates.csv")
-Dwayne <- read.csv("data/DWade_teammates.csv")
-Sasha <- read.csv("data/Sasha_teammates.csv")
-Zydrunas <- read.csv("data/zydrunas_teammates.csv")
-Shumpert <- read.csv("data/shumpert_teammates.csv")
-Mo <- read.csv("data/mo_teammates.csv")
-Johnson <- read.csv("data/JamesJ_teammates.csv")
-Bosh <- read.csv("data/Bosh_teammates.csv")
-Chalmers <- read.csv("data/chalmers_teammates.csv")
-
-lebron_network <- bind_rows(
-  Lebron, Thompson, Jefferson, Love, Davis, Kyrie, Green, Korver,
-  JR, Frye, Anderson, Delly, Dwayne, Sasha, Zydrunas, Shumpert, Mo,
-  Johnson, Bosh, Chalmers
-)
-
-player_names <- c("LeBron James", "Tristan Thompson", "Richard Jefferson", "Kevin Love",
-                  "Anthony Davis", "Kyrie Irving", "Danny Green", "Kyle Korver",
-                  "JR Smith", "Channing Frye", "Anderson Varejao", "Matthew Dellavedova",
-                  "Dwyane Wade", "Sasha Pavlovic", "Zydrunas Ilgauskas", "Iman Shumpert",
-                  "Mo Williams", "James Jones", "Chris Bosh", "Mario Chalmers")
-
-edges <- lebron_network |>
-  rename(from = name, to = Player, weight = GP) |>
-  filter(from %in% player_names & to %in% player_names)
-
-edges <- edges |>
-  rowwise() |>
-  mutate(player1 = min(from, to),
-         player2 = max(from, to)) |>
-  group_by(player1, player2) |>
-  summarise(weight = sum(weight), .groups = 'drop') |>
-  rename(from = player1, to = player2)
-
-lebron_plot <- graph_from_data_frame(edges, directed = FALSE)
-
-```
-
-
-```{r}
-Teammates_stats <- read.csv("data/Teammates_Stats.csv")
-
-
-```
-
-
-```{r}
-
-#Need to assign players to one primary team
-teammates_clean <- Teammates_stats |>
-  mutate(Team = case_when(
-    str_detect(Team.s., "Cavs") ~ "Cavs",
-    str_detect(Team.s., "Heat") ~ "Heat",
-    str_detect(Team.s., "Lakers") ~ "Lakers",
-    TRUE ~ Team.s.
-  ))
-
-#Standardize PTS and ASTs across the whole dataset
-Stats_stdz <- teammates_clean |>
-  select(Player, Team, PTS, AST) |>
-  mutate(across(c(PTS, AST), 
-                ~ (.x - mean(.x)) / sd(.x),
-                .names = "{.col}_z")) |>
-  select(Player, Team, ends_with("_z"))
-```
-
-
-```{r}
-#Perform k-means clustering with k = 3
-set.seed(123)
-Stats_kmeans3 <- Stats_stdz |> 
-  select(PTS_z, AST_z) |>
-  kmeans(centers = 3, nstart = 20)
-
-Stats_stdz_c3 <- Stats_stdz |>
-  mutate(cluster = as.factor(Stats_kmeans3$cluster))
-
-Stats_kmeans3_summary <- tidy(Stats_kmeans3)
-#Stats_kmeans3_summary
-```
-
 
 ```{r court-setup, include=FALSE}
 library(tidyverse)
@@ -379,3 +285,72 @@ plot_lebron_map(2019, 2025, "California")
 :::
 
 
+The charts below provide a snapshot of this evolution — comparing his rookie season shot locations to those from his most recent campaign.
+
+- Track the shift from interior-heavy scoring to a more balanced perimeter approach  
+- Observe changes in shot clustering by zone  
+- Reflect on how age, team context, and league-wide trends have reshaped his role
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+<div class="text-center">
+  
+#### Rookie Season (2004)
+
+</div>
+
+```{r shotchart-2004-two, echo=FALSE, message=FALSE, warning=FALSE}
+shots_2004 <- read_csv("data/shot-chart-data/LeBron_James/2003-04.csv")
+
+ggplot(shots_2004, aes(x = LOC_X, y = LOC_Y)) +
+  geom_point(color = "blue", alpha = 0.6) +
+  coord_fixed() +
+  draw_half_court() +
+  labs(
+    title = "Shot Chart: LeBron James (2004)",
+    x = "x", y = "y"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "lightgray"),
+    panel.grid.major = element_line(color = "#cccccc"),
+    panel.grid.minor = element_line(color = "#dddddd")
+  ) +
+  xlim(-250, 250) + ylim(-50, 470)
+```
+
+:::
+
+::: {.column width="50%"}
+
+<div class="text-center">
+  
+#### Most Recent Season (2025)
+
+</div>
+
+```{r shotchart-2025-two, echo=FALSE, message=FALSE, warning=FALSE}
+shots_2025 <- read_csv("data/shot-chart-data/LeBron_James/2023-24.csv")
+
+ggplot(shots_2025, aes(x = LOC_X, y = LOC_Y)) +
+  geom_point(color = "blue", alpha = 0.6) +
+  coord_fixed() +
+  draw_half_court() +
+  labs(
+    title = "Shot Chart: LeBron James (2025)",
+    x = "x", y = "y"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "lightgray"),
+    panel.grid.major = element_line(color = "#cccccc"),
+    panel.grid.minor = element_line(color = "#dddddd")
+  ) +
+  xlim(-250, 250) + ylim(-50, 470)
+```
+
+:::
+
+:::
