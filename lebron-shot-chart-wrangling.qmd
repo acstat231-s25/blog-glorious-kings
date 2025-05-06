@@ -17,7 +17,7 @@ player_name = "LeBron James"
 seasons = [f"{year}-{str(year+1)[-2:]}" for year in range(2003, 2024)]
 
 # Save to the correct folder
-base_dir = "/Users/paulgrajzl/Documents/Stat231-Data-Science/blog-glorious-kings/data/shot-chart-data"
+base_dir = "data/shot-chart-data"
 player_folder = os.path.join(base_dir, player_name.replace(" ", "_"))
 os.makedirs(player_folder, exist_ok=True)
 
@@ -36,7 +36,7 @@ if not player_id:
 # Loop over all seasons
 for season in seasons:
     try:
-        # IMPORTANT: Use shotchartdetail.ShotChartDetail if you import shotchartdetail
+        # IMPORTANT: Using shotchartdetail.ShotChartDetail because we import shotchartdetail (noted above, had lots of issues with this)
         shots = shotchartdetail.ShotChartDetail(
             team_id=0,
             player_id=player_id,

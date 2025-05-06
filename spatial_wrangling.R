@@ -193,23 +193,23 @@ for (year in 2004:2025) {
     team_df <- read_csv(team_path, skip = 1)
     
     # Clean LeBron dates
-    lebron_df <- lebron_df %>%
-      mutate(Date = mdy(Date)) %>%
+    lebron_df <- lebron_df |>
+      mutate(Date = mdy(Date)) |>
       filter(!is.na(Date))
     
     # Clean team dates and determine Home/Away
-    team_df <- team_df %>%
-      filter(!is.na(Date)) %>%
+    team_df <- team_df |>
+      filter(!is.na(Date)) |>
       mutate(
         Date = ymd(Date),
         `Home/Away` = ifelse(`...4` == "@", "Away", NA),
         `Home/Away` = replace_na(`Home/Away`, "Home"),
         Team = team_abbr
-      ) %>%
+      ) |>
       select(Date, `Home/Away`, Team)
     
     # Merge
-    merged_df <- lebron_df %>%
+    merged_df <- lebron_df |>
       left_join(team_df, by = "Date")
     
     # Save
@@ -232,8 +232,8 @@ lebron <- read_csv("data/combined/LeBron_GameLog_2025_WithTeamInfo.csv")
 team_states <- read_csv("data/NBA_Teams_By_State.csv")
 
 # Create team-to-state lookup (1 team per row)
-team_lookup <- team_states %>%
-  separate_rows(Teams, sep = ",") %>%
+team_lookup <- team_states |>
+  separate_rows(Teams, sep = ",") |>
   mutate(
     Teams = str_trim(Teams),
     State = str_to_title(State),
@@ -241,27 +241,30 @@ team_lookup <- team_states %>%
   )
 
 # Prepare LeBron data
-lebron <- lebron %>%
+lebron <- lebron |>
   mutate(
     Opponent = str_trim(Opponent),
     GameState = if_else(`Home/Away` == "Home", "California", NA)
   )
 
 # Join by matching mascot names
-lebron <- lebron %>%
-  left_join(team_lookup, by = c("Opponent" = "Mascot")) %>%
+lebron <- lebron |>
+  left_join(team_lookup, by = c("Opponent" = "Mascot")) |>
   mutate(
     GameState = if_else(`Home/Away` == "Away", State, GameState)
   )
 
 # Summarize total points by state
-points_by_state <- lebron %>%
-  filter(!is.na(GameState)) %>%
-  group_by(GameState) %>%
-  summarise(TotalPoints = sum(PTS, na.rm = TRUE)) %>%
+points_by_state <- lebron |>
+  filter(!is.na(GameState)) |>
+  group_by(GameState) |>
+  summarise(TotalPoints = sum(PTS, na.rm = TRUE)) |>
   arrange(desc(TotalPoints))
 
 print(points_by_state)
+
+### PURELY FOR TESTING PURPOSES HERE ###
+########################################
 
 # Load required libraries
 library(maps)
@@ -271,7 +274,7 @@ library(ggplot2)
 states_map <- map_data("state")
 
 # Prepare for merge
-points_by_state_map <- points_by_state %>%
+points_by_state_map <- points_by_state |>
   mutate(region = str_to_lower(GameState))
 
 # Merge
@@ -305,13 +308,13 @@ library(ggplot2)
 team_states <- read_csv("data/NBA_Teams_By_State.csv")
 
 # Build team-to-state lookup for mascots
-team_lookup <- team_states %>%
-  separate_rows(Teams, sep = ",") %>%
+team_lookup <- team_states |>
+  separate_rows(Teams, sep = ",") |>
   mutate(
     Teams = str_trim(Teams),
     State = str_to_title(State),
     Mascot = word(Teams, -1)
-  ) %>%
+  ) |>
   distinct(Mascot, State)
 
 # Define home state by team/year
@@ -340,7 +343,7 @@ load_lebron_era <- function(years) {
   bind_rows(lapply(years, function(y) {
     file_path <- paste0("data/combined/LeBron_GameLog_", y, "_WithTeamInfo.csv")
     if (file.exists(file_path)) {
-      df <- read_csv(file_path, show_col_types = FALSE) %>%
+      df <- read_csv(file_path, show_col_types = FALSE) |>
         mutate(Season = y)
       return(df)
     } else {
@@ -356,22 +359,22 @@ for (era_name in names(eras)) {
   lebron <- load_lebron_era(years)
   
   # Assign home state based on year + Home/Away
-  lebron <- lebron %>%
+  lebron <- lebron |>
     mutate(
       Opponent = str_trim(Opponent),
       HomeState = map_chr(Season, get_home_state),
       GameState = if_else(`Home/Away` == "Home", HomeState, NA)
-    ) %>%
-    left_join(team_lookup, by = c("Opponent" = "Mascot")) %>%
+    ) |>
+    left_join(team_lookup, by = c("Opponent" = "Mascot")) |>
     mutate(
       GameState = if_else(`Home/Away` == "Away", State, GameState)
     )
   
   # Summarize points by state
-  points_by_state <- lebron %>%
-    filter(!is.na(GameState)) %>%
-    group_by(GameState) %>%
-    summarise(TotalPoints = sum(PTS, na.rm = TRUE)) %>%
+  points_by_state <- lebron |>
+    filter(!is.na(GameState)) |>
+    group_by(GameState) |>
+    summarise(TotalPoints = sum(PTS, na.rm = TRUE)) |>
     mutate(region = str_to_lower(GameState))
   
   # Merge with US map
