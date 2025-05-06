@@ -68,6 +68,8 @@ glossary_data |>
   kable()
 
 ```
+# Sourcing
 
+We pulled our data from multiple sources off of the internet. For the shot chart, the data was pulled from from an API on NBA.com. For Lebron's general stats and the map of his scoring, we used basketballreference.com and realgm.com. realgm.com was also used to collect data for the teammates of LeBron for both the clustering and network visuals.
 
 
