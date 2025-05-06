@@ -110,11 +110,13 @@ The charts below provide a snapshot of this evolution — comparing his rookie s
 - Observe changes in shot clustering by zone
 - Reflect on how age, team context, and league-wide trends have reshaped his role
 
-::: {.panel-tabset}
+::: {.columns}
 
-### Rookie Season (2004)
+::: {.column width="50%"}
 
-```{r shotchart-2004, echo=FALSE, message=FALSE, warning=FALSE}
+#### <span style="display: block; margin-left: 0;">Rookie Season (2004)</span>
+
+```{r shotchart-2004, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=7}
 shots_2004 <- read_csv("data/shot-chart-data/LeBron_James/2003-04.csv")
 
 ggplot(shots_2004, aes(x = LOC_X, y = LOC_Y)) +
@@ -134,9 +136,13 @@ ggplot(shots_2004, aes(x = LOC_X, y = LOC_Y)) +
   xlim(-250, 250) + ylim(-50, 470)
 ```
 
-### Most Recent Season (2025)
+:::
 
-```{r shotchart-2025, echo=FALSE, message=FALSE, warning=FALSE}
+::: {.column width="50%"}
+
+#### <span style="display: block; margin-left: 0;">Most Recent Season (2025)</span>
+
+```{r shotchart-2025, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=7}
 shots_2025 <- read_csv("data/shot-chart-data/LeBron_James/2023-24.csv")
 
 ggplot(shots_2025, aes(x = LOC_X, y = LOC_Y)) +
@@ -155,6 +161,9 @@ ggplot(shots_2025, aes(x = LOC_X, y = LOC_Y)) +
   ) +
   xlim(-250, 250) + ylim(-50, 470)
 ```
+
+
+:::
 
 :::
 
@@ -300,75 +309,4 @@ plot_lebron_map(2015, 2018, "Ohio")
 ```{r}
 plot_lebron_map(2019, 2025, "California")
 ```
-:::
-
-
-The charts below provide a snapshot of this evolution — comparing his rookie season shot locations to those from his most recent campaign.
-
-- Track the shift from interior-heavy scoring to a more balanced perimeter approach  
-- Observe changes in shot clustering by zone  
-- Reflect on how age, team context, and league-wide trends have reshaped his role
-
-::: {.columns}
-
-::: {.column width="50%"}
-
-<div class="text-center">
-  
-#### Rookie Season (2004)
-
-</div>
-
-```{r shotchart-2004-two, echo=FALSE, message=FALSE, warning=FALSE}
-shots_2004 <- read_csv("data/shot-chart-data/LeBron_James/2003-04.csv")
-
-ggplot(shots_2004, aes(x = LOC_X, y = LOC_Y)) +
-  geom_point(color = "blue", alpha = 0.6) +
-  coord_fixed() +
-  draw_half_court() +
-  labs(
-    title = "Shot Chart: LeBron James (2004)",
-    x = "x", y = "y"
-  ) +
-  theme_minimal() +
-  theme(
-    panel.background = element_rect(fill = "lightgray"),
-    panel.grid.major = element_line(color = "#cccccc"),
-    panel.grid.minor = element_line(color = "#dddddd")
-  ) +
-  xlim(-250, 250) + ylim(-50, 470)
-```
-
-:::
-
-::: {.column width="50%"}
-
-<div class="text-center">
-  
-#### Most Recent Season (2025)
-
-</div>
-
-```{r shotchart-2025-two, echo=FALSE, message=FALSE, warning=FALSE}
-shots_2025 <- read_csv("data/shot-chart-data/LeBron_James/2023-24.csv")
-
-ggplot(shots_2025, aes(x = LOC_X, y = LOC_Y)) +
-  geom_point(color = "blue", alpha = 0.6) +
-  coord_fixed() +
-  draw_half_court() +
-  labs(
-    title = "Shot Chart: LeBron James (2025)",
-    x = "x", y = "y"
-  ) +
-  theme_minimal() +
-  theme(
-    panel.background = element_rect(fill = "lightgray"),
-    panel.grid.major = element_line(color = "#cccccc"),
-    panel.grid.minor = element_line(color = "#dddddd")
-  ) +
-  xlim(-250, 250) + ylim(-50, 470)
-```
-
-:::
-
 :::
