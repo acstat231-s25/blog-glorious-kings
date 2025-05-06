@@ -1,4 +1,4 @@
-This file contains code needed for teammate wrangling.
+This file contains code needed for teammate wrangling, namely for network diagrams.
 
 ```{r}
 library(rvest)
