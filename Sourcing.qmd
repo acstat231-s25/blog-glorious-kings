@@ -51,6 +51,63 @@ glossary_data <- data.frame(
                  "Double digits in 3 stats in one game.")
 )
 
+draw_half_court <- function(court_color = "#8B0000", court_thickness = 0.7) {
+  list(
+    # Outer lines (baseline to top of arc)
+    geom_rect(aes(xmin = -250, xmax = 250, ymin = -47.5, ymax = 422.5), 
+              fill = NA, color = court_color, linewidth = court_thickness),
+    
+    # Paint (key)
+    geom_rect(aes(xmin = -80, xmax = 80, ymin = -47.5, ymax = 142.5), 
+              fill = NA, color = court_color, linewidth = court_thickness),
+    
+    # Free throw circle (top half - solid)
+    geom_path(data = arc_points(center = c(0, 142.5), radius = 60, start = 0, end = pi), 
+              aes(x, y), color = court_color, linewidth = court_thickness),
+    # Free throw circle (bottom half - dotted)
+    geom_path(data = arc_points(center = c(0, 142.5), radius = 60, start = pi, end = 2*pi), 
+              aes(x, y), color = court_color, linewidth = court_thickness, linetype = "longdash"),
+    
+    
+    # Hoop (centered at 0,0)
+    geom_path(data = circle_points(center = c(0, 0), radius = 7.5), 
+              aes(x, y), color = "white", linewidth = court_thickness),
+    
+    # Backboard
+    annotate("segment", x = -30, xend = 30, y = -7.5, yend = -7.5, 
+             color = "white", linewidth = court_thickness),
+    
+    # Restricted area arc (closer, ends at width 40)
+    geom_path(data = arc_points(center = c(0, 0), radius = 40, start = 0, end = pi), 
+              aes(x, y), color = court_color, linewidth = court_thickness),
+    
+    # 3-point line (straight segments in corners)
+    annotate("segment", x = -220, xend = -220, y = -47.5, yend = 89.5, 
+             color = court_color, linewidth = court_thickness),
+    
+    annotate("segment", x = 220, xend = 220, y = -47.5, yend = 89.5, 
+             color = court_color, linewidth = court_thickness),
+    
+    # 3-point arc (connects both lines)
+    geom_path(data = arc_points(center = c(0, 0), radius = 237.5, start = acos(220 / 237.5), end = pi - acos(220 / 237.5)), 
+              aes(x, y), color = court_color, linewidth = court_thickness)
+  )
+}
+
+# Utility to create circle or arc points
+circle_points <- function(center = c(0, 0), radius = 1, npoints = 100) {
+  theta <- seq(0, 2*pi, length.out = npoints)
+  data.frame(x = center[1] + radius * cos(theta),
+             y = center[2] + radius * sin(theta))
+}
+
+arc_points <- function(center = c(0, 0), radius = 1, start = 0, end = pi, npoints = 100) {
+  theta <- seq(start, end, length.out = npoints)
+  data.frame(x = center[1] + radius * cos(theta),
+             y = center[2] + radius * sin(theta))
+}
+
+
 ```
 
 # Glossary
@@ -61,6 +118,42 @@ glossary_data <- data.frame(
 
 glossary_data |>
   kable()
+
+
+ggplot() +
+      draw_half_court() +
+      
+      # Free Throw Label
+      annotate("text", x = 0, y = 142.5, label = "Free Throw Line",
+               size = 4, fontface = "bold", family = "Source Serif Pro", vjust = -1) +
+      
+      # Three Point Line Label with Arrow
+      annotate("text", x = 0, y = 260, label = "Three Point Line",
+               size = 4, fontface = "bold", family = "Source Serif Pro", vjust = -1) +
+      annotate("segment", x = 0, xend = 0, y = 260, yend = 237.5,
+               arrow = arrow(length = unit(0.2, "inches")), color = "#8B0000") +
+      
+      # Hoop Label
+      annotate("text", x = 0, y = -15, label = "Hoop",
+               size = 4, fontface = "bold", family = "Source Serif Pro", vjust = 1) +
+      
+      # Out of Bounds Labels (vertical sides)
+      annotate("text", x = -260, y = 200, label = "Out of Bounds", angle = 90,
+               size = 4, fontface = "bold", family = "Source Serif Pro", hjust = 0.5) +
+      annotate("text", x = 260, y = 200, label = "Out of Bounds", angle = 90,
+               size = 4, fontface = "bold", family = "Source Serif Pro", hjust = 0.5) +
+      
+      coord_fixed() +
+      
+      # Add title and subtitle
+      labs(
+        subtitle = "Note: Field Goals (FG) include all made shots except for Free Throws"
+      ) +
+      
+      theme_void(base_family = "Source Serif Pro") +
+      theme(
+        plot.background = element_rect(fill = "gray90", color = NA)
+      )
 
 ```
 # Sourcing
