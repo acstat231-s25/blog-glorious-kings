@@ -14,7 +14,7 @@ website:
       # Add or remove additional pages below in desired order of appearance
       - another-page.qmd
       - href: yet-another-page.qmd
-        text: "Yet another page with a custom label and icon"
+        text: "Network Graph"
         icon: arrow-through-heart-fill
         
 format:

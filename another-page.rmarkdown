@@ -31,7 +31,6 @@ Teammates_stats <- read.csv("data/Teammates_Stats.csv")
 
 ```
 
-
 ```{r}
 
 #Need to assign players to one primary team
@@ -52,7 +51,6 @@ Stats_stdz <- teammates_clean |>
   select(Player, Team, ends_with("_z"))
 ```
 
-
 ```{r}
 #Perform k-means clustering with k = 3
 set.seed(123)
@@ -67,9 +65,13 @@ Stats_kmeans3_summary <- tidy(Stats_kmeans3)
 #Stats_kmeans3_summary
 ```
 
+
+
 ## The K-means Analysis
 
 ::: {layout="[ [1], [1] ]"}
+
+
 
 ```{r}
 #| echo: FALSE 
@@ -86,6 +88,8 @@ ggplot(Stats_stdz_c3, aes(x = PTS_z, y = AST_z, color = cluster)) +
        color = "Cluster") +
   theme_minimal()
 ```
+
+
 
 The clustering visualized above is separated by the different teams players played with LeBron. 
 
