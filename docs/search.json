@@ -95,7 +95,7 @@
     "href": "yet-another-page.html#sec-note",
     "title": "LeBron’s Teammates Network Graph",
     "section": "A note",
-    "text": "A note\nNotice that you can also modify the YAML headings at the top of each page as I did in the first subpage or completely delete them, as I did here."
+    "text": "A note\nNotice that you can also modify the YAML headings at the top of each page as I did in the first subpage or completely delete them, as I did here.\n======="
   },
   {
     "objectID": "Matt_Index.html",

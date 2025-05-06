@@ -2,16 +2,6 @@
 title: "LeBron's Teammates Network Graph"
 author: "Matt Tabet"
 ---
-<<<<<<< HEAD
-
-This is *yet* another page that can be linked! You are not required to include more than just *index.qmd*, but you are welcome to make content on different pages, if desired. This may help with managing GitHub commits, as well. 
-
-## A note {#sec-note} 
-
-Notice that you can also modify the YAML headings at the top of each page as I did in the [first subpage](another-page.qmd) or completely delete them, as I did here.
-
-=======
->>>>>>> 797c22c7cd29835a7f92f65f3d0af57bd6f3b7ce
 ```{r}
 #| label: setup
 #| include: false
@@ -19,11 +9,7 @@ Notice that you can also modify the YAML headings at the top of each page as I d
 # Improve digit display and NA display for kable tables
 options(scipen = 1, knitr.kable.NA = "")
 
-<<<<<<< HEAD
-# Load necessary packages
-=======
 # Load necessary packages - network page
->>>>>>> 797c22c7cd29835a7f92f65f3d0af57bd6f3b7ce
 library(tidyverse)
 library(knitr)
 library(kableExtra)
@@ -106,10 +92,7 @@ include_graphics("https://www.palmbeachpost.com/gcdn/authoring/2017/08/17/NPPP/g
 
 ## The Network
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 797c22c7cd29835a7f92f65f3d0af57bd6f3b7ce
 ```{r} 
 #| echo: FALSE 
 #| fig.width: 20
@@ -121,9 +104,6 @@ ggraph(layout = "linear", circular = TRUE) +
   geom_edge_link(aes(width = weight), alpha = 0.5, color = "lightblue") +
   geom_node_point(size = 12, color = "red") +
   geom_node_text(aes(label = name), repel = TRUE, size = 8, color = "black") +
-<<<<<<< HEAD
-  theme_void()
-=======
   theme_void() +
   theme(legend.text = element_text(size = 25),
         legend.title = element_text(size = 25),
@@ -131,11 +111,6 @@ ggraph(layout = "linear", circular = TRUE) +
         legend.key.height = unit(1, 'cm'),
         legend.key.width = unit(1, 'cm')
         )
- 
-
-  
-  
->>>>>>> 797c22c7cd29835a7f92f65f3d0af57bd6f3b7ce
 
 ```
 
