@@ -18,6 +18,9 @@ website:
       - href: yet-another-page.qmd
         text: "Network Graph"
         icon: bezier2
+      - href: Sourcing.qmd
+        text: Sources and Glossary
+        icon: book
         
 format:
   html:
